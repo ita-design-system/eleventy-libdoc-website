@@ -1,0 +1,33 @@
+import userConfig from "../settings.json" with { "type": "json" };
+export default {
+    lang: userConfig.lang ?? "en",
+    siteTitle: userConfig.siteTitle ?? "11ty LibDoc",
+    siteDescription: userConfig.siteDescription ?? "An Eleventy starter project to craft slick documentation",
+    siteLogoUrl: userConfig.siteLogoUrl ?? "",
+    siteLogoMaxHeight: userConfig.siteLogoMaxHeight ?? 60,
+    author: userConfig.author ?? false,
+    faviconUrl: userConfig.faviconUrl ?? "/favicon.png",
+    ogImageUrl: userConfig.ogImageUrl ?? "https://raw.githubusercontent.com/ita-design-system/ita-medias/refs/heads/main/ogimage-11ty-libdoc.png",
+    customLinks: userConfig.customLinks ?? [],
+    blogTitle: userConfig.blogTitle ?? "My Posts",
+    blogDescription: userConfig.blogDescription ?? "My own description for my blog",
+    blogAuthor: userConfig.blogAuthor ?? "The Blog Team",
+    blogSlug: userConfig.blogSlug ?? "posts",
+    displayTagsListLink: userConfig.displayTagsListLink ?? true,
+    tocEnabled: userConfig.tocEnabled ?? true,
+    tocHtmlTags: userConfig.tocHtmlTags ?? ["h1", "h2", "h3", "h4", "h5", "h6"],
+    tocMinTags: userConfig.tocMinTags ?? 1,
+    htmlBasePathPrefix: userConfig.htmlBasePathPrefix ?? "",
+    sandboxRunSwitch: userConfig.sandboxRunSwitch ?? true,
+    searchEnabled: userConfig.searchEnabled ?? true,
+    hljsLanguages: userConfig.hljsLanguages ?? [
+        "xml",
+        "javascript",
+        "json",
+        "yaml",
+        "liquid",
+        "markdown",
+        "css"
+    ],
+    roundedImagesCorners: userConfig.roundedImagesCorners ?? true,
+};

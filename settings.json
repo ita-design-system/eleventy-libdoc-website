@@ -1,0 +1,12 @@
+{
+    "customLinks": [
+        {
+            "url": "https://github.com/ita-design-system/eleventy-libdoc",
+            "text": "GitHub"
+        },
+        {
+            "url": "https://github.com/ita-design-system",
+            "text": "ITADS"
+        }
+    ]
+}

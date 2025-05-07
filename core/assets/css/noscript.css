@@ -1,0 +1,7 @@
+main > pre > code {
+    box-shadow: none;
+}
+code {
+    font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0.0, "MONO" 1, "wght" 400;
+    font-size: var(--ita-fontSizes-3);
+}
