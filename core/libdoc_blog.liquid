@@ -3,7 +3,7 @@ layout: libdoc_page.liquid
 date: false
 pagination:
     data: collections.postsByDateDescending
-    size: 2
+    size: 12
     alias: posts
 permalink: "{{ libdocConfig.blogSlug }}/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber | plus: 1 }}/{% endif %}index.html"
 ---
