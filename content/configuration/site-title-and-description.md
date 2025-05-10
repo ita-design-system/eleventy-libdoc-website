@@ -6,7 +6,7 @@ eleventyNavigation:
     parent: Configuration
     order: 20
 title: Site title and description - Configuration
-description: How site title and site description are managed through LibDoc build
+description: How to set site title and site description in LibDoc
 tags:
     - configuration
     - SEO
@@ -24,3 +24,9 @@ Just like [faviconUrl](/content/configuration/favicon.md) and [author](/content/
 * `siteDescription` is displayed as metadata description on the page with `permalink: index.html` (home page) and as <var>title</var> attribute on home page link.
 
 Site title and description are also involved in [SEO](/content/seo.md).
+
+<aside>
+    <p class="alert alert-warning" data-title="Be careful">
+        Site title and site description <strong>must</strong> be pure strings, any HTML tag is discarded.
+    </p>
+</aside>
