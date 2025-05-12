@@ -21,7 +21,7 @@ Eleventy LibDoc is a starter project for [Eleventy][11ty] to craft slick web rel
     LibDoc is easy to install, use and deploy.
 *   **Performance**<br>
     Low front-end dependencies and vanilla JS self-made components make LibDoc cross-browser compatibility and high-grade performances.<br>
-    <a  href="https://pagespeed.web.dev/analysis/https-eleventy-libdoc-netlify-app/2gfg5lkzy0?form_factor=desktop" target="_blank">
+    <a  href="https://developers.google.com/speed/pagespeed/insights/?url={{ libdocSystem.productionUrl }}" target="_blank">
         View performances
     </a>
 *   **Printable**<br>
