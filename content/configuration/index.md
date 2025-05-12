@@ -31,9 +31,9 @@ If not specified in `settings.json`, the following parameters are applied:
     "faviconUrl": "/favicon.png",
     "ogImageUrl": "https://raw.githubusercontent.com/ita-design-system/ita-medias/refs/heads/main/ogimage-11ty-libdoc.png",
     "customLinks": [],
-    "blogTitle": "My Posts",
-    "blogDescription": "My own description for my blog",
-    "blogAuthor": "The Blog Team",
+    "blogTitle": "Blog Posts",
+    "blogDescription": false,
+    "blogAuthor": false,
     "blogSlug": "posts",
     "displayTagsListLink": true,
     "tocEnabled": true,
@@ -57,27 +57,27 @@ If not specified in `settings.json`, the following parameters are applied:
 
 Parameter | Type | Description | Page override
 --- |--- |--- |---
-`lang`| String | Locale of the project, required for every message of the user interface [Learn more](/content/configuration/lang.md) | yes
-`siteTitle` | String | Title of the project [Learn more](/content/configuration/site-title-and-description.md) | no
-`siteDescription` | String | Description of the project [Learn more](/content/configuration/site-title-and-description.md) | no
-`siteLogoUrl` | String | Optional site logo URL [Learn more](/content/configuration/site-logo.md) | no
-`siteLogoMaxHeight` | Integer | If site logo URL is set, adjusts maximum height of the logo in pixels [Learn more](/content/configuration/site-logo.md) | no
-`author` | String or Boolean | Default author of pages. Setting to <var>false</var> disables author display [Learn more](/content/configuration/author.md) | yes
-`faviconUrl` | String | URL of the favicon [Learn more](/content/configuration/favicon.md) | yes
-`ogImageUrl` | String | Metadata URL of the default Open Graph image [Learn more](/content/configuration/open-graph-image.md) | yes
-`customLinks` | Array | Array of objects defining custom links into the primary navigation [Learn more](/content/configuration/custom-links.md) | no
-`customLinks[i].text` | String | Link text [Learn more](/content/configuration/custom-links.md) | no
-`customLinks[i].url` | String | Link URL [Learn more](/content/configuration/custom-links.md) | no
-`blogTitle` | String | Sets the blog title [Learn more](/content/configuration/blog.md) | no
-`blogDescription` | String | Sets the blog description [Learn more](/content/configuration/blog.md) | no
-`blogAuthor` | String | Sets the blog author [Learn more](/content/configuration/blog.md) | no
-`blogSlug` | String | Sets the slug for the blog [Learn more](/content/configuration/blog.md) | no
-`displayTagsListLink` | Boolean | Enable or disable the link that opens tags list page [Learn more](/content/configuration/tags-list-link.md) | no
-`tocEnabled` | Boolean | Enable or disable Table of Content [Learn more](/content/configuration/toc.md) | yes
-`tocHtmlTags` | Array | List of tags to support into the Table of Content [Learn more](/content/configuration/toc.md) | no
-`tocMinTags` | Integer | Minimum amount of headings detected to enable Table of Content [Learn more](/content/configuration/toc.md) | no
-`htmlBasePathPrefix` | String | Configure your HTML base path prefix [Learn more](/content/configuration/html-base.md) | no
-`sandboxRunSwitch` | Boolean | Enable disable scroll into sandbox instead of page [Learn more](/content/configuration/sandboxes.md) | no
-`searchEnabled` | Boolean | Enable disable search feature | no
-`hljsLanguages` | Array | List of supported languages for syntax highlighting, just add aliases according to your needs [Learn more](/content/configuration/hljs.md) | no
+`lang`| String | Locale of the project, required for every [message](/content/configuration/lang.md) of the user interface | yes
+`siteTitle` | String | [Site title](/content/configuration/site-title-and-description.md) of the project | no
+`siteDescription` | String | [Site description](/content/configuration/site-title-and-description.md) of the project | no
+`siteLogoUrl` | String | Optional [site logo URL](/content/configuration/site-logo.md) | no
+`siteLogoMaxHeight` | Integer | If site logo URL is set, adjusts [logo maximum height](/content/configuration/site-logo.md) in pixels | no
+`author` | String or Boolean | Default [author](/content/configuration/author.md) of pages. Setting to <var>false</var> disables author display | yes
+`faviconUrl` | String | [Favicon URL configuration](/content/configuration/favicon.md) | yes
+`ogImageUrl` | String | Metadata of the default [Open Graph Image](/content/configuration/open-graph-image.md) | yes
+`customLinks` | Array | Array of objects defining [custom links](/content/configuration/custom-links.md) into the primary navigation | no
+`customLinks[i].text` | String | Link text | no
+`customLinks[i].url` | String | Link URL | no
+`blogTitle` | String | Sets the [blog title](/content/configuration/blog.md) | no
+`blogDescription` | String or Boolean | Sets the [blog description](/content/configuration/blog.md) | no
+`blogAuthor` | String or Boolean | Sets the [blog author](/content/configuration/blog.md) | no
+`blogSlug` | String | Sets the [slug](/content/configuration/blog.md) for the blog  | no
+`displayTagsListLink` | Boolean | Enable or disable the [link that opens tags list page](/content/configuration/tags-list-link.md) | no
+`tocEnabled` | Boolean | Enable or disable [Table of Content](/content/configuration/toc.md) | yes
+`tocHtmlTags` | Array | List of [tags to support into the Table of Content](/content/configuration/toc.md) | no
+`tocMinTags` | Integer | [Minimum amount of headings](/content/configuration/toc.md) detected to enable Table of Content | no
+`htmlBasePathPrefix` | String | Configure your [HTML base](/content/configuration/html-base.md) path prefix | no
+`sandboxRunSwitch` | Boolean | Enable disable [scroll into sandbox](/content/configuration/sandboxes.md) instead of page | no
+`searchEnabled` | Boolean | Enable disable [search feature](/content/primary-navigation/search-input.md) | no
+`hljsLanguages` | Array | List of supported [languages for syntax highlighting](/content/configuration/hljs.md), just add aliases according to your needs | no
 `roundedImagesCorners` | Boolean | Enable disable rounded image corners by default | no

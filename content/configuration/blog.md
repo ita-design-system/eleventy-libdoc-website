@@ -19,7 +19,7 @@ Here are the parameters related to blog.
 {
     "blogTitle": "My Posts",
     "blogDescription": "My own description for my blog",
-    "blogAuthor": "The Front Club Team",
+    "blogAuthor": "The Blog Team",
     "blogSlug": "posts",
 }
 ```

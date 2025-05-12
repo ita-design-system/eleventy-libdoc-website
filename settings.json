@@ -1,4 +1,6 @@
 {
+    "author": "ITADS",
+    "blogAuthor": "ITADS",
     "customLinks": [
         {
             "url": "https://github.com/ita-design-system/eleventy-libdoc",

@@ -10,7 +10,7 @@ Eleventy LibDoc is a starter project for [Eleventy][11ty] to craft slick web rel
 
 1. Clone or fork <https://github.com/ita-design-system/eleventy-libdoc>
 2. Run `npm install`
-3. Enter your own settings in `settings.json`. Learn more about [configuration](/content/configuration/index.md).
+3. Enter your own settings in `settings.json`. [Configuration](/content/configuration/index.md).
 4. Build `npx @11ty/eleventy`
 
 ## Key features
