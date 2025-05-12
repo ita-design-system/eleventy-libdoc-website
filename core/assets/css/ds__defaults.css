@@ -287,7 +287,7 @@ main a[aria-current="page"] {
     opacity: 0.5;
     pointer-events: none;
 }
-main a[href^="https://"]::after {
+main a[href^="https://"]:not([href^="https://eleventy-libdoc"])::after {
     content: '\e900';
     font-family: icomoon;
     text-decoration: none;
@@ -296,7 +296,7 @@ main a[href^="https://"]::after {
     color: var(--ita-colors-primary-300);
     transition: color 300ms;
 }
-main a[href^="https://"]:hover::after {
+main a[href^="https://"]:not([href^="https://eleventy-libdoc"]):hover::after {
     color: var(--ita-colors-primary-700);
 }
 /* EMPHASIS */

@@ -856,9 +856,12 @@ const libdocUi = {
             elDetail.addEventListener("toggle", libdocUi.handlers._toggleNavPrimaryAccordion);
         });
 
-        libdocUi.el.main.querySelectorAll('a[href^="https://"]').forEach(function(el) {
-            el.target = '_blank';
-            el.title = `${libdocMessages.open} ${el.href} ${libdocMessages.inANewTab.toLowerCase()}`
+        libdocUi.el.main.querySelectorAll('main a[href^="https://"]').forEach(function(el) {
+            const link = new URL(el.href);
+            if (link.hostname != location.hostname) {
+                el.target = '_blank';
+                el.title = `${libdocMessages.open} ${el.href} ${libdocMessages.inANewTab.toLowerCase()}`;
+            }
         });
         libdocUi.el.main.querySelectorAll('abbr[title]').forEach(function(el) {
             el.addEventListener('click', libdocUi.handlers._clickAbbr);
