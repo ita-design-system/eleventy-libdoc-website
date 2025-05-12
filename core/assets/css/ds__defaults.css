@@ -941,7 +941,7 @@ main .alert.alert-danger::before {
 }
 /* SEARCH OCCURRENCES */
 @keyframes flash {
-    50% { background-color: yellow }
+    50% { background-color: #BF0 }
     100% { background-color: inherit }
 }
 main .__search-occurrence {
