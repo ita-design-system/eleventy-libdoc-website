@@ -591,6 +591,7 @@ main table tbody tr td {
     font-size: var(--ita-fontSizes-3);
     border: 1px solid var(--ita-colors-primary-300);
     font-variation-settings: "wght" 400, "MONO" 0;
+    line-height: 1.5em;
 }
 main table tbody tr:nth-child(odd) td {
     background-color: var(--ita-colors-primary-200);
