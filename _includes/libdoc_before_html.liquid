@@ -65,6 +65,10 @@
 {%- assign pageTitle = pageTitle | strip_html -%}
 {%- assign pageDescription = pageDescription | strip_html -%}
 
+{%- if pageDescription == false or pageDescription == 'false' -%}
+    {%- assign pageDescription = '' -%}
+{%- endif -%}
+
 {%- comment -%} Eleventy Navigation {%- endcomment -%}
 {%- assign eleventyNavigationMenu = collections.all | eleventyNavigation | eleventyNavigationToHtml: libdocSystem.navigationOptions -%}
 {%- assign currentPageHrefAttribute = '<a href="' | append: page.url | append: '"' -%}
