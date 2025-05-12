@@ -862,6 +862,9 @@ const libdocUi = {
                 el.target = '_blank';
                 el.title = `${libdocMessages.open} ${el.href} ${libdocMessages.inANewTab.toLowerCase()}`;
             }
+            if (link.hostname == libdocSystem.productionUrl) {
+                el.classList.add('__external-link');
+            }
         });
         libdocUi.el.main.querySelectorAll('abbr[title]').forEach(function(el) {
             el.addEventListener('click', libdocUi.handlers._clickAbbr);

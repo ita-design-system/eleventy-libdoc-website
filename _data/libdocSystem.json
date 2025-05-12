@@ -27,5 +27,6 @@
                 }
             }
         }
-    }
+    },
+    "productionUrl": "eleventy-libdoc.netlify.app"
 }
