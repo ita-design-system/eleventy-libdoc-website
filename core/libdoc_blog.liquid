@@ -6,9 +6,10 @@ pagination:
     size: 12
     alias: posts
 permalink: "{{ libdocConfig.blogSlug }}/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber | plus: 1 }}/{% endif %}index.html"
+title: Posts
 ---
 <div class="">
-    <ol class="d-flex fd-column gap-5 | m-0 pl-0 pt-5 | ls-none blwidth-1 blstyle-dashed bcolor-neutral-500">
+    <ol class="d-flex fd-column gap-5 | m-0 pl-0 pt-9 | ls-none blwidth-1 blstyle-dashed bcolor-neutral-500">
         {% for item in posts %}
             <li class="d-flex ai-center">
                 <div class="pos-absolute t-tX-50 | p-1 | bc-primary-500 brad-4"></div>
