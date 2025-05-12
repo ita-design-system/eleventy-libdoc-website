@@ -62,15 +62,15 @@ Parameter | Type | Description | Page override
 `siteDescription` | String | [Site description](/content/configuration/site-title-and-description.md) of the project | no
 `siteLogoUrl` | String | Optional [site logo URL](/content/configuration/site-logo.md) | no
 `siteLogoMaxHeight` | Integer | If site logo URL is set, adjusts [logo maximum height](/content/configuration/site-logo.md) in pixels | no
-`author` | String or Boolean | Default [author](/content/configuration/author.md) of pages. Setting to <var>false</var> disables author display | yes
+`author` | String or <var>false</var> | Default [author](/content/configuration/author.md) of pages. Setting to <var>false</var> disables author display | yes
 `faviconUrl` | String | [Favicon URL configuration](/content/configuration/favicon.md) | yes
 `ogImageUrl` | String | Metadata of the default [Open Graph Image](/content/configuration/open-graph-image.md) | yes
 `customLinks` | Array | Array of objects defining [custom links](/content/configuration/custom-links.md) into the primary navigation | no
 `customLinks[i].text` | String | Link text | no
 `customLinks[i].url` | String | Link URL | no
 `blogTitle` | String | Sets the [blog title](/content/configuration/blog.md) | no
-`blogDescription` | String or Boolean | Sets the [blog description](/content/configuration/blog.md) | no
-`blogAuthor` | String or Boolean | Sets the [blog author](/content/configuration/blog.md) | no
+`blogDescription` | String or <var>false</var> | Sets the [blog description](/content/configuration/blog.md) | no
+`blogAuthor` | String or <var>false</var> | Sets the [blog author](/content/configuration/blog.md) | no
 `blogSlug` | String | Sets the [slug](/content/configuration/blog.md) for the blog  | no
 `displayTagsListLink` | Boolean | Enable or disable the [link that opens tags list page](/content/configuration/tags-list-link.md) | no
 `tocEnabled` | Boolean | Enable or disable [Table of Content](/content/configuration/toc.md) | yes
