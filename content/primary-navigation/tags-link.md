@@ -10,7 +10,7 @@ description: How to use the tags list page of LibDoc
 tags:
     - navigation
     - tags
-date: Last Modified
+date: git Last Modified
 ---
 
 Every LibDoc page can contain tags. All these tags are listed into a special page of Eleventy LibDoc called *tags list*. **Tags list link appears only if at least one tag - excepting `post` tag - is found on pages.**

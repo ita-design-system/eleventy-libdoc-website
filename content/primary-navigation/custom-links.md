@@ -9,7 +9,7 @@ eleventyNavigation:
 description: Display important links that visitors may need to see on each page you create
 tags:
     - navigation
-date: Last Modified
+date: git Last Modified
 ---
 
 LibDoc allows to display personal and/or important links into the primary navigation. It can be set into [LibDoc configuration](/content/configuration/custom-links.md).

@@ -11,7 +11,7 @@ tags:
     - front-matter
     - navigation
     - author
-date: Last Modified
+date: git Last Modified
 ---
 By default rendered page display [LibDoc configuration author](/content/configuration/author.md). To override the default author, enter any string in the `author` key of the front matter. To remove the author on the page, set `false`.
 

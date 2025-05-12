@@ -10,7 +10,7 @@ description: How to manage date string into the page header
 tags:
     - front-matter
     - date
-date: Last Modified
+date: git Last Modified
 ---
 
 ## Remove date display

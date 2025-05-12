@@ -79,7 +79,7 @@ Eleventy LibDoc uses built-in [11ty content dates](https://www.11ty.dev/docs/dat
 # Custom date
 date: 2016-01-01
 # Last modified
-date: Last Modified
+date: git Last Modified
 # Git Last modified
 date: git Last Modified # recommended
 ```

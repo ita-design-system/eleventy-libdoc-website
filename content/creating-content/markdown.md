@@ -6,7 +6,7 @@ eleventyNavigation:
     order: 10
 description: All available markdown tags into a single page with examples
 permalink: creating-content/markdown/index.html
-date: Last Modified
+date: git Last Modified
 # author: false
 ---
 

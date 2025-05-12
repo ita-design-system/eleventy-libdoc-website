@@ -9,7 +9,7 @@ eleventyNavigation:
 description: Easily navigate into a page clicked from a search result
 tags:
     - navigation
-date: Last Modified
+date: git Last Modified
 ---
 
 When a search result is clicked, an UI element is displayed on the target page to help navigating between occurrences of the text query.

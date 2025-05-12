@@ -10,7 +10,7 @@ description: How to use hierarchical menu
 tags:
     - navigation
     - menu
-date: Last Modified
+date: git Last Modified
 ---
 
 LibDoc’s pages navigation is based on [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/). Page menu items must be set into the [front matter](/content/front-matter/index.md) of each page.

@@ -10,7 +10,7 @@ description: How to override default language on any page
 tags:
     - front-matter
     - language
-date: Last Modified
+date: git Last Modified
 ---
 Useful when a selected page have different language than the default. Here is a front matter with a page language overridden:
 

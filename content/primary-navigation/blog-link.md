@@ -10,7 +10,7 @@ description: How to use the blog feature of LibDoc
 tags:
     - navigation
     - blogging
-date: Last Modified
+date: git Last Modified
 ---
 
 LibDoc has a feature dedicated to blogging. Any page created that contains a tag `post` is assigned as a blog post. 

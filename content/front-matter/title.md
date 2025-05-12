@@ -10,7 +10,7 @@ description: How to just add a title to a page
 tags:
     - front-matter
     - navigation
-date: Last Modified
+date: git Last Modified
 ---
 
 Page title is displayed following these ordered priorities:

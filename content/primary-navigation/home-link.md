@@ -9,7 +9,7 @@ eleventyNavigation:
 description: Always visible, redirects to the root of the project.
 tags:
     - navigation
-date: Last Modified
+date: git Last Modified
 ---
 
 Home page link is always visible, it redirects to the root of the project displaying the text value of the [configuration file](/content/configuration/site-title-and-description.md). 

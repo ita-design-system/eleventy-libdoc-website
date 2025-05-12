@@ -11,7 +11,7 @@ tags:
     - front-matter
     - navigation
     - tags
-date: Last Modified
+date: git Last Modified
 ---
 A front matter with only tags:
 

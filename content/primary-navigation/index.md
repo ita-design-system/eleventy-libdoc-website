@@ -8,7 +8,7 @@ eleventyNavigation:
 description: Detailed features of LibDoc’s primary navigation
 tags:
     - navigation
-date: Last Modified
+date: git Last Modified
 ---
 
 The primary navigation is one of the most important element of the user interface. It contains six parts:

@@ -9,7 +9,7 @@ description: How to add a description to any page
 tags:
     - front-matter
     - navigation
-date: Last Modified
+date: git Last Modified
 ---
 A front matter with a custom description for a page:
 

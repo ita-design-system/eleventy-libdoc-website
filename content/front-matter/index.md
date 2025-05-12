@@ -15,7 +15,7 @@ tags:
     - author
     - description
     - SEO
-date: Last Modified
+date: git Last Modified
 ---
 List of LibDoc’s front matter parameters:
 
@@ -88,5 +88,5 @@ tags:
     - author
     - description
     - SEO
-date: Last Modified
+date: git Last Modified
 ```

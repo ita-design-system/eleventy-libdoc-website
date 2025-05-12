@@ -10,7 +10,7 @@ tags:
     - front-matter
     - navigation
     - minimal
-date: Last Modified
+date: git Last Modified
 ogImageUrl: "https://cdn.jsdelivr.net/gh/ita-design-system/ita-medias@main/bricss-og-image.png"
 ---
 Here is the minimal front matter for a page:
