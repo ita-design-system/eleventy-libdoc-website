@@ -19,6 +19,8 @@ const libdocUi = {
         main: document.querySelector('main'),
         mainHeader: document.querySelector('main > header'),
         navPrimary: document.querySelector('#nav_primary'),
+        navPrimaryCheckbox: document.querySelector('#nav_primary_checkbox'),
+        navPrimaryContainer: document.querySelector('#nav_primary_container'),
         navSmallDevices: document.querySelector('#nav_small_devices'),
         searchForms: document.querySelectorAll('.search_form'),
         searchInputs: document.querySelectorAll('input[type="search"][name="search"]'),
@@ -321,12 +323,10 @@ const libdocUi = {
             }
             libdocUi.updateSearchInputClearBtns();
         },
-        _cToggle: function(evt) {
-            if (evt.detail.id == 'nav_primary') {
-                libdocUi.updateNavPrimary();
-                libdocUi.updateFTOCBtns();
-                libdocUi.updateGTTBtns();
-            }
+        _navPrimaryCheckboxChange: function(evt) {
+            libdocUi.updateNavPrimary();
+            libdocUi.updateFTOCBtns();
+            libdocUi.updateGTTBtns();
         },
         _searchSubmit: function(evt) {
             const elInput = evt.target.querySelector('input');
@@ -561,7 +561,7 @@ const libdocUi = {
     updateGTTBtns: function() {
         if (window.scrollY > libdocUi.el.mainHeader.clientHeight) {
             libdocUi.enableGTTLargeDevices();
-            if (cToggle.instances.nav_primary.opened) {
+            if (getComputedStyle(libdocUi.el.navPrimaryContainer) != 'none') {
                 libdocUi.disableGTTSmallDevices();
             } else {
                 libdocUi.enableGTTSmallDevices();
@@ -616,7 +616,7 @@ const libdocUi = {
     },
     updateFTOCBtns: function() {
         if (libdocUi.el.tocMainOl !== null) {
-            if (cToggle.instances.nav_primary.opened) {
+            if (getComputedStyle(libdocUi.el.navPrimaryContainer) != 'none') {
                 libdocUi.el.navSmallDevicesFTOCBtn.disabled = true;
             } else {
                 libdocUi.el.navSmallDevicesFTOCBtn.disabled = false;
@@ -836,7 +836,7 @@ const libdocUi = {
         libdocUi.updateNavPrimary();
         libdocUi.updateFtocList();
         libdocUi.updateGTTBtns();
-        document.addEventListener('cToggle_event', libdocUi.handlers._cToggle);
+        libdocUi.el.navPrimaryCheckbox.addEventListener('change', libdocUi.handlers._navPrimaryCheckboxChange);
         window.addEventListener('resize', libdocUi.handlers._windowResize);
         window.addEventListener('load', libdocUi.handlers._windowLoad);
         libdocUi.el.navPrimary.addEventListener('scroll', libdocUi.handlers._scrollNavPrimary);
