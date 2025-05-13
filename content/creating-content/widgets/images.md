@@ -112,8 +112,8 @@ The `wide` class name allows to feature an image.
 ## Mixed features
 
 <figure class="long-shadow wide">
-    <img src="/assets/images/gypaetus-barbatus-peisey.jpg"
-        alt="Gypaetus barbatus">
+    <img src="/assets/images/pierra-menta.jpg"
+        alt="Pierra Menta">
     <figcaption>
         A wide boxed image with filter drop shadow, with its long description.
         Class names applied on figure: 
@@ -123,8 +123,8 @@ The `wide` class name allows to feature an image.
 
 ```html
 <figure class="long-shadow wide">
-    <img src="/assets/images/gypaetus-barbatus-peisey.jpg"
-        alt="Gypaetus barbatus">
+    <img src="/assets/images/pierra-menta.jpg"
+        alt="Pierra Menta">
     <figcaption>
         A wide boxed image with filter drop shadow, with its long description.
         Class names applied on figure: 

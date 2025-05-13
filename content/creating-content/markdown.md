@@ -282,10 +282,10 @@ Easily create links between your project pages. Eleventy allows to create dynami
 
 Links <abbr title="Uniform Resource Locator">URL</abbr> to pages that does not set `permalink` **don’t change automatically** but works fine.
 
-[Bring me to the page ./markdown.md](/markdown/)
+[Bring me to the page ./markdown.md](/creating-content/markdown/)
 
 ```markdown
-[Bring me to the page ./markdown.md](/markdown/)
+[Bring me to the page ./markdown.md](/creating-content/markdown/)
 ```
 
 ## Reference links
@@ -321,7 +321,7 @@ Optionnaly, you can add a title attribute to your markdown links, adding a space
 
 [Dynamic link to front matter](/content/front-matter/index.md "Go to front matter")
 
-```markup
+```markdown
 [Dynamic link to front matter](/content/front-matter/index.md "Go to front matter")
 ```
 
@@ -343,26 +343,30 @@ Here is a simple case with a raster image
 
 Here is a simple case with a vector image
 
-![Alt text](/assets/images/grue-royale.svg) 
+![Alt text](/assets/images/pierra-menta.svg) 
 
 ```markdown
-![Alt text](/assets/images/grue-royale.svg) 
+![Alt text](/assets/images/pierra-menta.svg) 
 ```
 
 [avif wiki]: https://en.wikipedia.org/wiki/AVIF
 [webp wiki]: https://en.wikipedia.org/wiki/WEBP
 
-Example of an image with a dynamic link.
+Example of an image with a dynamic link:
+
 [![Alt text](/assets/images/pierra-menta.jpg)](/content/creating-content/markdown.md#images)
 
-Optionally add a title attribute
+Optionally add a title attribute:
+
 [![Alt text](/assets/images/pierra-menta.jpg)](/content/creating-content/markdown.md#images "Go to Markdown page section Images")
 
 ```markdown
-Example of an image with a dynamic link. 
+Example of an image with a dynamic link:
+
 [![Alt text](/assets/images/pierra-menta.jpg)](/content/creating-content/markdown.md#images)
 
-Optionally add a title attribute
+Optionally add a title attribute:
+
 [![Alt text](/assets/images/pierra-menta.jpg)](/content/creating-content/markdown.md#images "Go to Markdown page section Images")
 ```
 
@@ -380,17 +384,21 @@ Here is an example of a markdown link including a vector image with its natural 
 
 Remote images are processed just like [local images](#local-images) through Eleventy Image Plugin.
 
-A JPEG remote image
-![Young marmots](https://raw.githubusercontent.com/olivier3lanc/photographies/master/animaux/sauvages/img_4417.jpg) 
+A WEBP remote image:
 
-Small remote SVG logo
+![Fir tree in the snow](https://raw.githubusercontent.com/olivier3lanc/photographies/master/paysages/hiver/sapins_hiver_isoles_img_1248_size_2560x1706.webp) 
+
+A remote SVG logo:
+
 ![SVG Logo Scroll Btween](https://raw.githubusercontent.com/olivier3lanc/Scroll-Btween/refs/heads/master/img/logo-scroll-btween.svg)
 
 ```markdown
-A JPEG remote image
-![Young marmots](https://raw.githubusercontent.com/olivier3lanc/photographies/master/animaux/sauvages/img_4417.jpg) 
+A WEBP remote image:
 
-Small remote SVG logo
+![Fir tree in the snow](https://raw.githubusercontent.com/olivier3lanc/photographies/master/paysages/hiver/sapins_hiver_isoles_img_1248_size_2560x1706.webp) 
+
+A remote SVG logo:
+
 ![SVG Logo Scroll Btween](https://raw.githubusercontent.com/olivier3lanc/Scroll-Btween/refs/heads/master/img/logo-scroll-btween.svg)
 ```
 
@@ -398,14 +406,14 @@ Small remote SVG logo
 
 Just like [reference links](#reference-links), you can assign text shortcuts to absolute or relative image URL. This avoids repeating same URL multiple times. Here is an example below.
 
-![alt text][gypaetus]
+![alt text][pierra-menta]
 
-[gypaetus]: /assets/images/gypaetus-barbatus-peisey.jpg "Gypaetus Barbatus flying"
+[pierra-menta]: /assets/images/pierra-menta.jpg "Pierra Menta"
 
 ```markdown
-![alt text][gypaetus]
+![alt text][pierra-menta]
 
-[gypaetus]: /assets/images/gypaetus-barbatus-peisey.jpg "Gypaetus Barbatus flying"
+[pierra-menta]: /assets/images/pierra-menta.jpg "Pierra Menta"
 ```
 
 ## Inline code
