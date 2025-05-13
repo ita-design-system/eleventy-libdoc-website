@@ -30,4 +30,5 @@ export default {
         "css"
     ],
     roundedImagesCorners: userConfig.roundedImagesCorners ?? true,
+    editThisPageRootUrl: userConfig.editThisPageRootUrl ?? false
 };

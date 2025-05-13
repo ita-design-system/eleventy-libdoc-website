@@ -294,10 +294,13 @@ main a.__external-link::after {
     text-decoration: none;
     display: inline-flex;
     float: none;
-    color: var(--ita-colors-primary-300);
     transition: color 300ms;
 }
-main a[href^="https://"]:not([href^="https://eleventy-libdoc"]):hover::after,
+main a[href^="https://"]:not([href^="https://eleventy-libdoc"]):not(.btn)::after,
+main a.__external-link::after {
+    color: var(--ita-colors-primary-300);
+}
+main a[href^="https://"]:not([href^="https://eleventy-libdoc"]):not(.btn):hover::after,
 main a.__external-link:hover::after {
     color: var(--ita-colors-primary-700);
 }
@@ -808,6 +811,7 @@ main button[type="button"].btn {
     line-height: 1em;
     cursor: pointer;
     transition: all 300ms;
+    white-space: nowrap;
 }
 main a.btn:hover,
 main button[type="button"].btn:hover {
@@ -827,8 +831,8 @@ main button[type="button"].btn.btn-primary {
 main a.btn.btn-primary-light,
 main button[type="button"].btn.btn-primary-light {
     background-color: var(--ita-colors-primary-100);
-    color: var(--ita-colors-primary-500);
-    border-color: var(--ita-colors-primary-500);
+    color: var(--ita-colors-primary-600);
+    border-color: var(--ita-colors-primary-600);
 }
 main a.btn.btn-success,
 main button[type="button"].btn.btn-success {
@@ -955,7 +959,8 @@ main .__search-occurrence {
 }
 
 #nav_primary .nav_primary__anchor::before,
-.nav_primary .nav_primary__anchor::before {
+.nav_primary .nav_primary__anchor::before,
+#nav_primary_blog_link::before {
     content: '';
     display: flex;
     border-top: 1px dashed var(--ita-colors-neutral-500);
@@ -964,7 +969,8 @@ main .__search-occurrence {
     order: -2;
 }
 #nav_primary .nav_primary__anchor::after,
-.nav_primary .nav_primary__anchor::after {
+.nav_primary .nav_primary__anchor::after,
+#nav_primary_blog_link::after {
     content: '';
     display: flex;
     background-color: var(--ita-colors-primary-500);

@@ -35,6 +35,10 @@
         "en": "Go to top of page",
         "fr": "Aller en haut de page"
     },
+    "editThisPage": {
+        "en": "Edit this page",
+        "fr": "Modifier la page"
+    },
     "height": {
         "en": "Height",
         "fr": "Hauteur"
