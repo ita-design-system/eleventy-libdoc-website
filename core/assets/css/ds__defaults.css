@@ -610,16 +610,17 @@ main table td code {
 /* QUOTES */
 main blockquote {
     position: relative;
-    background-color: var(--ita-colors-primary-200);
+    background: var(--ita-colors-neutral-100);
     color: var(--ita-colors-primary-900);
     padding: var(--ita-spacings-5) var(--ita-spacings-9);
     max-width: var(--libdoc-container-width);
     border-bottom-left-radius: 3em;
     border-top-right-radius: 3em;
-    border: var(--ita-spacings-1) solid var(--ita-colors-neutral-100);
+    border: 3px double var(--ita-colors-primary-300);
     font-family: var(--libdoc-font-family);
     font-size: var(--ita-fontSizes-7);
-    /* box-shadow: 0px 0px 5px inset var(--ita-colors-neutral-500), 0px 0px 5px var(--ita-colors-neutral-500); */
+    border-radius: 12px;
+    box-shadow: var(--libdoc-soft-shadow);
 }
 main blockquote::before {
     content: "❝";
@@ -639,7 +640,13 @@ main blockquote::after {
 }
 main blockquote * {
     font-variation-settings: "slnt" -15, "CASL" 1, "CRSV" 1;
-    /* text-shadow: none; */
+    letter-spacing: -0.01em;
+}
+main blockquote em {
+    font-variation-settings: "slnt" -15, "CASL" 1, "CRSV" 1, "wght" 500;
+}
+main blockquote strong {
+    font-variation-settings: "slnt" -15, "CASL" 1, "CRSV" 1, "wght" 700;
 }
 /* DEFINITION LISTS */
 main dl dt {
@@ -798,17 +805,18 @@ main a.btn,
 main button[type="button"].btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: var(--ita-spacings-3);
+    padding: 1.5em;
     border-radius: 100px;
     background-color: var(--ita-colors-neutral-200);
     color: var(--ita-colors-neutral-900);
     border: 1px dashed var(--ita-colors-neutral-900);
-    padding: var(--ita-spacings-3) var(--ita-spacings-5);
+    height: 3em;
     text-transform: uppercase;
     text-decoration: none;
     font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0, "MONO" 0, "wght" 600;
     font-size: var(--ita-fontSizes-3);
-    line-height: 1em;
     cursor: pointer;
     transition: all 300ms;
     white-space: nowrap;
