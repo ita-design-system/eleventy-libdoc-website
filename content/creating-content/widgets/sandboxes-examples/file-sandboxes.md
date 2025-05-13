@@ -8,6 +8,6 @@ permalink: creating-content/widgets/sandboxes/file-based-examples/index.html
 tags:
     - sandbox
 ---
-{% include 'sandbox' path: '/sandboxes/2/index.html' %}
+{% include 'sandbox' path: '/sandboxes/2/index.html', title: 'Scroll Btween example' %}
 
-{% include 'sandbox' path: '/sandboxes/3/index.html' %}
+{% include 'sandbox' path: '/sandboxes/3/index.html', title: 'MapLibre GL JS Example' %}

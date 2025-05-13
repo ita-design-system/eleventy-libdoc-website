@@ -8,7 +8,7 @@ permalink: creating-content/widgets/sandboxes/inline-examples/index.html
 tags:
     - sandbox
 ---
-{% sandbox %}
+{% sandbox 'A simple inline sandbox' %}
 <style>
     * {
         box-sizing: border-box;
@@ -36,7 +36,7 @@ tags:
 {% endsandbox %}
 
 
-{% sandbox %}
+{% sandbox 'A Scroll Btween demo' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
