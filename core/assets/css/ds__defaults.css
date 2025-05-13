@@ -612,6 +612,8 @@ main blockquote {
     position: relative;
     background: var(--ita-colors-neutral-100);
     color: var(--ita-colors-primary-900);
+    margin-top: var(--ita-spacings-10);
+    margin-bottom: var(--ita-spacings-10);
     padding: var(--ita-spacings-5) var(--ita-spacings-9);
     max-width: var(--libdoc-container-width);
     border-bottom-left-radius: 3em;
