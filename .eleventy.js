@@ -24,6 +24,8 @@ export default function(eleventyConfig) {
     eleventyConfig.addAsyncFilter("cleanup", libdocFunctions.filters.cleanup);
     eleventyConfig.addAsyncFilter("dateString", libdocFunctions.filters.dateString);
     eleventyConfig.addAsyncFilter("toc", libdocFunctions.filters.toc);
+    eleventyConfig.addAsyncFilter("icon", libdocFunctions.filters.icon);
+    eleventyConfig.addAsyncFilter("iconCard", libdocFunctions.filters.iconCard);
     // END FILTERS
 
     // START COLLECTIONS
@@ -36,6 +38,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addShortcode("icomoon", libdocFunctions.shortcodes.icomoon);
     eleventyConfig.addPairedShortcode("sandbox", libdocFunctions.pairedShortcodes.sandbox);
     eleventyConfig.addPairedShortcode("sandboxFile", libdocFunctions.pairedShortcodes.sandboxFile);
+    eleventyConfig.addPairedShortcode("alert", libdocFunctions.pairedShortcodes.alert);
     // END SHORTCODES
 
     // START FILE COPY

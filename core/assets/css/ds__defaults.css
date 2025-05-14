@@ -1085,6 +1085,11 @@ main .__search-occurrence {
     right: clamp(var(--ita-spacings-5), 100%, calc(50% - var(--ita-widths-content) - var(--ita-widths-content) / 2));
 }
 
+/* WIDGETS */
+main .widget + .widget {
+    margin-top: var(--ita-spacings-5);
+}
+
 /* RESPONSIVE MD */
 @media (min-width: 960px) {
     #floating_toc_container {

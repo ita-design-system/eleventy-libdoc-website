@@ -4,12 +4,11 @@ eleventyNavigation:
     key: Sandboxes
     parent: Widgets
     order: 80
-description: Simple HTML resources separated from LibDoc’s pages scope and embedded into a LibDoc page
+description: Showcase small demos or full HTML pages into a responsive dual pane
 permalink: creating-content/widgets/sandboxes/index.html
 tags:
     - sandbox
 ---
-
 **Sandboxes are simple HTML resources separated from LibDoc’s pages scope and embedded into a LibDoc page**, just like a Youtube embed or any other. LibDoc sandboxes come with a custom user interface with both code and result. By default, code and result get 50% of the width each but it can be resized. There are two ways to include a sandbox:
 
 

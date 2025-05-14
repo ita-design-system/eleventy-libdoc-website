@@ -6,6 +6,9 @@ eleventyNavigation:
     order: 60
 description: Available icons to use with the content
 permalink: creating-content/widgets/icons/index.html
+tags:
+    - icons
+    - filters
 ---
 ## List
 
@@ -13,20 +16,40 @@ permalink: creating-content/widgets/icons/index.html
 
 ## How to use
 
-Just add class name `icon-<ICON_NAME>` on a `<span>`. Here is a paragraph with icons.
+Use the dedicated filter `{% raw %}{{ '<ICON_NAME>' | icon }}{% endraw %}`. 
 
-At labore <span class="icon-check-circle"></span>
-rebum dolore sit <span class="icon-link-simple"></span> 
-lorem diam eos accusam nonumy.
-Lorem sanctus takimata consetetur
-tempor voluptua <span class="icon-info"></span> 
-ipsum et gubergren ipsum.
+Optionally set the size of the icon adding a comma followed by an integer from 1 to 10 `{% raw %}{{ '<ICON_NAME>,<INTEGER>' | icon }}{% endraw %}`. 
 
-```html
-At labore <span class="icon-check-circle"></span>
-rebum dolore sit <span class="icon-link-simple"></span> 
-lorem diam eos accusam nonumy.
-Lorem sanctus takimata consetetur
-tempor voluptua <span class="icon-info"></span> 
-ipsum et gubergren ipsum.
+Here is a paragraph with icons.
+
+Inherited icon size {{ 'rocket' | icon }}
+
+Specified icon sizes:
+
+{{ 'rocket,1' | icon }}
+{{ 'rocket,2' | icon }}
+{{ 'rocket,3' | icon }}
+{{ 'rocket,4' | icon }}
+{{ 'rocket,5' | icon }}
+{{ 'rocket,6' | icon }}
+{{ 'rocket,7' | icon }}
+{{ 'rocket,8' | icon }}
+{{ 'rocket,9' | icon }}
+{{ 'rocket,10' | icon }}
+
+```liquid
+{% raw %}Inherited icon size {{ 'rocket' | icon }}
+
+Specified icon sizes:
+
+{{ 'rocket,1' | icon }}
+{{ 'rocket,2' | icon }}
+{{ 'rocket,3' | icon }}
+{{ 'rocket,4' | icon }}
+{{ 'rocket,5' | icon }}
+{{ 'rocket,6' | icon }}
+{{ 'rocket,7' | icon }}
+{{ 'rocket,8' | icon }}
+{{ 'rocket,9' | icon }}
+{{ 'rocket,10' | icon }}{% endraw %}
 ```

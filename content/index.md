@@ -15,18 +15,18 @@ Eleventy LibDoc is a starter project for [Eleventy][11ty] to craft slick web rel
 
 ## Key features
 
-*   **Accessibility**<br>
-    LibDoc was developed with accessibility awareness. 
-*   **Content focused**<br>
-    LibDoc is easy to install, use and deploy.
-*   **Performance**<br>
-    Low front-end dependencies and vanilla JS self-made components make LibDoc cross-browser compatibility and high-grade performances.<br>
-    <a  href="https://developers.google.com/speed/pagespeed/insights/?url={{ libdocSystem.productionUrl }}" target="_blank">
+{{ 'person-arms-spread|Accessibility|LibDoc was developed with accessibility awareness.' | iconCard }}
+{{ 'pen|Content focused|LibDoc is easy to install, use and deploy.' | iconCard }}
+{{ 'rocket|Performance|Low front-end dependencies and vanilla JS self-made components make LibDoc cross-browser compatibility and good performances. <a href="https://developers.google.com/speed/pagespeed/insights/?url=eleventy-libdoc.netlify.app" target="_blank">
         View performances
-    </a>
-*   **Printable**<br>
-    Every page created with LibDoc can be printed. Try to print preview this page in PDF!<br>
-    <button type="button" class="btn mt-2" onclick="print()">print preview</button>
+    </a>' | iconCard }}
+{{ 'parachute|Fallback if no Javascript available|LibDoc can work even without Javascript with reduced features.' | iconCard }}
+{{ 'images|Image transcoding|LibDoc transcodes and resizes your source images into production ready formats.' | iconCard }}
+{{ 'parachute|Fallback if no Javascript available|LibDoc can work even without Javascript with reduced features.' | iconCard }}
+{{ 'printer|Printable|Every page created with LibDoc can be printed. Try to print preview this page in PDF!<br>
+    <button type="button" class="btn mt-2" onclick="print()">print preview</button>' | iconCard }}
+{{ 'code|Slick code highlighting|Display your code in a nice style and adjust which code languages you really use.' | iconCard }}
+{{ 'sidebar|Sandboxes|Showcase small demos or full HTML pages into a responsive dual pane.' | iconCard }}
 
 ## Configuration
 
@@ -54,6 +54,8 @@ Start entering your own settings into `settings.json` at the root of the project
     Allows to deploy your build into a sub domain instead of root. Computes input path and every <abbr title="Uniform Resource Locator">URL</abbr> to fit to the sub domain target.
 *   [Syntax highlighting configuration](https://eleventy-libdoc.netlify.app/configuration/highlight-js/)<br>
     Adjust your own supported languages for syntax highlighting.
+*   [Edit this page link](https://eleventy-libdoc.netlify.app/configuration/edit-this-page-link/)<br>
+    Sets the git root directory project’s URL to enable "Edit this page" button link.
 
 
 ## Creating content
@@ -67,7 +69,7 @@ Easily write documentation with Markdown and <abbr title="Hyper Text Markup Lang
 *   [Widgets](https://eleventy-libdoc.netlify.app/creating-content/widgets/)<br>
     Useful for advanced and specific usages.
     *   [Alerts](https://eleventy-libdoc.netlify.app/creating-content/widgets/alerts/)<br>
-        Simple paragraphs that displays informations to highlight.
+        Shortcodes and plain HTML that allows to display informations to highlight.
     *   [Buttons](https://eleventy-libdoc.netlify.app/creating-content/widgets/buttons/)<br>
         Form buttons and links to create Call To Actions.
     *   [Definition lists](https://eleventy-libdoc.netlify.app/creating-content/widgets/definition-lists/)<br>
@@ -78,6 +80,8 @@ Easily write documentation with Markdown and <abbr title="Hyper Text Markup Lang
         Code integration results of various content providers.
     *   [Icons](https://eleventy-libdoc.netlify.app/creating-content/widgets/icons/)<br>
         Available icons to use with the content.
+    *   [Icon cards](https://eleventy-libdoc.netlify.app/creating-content/widgets/icon-cards/)<br>
+        Easily highlight something important in a simple way with an icon, a main text and its description.
     *   [Images](https://eleventy-libdoc.netlify.app/creating-content/widgets/images/)<br>
         Ready to use HTML to highlight your images.
     *   [Sandboxes](https://eleventy-libdoc.netlify.app/creating-content/widgets/sandboxes/)<br>
