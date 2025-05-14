@@ -1,6 +1,19 @@
-import libdocMessages from "./libdocMessages.json" with { "type": "json" };
+// START IMPORT REQUIRE WORKAROUND
+// To make 11ty --serve work with JSON imports
+// https://github.com/11ty/eleventy/issues/3128#issuecomment-1878745864
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+// END IMPORT REQUIRE WORKAROUND
+
+// START JSON IMPORT WORKAROUND
+// import libdocMessages from "./libdocMessages.json" with { "type": "json" };
+// import libdocPackage from "../package.json" with { "type": "json" };
+const libdocMessages = require("./libdocMessages.json");
+const libdocPackage = require("../package.json");
+// END JSON IMPORT WORKAROUND
+
 import libdocConfig from "./libdocConfig.js";
-import libdocPackage from "../package.json" with { "type": "json" };
+
 export default {
     version: function() {
         return libdocPackage.version

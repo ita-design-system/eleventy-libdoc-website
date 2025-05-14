@@ -1,8 +1,22 @@
-import libdocUtils      from "./libdocUtils.js";
-import libdocConfig     from "./libdocConfig.js";
-import libdocSystem     from "./libdocSystem.json" with { "type": "json" };
-import libdocMessages   from "./libdocMessages.json" with { "type": "json" };
-import icomoon          from "../core/assets/fonts/icomoon/selection.json" with { "type": "json" };
+// START IMPORT REQUIRE WORKAROUND
+// To make 11ty --serve work with JSON imports
+// https://github.com/11ty/eleventy/issues/3128#issuecomment-1878745864
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+// END IMPORT REQUIRE WORKAROUND
+
+// START JSON IMPORT WORKAROUND
+// import libdocMessages   from "./libdocMessages.json" with { "type": "json" };
+// import libdocSystem     from "./libdocSystem.json" with { "type": "json" };
+// import icomoon          from "../core/assets/fonts/icomoon/selection.json" with { "type": "json" };
+const libdocSystem =        require("./libdocSystem.json");
+const libdocMessages =      require("./libdocMessages.json");
+const icomoon =             require("../core/assets/fonts/icomoon/selection.json");
+// END JSON IMPORT WORKAROUND
+
+import libdocUtils          from    "./libdocUtils.js";
+import libdocConfig         from    "./libdocConfig.js";
+
 export default {
     pluginsParameters: {
         eleventyImageTransform: function() {
