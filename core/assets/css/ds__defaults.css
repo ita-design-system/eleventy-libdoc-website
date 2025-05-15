@@ -915,6 +915,7 @@ main .alert {
     background-color: var(--ita-colors-primary-100);
     font-size: var(--ita-fontSizes-4);
     letter-spacing: -0.01em;
+    line-height: 1.6em;
 }
 main .alert[data-title]::before {
     content: attr(data-title);

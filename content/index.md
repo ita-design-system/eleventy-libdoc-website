@@ -15,18 +15,15 @@ Eleventy LibDoc is a starter project for [Eleventy][11ty] to craft slick web rel
 
 ## Key features
 
-{{ 'person-arms-spread|Accessibility|LibDoc was developed with accessibility awareness.' | iconCard }}
-{{ 'pen|Content focused|LibDoc is easy to install, use and deploy.' | iconCard }}
-{{ 'rocket|Performance|Low front-end dependencies and vanilla JS self-made components make LibDoc cross-browser compatibility and good performances. <a href="https://developers.google.com/speed/pagespeed/insights/?url=eleventy-libdoc.netlify.app" target="_blank">
-        View performances
-    </a>' | iconCard }}
-{{ 'parachute|Fallback if no Javascript available|LibDoc can work even without Javascript with reduced features.' | iconCard }}
-{{ 'images|Image transcoding|LibDoc transcodes and resizes your source images into production ready formats.' | iconCard }}
-{{ 'parachute|Fallback if no Javascript available|LibDoc can work even without Javascript with reduced features.' | iconCard }}
-{{ 'printer|Printable|Every page created with LibDoc can be printed. Try to print preview this page in PDF!<br>
-    <button type="button" class="btn mt-2" onclick="print()">print preview</button>' | iconCard }}
-{{ 'code|Slick code highlighting|Display your code in a nice style and adjust which code languages you really use.' | iconCard }}
-{{ 'sidebar|Sandboxes|Showcase small demos or full HTML pages into a responsive dual pane.' | iconCard }}
+{% iconCard 'Content focused', 'LibDoc is easy to install, deploy and use.', 'pen' %}
+{% iconCard 'Accessibility', 'LibDoc was developed with accessibility awareness.', 'person-arms-spread' %}
+{% iconCard 'Performance', 'Low front-end dependencies and vanilla JS self-made components make LibDoc cross-browser compatibility and good performances. <a href="https://developers.google.com/speed/pagespeed/insights/?url=eleventy-libdoc.netlify.app" target="_blank">View performances</a>', 'rocket' %}
+{% iconCard 'Search', 'Quickly get search results and easily navigate through search occurrences with a dedicated <abbr title="user Interface">UI</abbr>.', 'magnifying-glass' %}
+{% iconCard 'Fallback if no Javascript available', 'LibDoc can work even without Javascript with reduced features.', 'parachute' %}
+{% iconCard 'Image transcoding', 'LibDoc transcodes and resizes your source images into production ready formats.', 'images' %}
+{% iconCard 'Printable', 'Every page created with LibDoc can be printed. Try to print preview this page in PDF!<br><button type="button" class="btn mt-2" onclick="print()">print preview</button>', 'printer' %}
+{% iconCard 'Slick code highlighting', 'Display your code in a nice style and adjust which code languages you really use.', 'code' %}
+{% iconCard 'Sandboxes', 'Showcase small demos or full HTML pages into a responsive dual pane.', 'sidebar' %}
 
 ## Configuration
 

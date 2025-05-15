@@ -77,11 +77,11 @@ permalink: front-matter/index.html
 eleventyNavigation:
     key: Front Matter
     title: The Front Matter
-    order: 20
+    order: 40
 title: LibDoc’s Front Matter 
 description: Documentation of all front matter settings related to a LibDoc page
 tags:
-    - Front matter
+    - front-matter
     - permalink
     - navigation
     - dates
