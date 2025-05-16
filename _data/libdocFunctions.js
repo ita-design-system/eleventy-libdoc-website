@@ -44,6 +44,9 @@ export default {
                     const filename = src.split('/').slice(-1)[0].split('.')[0];
                     return `${libdocUtils.slugify(filename)}-${id}-__${width}__.${format}`;
                 },
+                sharpOptions: {
+                    animated: true
+                },
                 // transform: (sharp) => {
                 //     sharp.trim();
                 // },
