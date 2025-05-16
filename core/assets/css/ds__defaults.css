@@ -4,9 +4,15 @@
     --libdoc-damier: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAHElEQVR4AWP4jwOcwQFoo2FUAy4JXAbRRMOoBgCE0rCfubvZNQAAAABJRU5ErkJggg==');
     --libdoc-soft-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     --libdoc-long-shadow:
-        1px 1px 2px rgba(15, 49, 86, 0.08), 
-        5px 6px 9px rgba(15, 49, 86, 0.26), 
-        12px 13px 21px rgba(15, 49, 86, 0.34), 
+        1px 1px 2px rgba(49, 49, 49, 0.08),
+        5px 6px 9px rgba(49, 49, 49, 0.26),
+        12px 13px 21px rgba(49, 49, 49, 0.34),
+        22px 24px 38px rgba(49, 49, 49, 0.42),
+        34px 37px 59px rgba(49, 49, 49, 0.50);
+    --libdoc-long-shadow-alt:
+        1px 1px 2px rgba(15, 49, 86, 0.08),
+        5px 6px 9px rgba(15, 49, 86, 0.26),
+        12px 13px 21px rgba(15, 49, 86, 0.34),
         22px 24px 38px rgba(15, 49, 86, 0.42),
         34px 37px 59px rgba(15, 49, 86, 0.50);
 }
@@ -569,7 +575,7 @@ main > pre {
 }
 main > pre > code {
     border-radius: 6px;
-    box-shadow: var(--libdoc-long-shadow);
+    box-shadow: var(--libdoc-long-shadow-alt);
 }
 main > pre > code::before {
     content: attr(class);

@@ -285,6 +285,7 @@ const libdocUi = {
         _toggleFtocLargeDevices: function(evt) {
             if (libdocUi.el.ftocDetails.open) {
                 libdocUi.updateUserPreferences({FTOCNormallyOpened: true});
+                libdocUi.updateFtocList();
             } else {
                 libdocUi.updateUserPreferences({FTOCNormallyOpened: false});
             }
@@ -561,7 +562,7 @@ const libdocUi = {
     updateGTTBtns: function() {
         if (window.scrollY > libdocUi.el.mainHeader.clientHeight) {
             libdocUi.enableGTTLargeDevices();
-            if (getComputedStyle(libdocUi.el.navPrimaryContainer) != 'none') {
+            if (getComputedStyle(libdocUi.el.navPrimaryContainer).display != 'none') {
                 libdocUi.disableGTTSmallDevices();
             } else {
                 libdocUi.enableGTTSmallDevices();
@@ -616,7 +617,7 @@ const libdocUi = {
     },
     updateFTOCBtns: function() {
         if (libdocUi.el.tocMainOl !== null) {
-            if (getComputedStyle(libdocUi.el.navPrimaryContainer) != 'none') {
+            if (getComputedStyle(libdocUi.el.navPrimaryContainer).display != 'none') {
                 libdocUi.el.navSmallDevicesFTOCBtn.disabled = true;
             } else {
                 libdocUi.el.navSmallDevicesFTOCBtn.disabled = false;
