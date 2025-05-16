@@ -131,7 +131,7 @@
                             name="nav_primary"
                             id="nav_primary_checkbox"
                             value=""
-                            class="pos-absolute opa-0">
+                            class="pos-absolute opa-0 pe-none">
                         <label for="nav_primary_checkbox"
                             class="d-flex fd-column jc-center ai-center gap-1 | h-100 pl-2 pr-5 | ta-center | cur-pointer c-primary-900 bc-neutral-100">
                             <span class="icon-list fs-6"></span>
@@ -301,8 +301,9 @@
                                 fs-2="xs">
                                 <span class="icon-calendar-dots fs-6"></span>
                                 <span ws-nowrap="sm,md">
-                                    <span class="ws-nowrap">{{ libdocMessages.lastModified[pageLang] }}</span>
-                                    {{ page.date|dateString }}
+                                    {% comment %} <span class="ws-nowrap">{{ libdocMessages.lastModified[pageLang] }}</span> {% endcomment %}
+                                    {{ date | datePrefixText }}
+                                    {{ page.date | dateString }}
                                 </span>
                             </p>
                         {% endif %}
@@ -363,8 +364,6 @@
         </main>
     </div>
     
-    
-    <script src="/core/assets/js/c-toggle.js"></script>
     <script src="/core/assets/js/sandbox.js"></script>
     <script src="/core/assets/js/hljs/highlight.min.js"></script>
     {% for hljsLang in libdocConfig.hljsLanguages %}

@@ -119,7 +119,7 @@ body {
     font-weight: 300;
     font-style: normal;
     font-size: var(--ita-fontSizes-5);
-    font-variation-settings: "slnt" 0, "CASL" 0.5, "CRSV" 1, "MONO" 0, "wght" 330;
+    font-variation-settings: "slnt" 0, "CASL" 0.5, "CRSV" 1, "MONO" 0, "wght" 360;
 }
 html,
 .o-auto {

@@ -27,6 +27,17 @@ const libdocUi = {
         searchClearBtns: document.querySelectorAll('.search_form__clear_btn'),
         ftocHeadings: []
     },
+    getTransferSize: function() {
+        // https://jmperezperez.com/blog/page-load-footer/
+        let result = 0;
+        if (typeof performance == 'object') {
+            result = performance.getEntriesByType('resource').reduce((a, r) => {
+                return a + r.transferSize;
+            }, 0);
+            result = Math.round(result / 1024);
+        }
+        return result;
+    },
     getCurrentScreenSizeName: function() {
         let response = '';
         Object.keys(libdocUi.defaults.screenSizes).forEach(function(name) {
@@ -323,6 +334,7 @@ const libdocUi = {
                 });
             }
             libdocUi.updateSearchInputClearBtns();
+            libdocUi.updateTransferSizeDisplay();
         },
         _navPrimaryCheckboxChange: function(evt) {
             libdocUi.updateNavPrimary();
@@ -405,7 +417,14 @@ const libdocUi = {
             }
         }
     },
-
+    updateTransferSizeDisplay: function() {
+        const currentTransferSize = libdocUi.getTransferSize();
+        if (currentTransferSize > 0) {
+            document.querySelectorAll('.page-transfer-size-display').forEach(function(el) {
+                el.innerHTML = `${currentTransferSize} kB`;
+            })
+        }
+    },
     updateSearchInputClearBtns: function() {
         libdocUi.el.searchInputs.forEach(function(elInput) {
             const elClearBtn = elInput.form.querySelector('.search_form__clear_btn');
@@ -874,7 +893,6 @@ const libdocUi = {
             libdocUi.fitSvgToItsContent(el)
         });
         document.body.addEventListener('touchstart', libdocUi.handlers._touchStart);
-        // document.addEventListener('selectionchange', libdocUi.handlers._selectionChange);
     }
 }
 libdocUi.update();

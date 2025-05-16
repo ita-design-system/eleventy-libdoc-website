@@ -23,6 +23,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addAsyncFilter("embed", libdocFunctions.filters.embed);
     eleventyConfig.addAsyncFilter("cleanup", libdocFunctions.filters.cleanup);
     eleventyConfig.addAsyncFilter("dateString", libdocFunctions.filters.dateString);
+    eleventyConfig.addAsyncFilter("datePrefixText", libdocFunctions.filters.datePrefixText);
     eleventyConfig.addAsyncFilter("toc", libdocFunctions.filters.toc);
     // END FILTERS
 

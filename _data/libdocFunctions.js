@@ -110,6 +110,13 @@ export default {
             content = content.replaceAll(`</aside></p>`, `</aside>`);
             return content;
         },
+        datePrefixText: async function(date) {
+            let text = '';
+            if (typeof date == 'string') {
+                text = libdocMessages.lastModified[libdocConfig.lang];
+            }
+            return text;
+        },
         dateString: async function(content) {
             let theDay = content.getDate().toString();
             if (theDay.length == 1) theDay = `0${theDay}`;
