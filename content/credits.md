@@ -11,6 +11,8 @@ description: LibDoc could not work without these resources
     Eleventy is a simpler static site generator.
 *   [BRiCSS](https://ita-design-system.github.io/bricss/)<br>
     A simple and customizable low-level CSS library generator.
+*   [LibDoc UI Library](https://ita-design-system.github.io/eleventy-libdoc-ui/)<br>
+    List of all available CSS classes for 11ty LibDoc Library.
 *   [Icomoon](https://icomoon.io)<br>
     Personalize your designs, import your icons or pick from existing sets.
 *   [Phosphor Icons](https://phosphoricons.com/)<br>
