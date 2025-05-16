@@ -11,14 +11,15 @@ Eleventy LibDoc is a starter project for [Eleventy][11ty] to craft slick web rel
 1. Clone or fork <https://github.com/ita-design-system/eleventy-libdoc>
 2. Run `npm install`
 3. Enter your own settings in `settings.json`. [Configuration](/content/configuration/index.md).
-4. Build `npx @11ty/eleventy`
+4. Build and serve `npx @11ty/eleventy --serve` or just build `npx @11ty/eleventy` (if you already have your own web server).
 
 ## Key features
 
 {% iconCard 'Content focused', 'LibDoc is easy to install, deploy and use.', 'pen' %}
 {% iconCard 'Accessibility', 'LibDoc was developed with accessibility awareness.', 'person-arms-spread' %}
 {% iconCard 'Performance', 'Low front-end dependencies and vanilla JS self-made components make LibDoc cross-browser compatibility and good performances. <a href="https://developers.google.com/speed/pagespeed/insights/?url=eleventy-libdoc.netlify.app" target="_blank">View performances</a>', 'rocket' %}
-{% iconCard 'Search', 'Quickly get search results and easily navigate through search occurrences with a dedicated <abbr title="user Interface">UI</abbr>.', 'magnifying-glass' %}
+{% iconCard 'Search', 'Quickly get search results and easily navigate through search occurrences with a dedicated <abbr title="User Interface">UI</abbr>.', 'magnifying-glass' %}
+{% iconCard 'Smart table of content', 'In addition of a pure static table of content, LibDoc generates a floating <abbr title="Table of Content">TOC</abbr> always visible that also displays the current window scroll position', 'list-dashes' %}
 {% iconCard 'Fallback if no Javascript available', 'LibDoc can work even without Javascript with reduced features.', 'parachute' %}
 {% iconCard 'Image transcoding', 'LibDoc transcodes and resizes your source images into production ready formats.', 'images' %}
 {% iconCard 'Printable', 'Every page created with LibDoc can be printed. Try to print preview this page in PDF!<br><button type="button" class="btn mt-2" onclick="print()">print preview</button>', 'printer' %}

@@ -6,7 +6,7 @@ tags:
     - blogging
 title: My simple post
 description: This is a simple blog post test
-date: git Last Modified
+date: 2025-02-12
 ---
 
 Front matter of the current post:

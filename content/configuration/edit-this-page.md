@@ -11,11 +11,15 @@ description: Sets the git root directory project’s URL to enable "Edit this pa
 tags:
     - configuration
 ---
-By default, there is no "Edit this page" link. To display an "Edit this page" link button at the bottom of each page, just fill the `editThisPageRootUrl` parameter of the git root directory project’s URL into `settings.json`. 
+By default, there is no "Edit this page" link. To display an "Edit this page" link button at the bottom of each page, just fill the `editThisPageRootUrl` parameter of the git root directory project’s URL into `settings.json` as follows:
+
+`"editThisPageRootUrl": "<GIT_ROOT_PUBLIC_REMOTE_URL>"`
+
+Example for this project:
 
 ```json
 {
-    "editThisPageRootUrl": "https://github.com/ita-design-system/eleventy-libdoc/blob/main"
+    "editThisPageRootUrl": "https://github.com/ita-design-system/eleventy-libdoc-website/blob/main"
 }
 ```
 

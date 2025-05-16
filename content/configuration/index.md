@@ -18,12 +18,12 @@ Even if `settings.json` can be empty, it is recommended to enter at least:
 * `siteDescription`
 * `faviconUrl`
 
-If not specified in `settings.json`, the following parameters are applied:
+**If not specified in `settings.json`, the following parameters are applied:**
 
 ```json
 {
     "lang": "en",
-    "siteTitle": "Eleventy LibDoc",
+    "siteTitle": "11ty LibDoc",
     "siteDescription": "An Eleventy starter project to craft slick documentation",
     "siteLogoUrl": "",
     "siteLogoMaxHeight": 60,
@@ -82,4 +82,4 @@ Parameter | Type | Description | Page override
 `searchEnabled` | Boolean | Enable disable [search feature](/content/primary-navigation/search-input.md) | no
 `hljsLanguages` | Array | List of supported [languages for syntax highlighting](/content/configuration/hljs.md), just add aliases according to your needs | no
 `roundedImagesCorners` | Boolean | Enable disable rounded image corners by default | no
-`editThisPageRootUrl` | String or <var>false</var> | Sets the git root directory project’s URL to enable "edit this page" link | no
+`editThisPageRootUrl` | String or <var>false</var> | Sets the git root directory project’s URL to enable [edit this page link](/content/configuration/edit-this-page.md) | no

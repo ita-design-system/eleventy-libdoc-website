@@ -6,7 +6,7 @@ tags:
     - blogging
 title: My first post
 description: This is a blog post test
-date: git Last Modified
+date: 2025-01-01
 ogImageUrl: https://images.weserv.nl/?url=https://raw.githubusercontent.com/olivier3lanc/photographies/master/paysages/hiver/foret_sapins_hiver_col_pre_img_4917_size_2560x1706.webp&w=1200&h=630&fit=cover&q=30&output=webp
 author: John Doe
 ---
