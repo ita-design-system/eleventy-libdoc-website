@@ -1,7 +1,7 @@
 {
   "name": "eleventy-libdoc",
   "version": "0.5.2",
-  "description": "An Eleventy starter project to craft slick documentation",
+  "description": "An Eleventy starter project to craft slick and responsive documentation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

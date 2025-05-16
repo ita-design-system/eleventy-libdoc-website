@@ -1,10 +1,10 @@
 ---
 title: Eleventy LibDoc
-description: An Eleventy starter project to craft slick documentation
+description: An Eleventy starter project to craft slick and responsive documentation
 layout: libdoc_page.liquid
 permalink: index.html
 ---
-Eleventy LibDoc is a starter project for [Eleventy][11ty] to craft slick web related code documentation.
+Eleventy LibDoc is an easy to use and content focused starter project for [Eleventy][11ty] to craft slick and responsive documentation. It was was developed with accessibility awareness and low-tech mindset which allows to reach good page speed performances. It contains vanilla JS self-made components like search, primary navigation, table of content, code highlighting and sandboxes.
 
 ## Getting started
 
@@ -19,6 +19,7 @@ Eleventy LibDoc is a starter project for [Eleventy][11ty] to craft slick web rel
 {% iconCard 'Accessibility', 'LibDoc was developed with accessibility awareness.', 'person-arms-spread' %}
 {% iconCard 'Performance', 'Low front-end dependencies and vanilla JS self-made components make LibDoc cross-browser compatibility and good performances. <a href="https://developers.google.com/speed/pagespeed/insights/?url=eleventy-libdoc.netlify.app" target="_blank">View performances</a>', 'rocket' %}
 {% iconCard 'Search', 'Quickly get search results and easily navigate through search occurrences with a dedicated <abbr title="User Interface">UI</abbr>.', 'magnifying-glass' %}
+{% iconCard 'Smart navigation', 'On page change, the primary navigation menu keeps its position.', 'list' %}
 {% iconCard 'Smart table of content', 'In addition of a pure static table of content, LibDoc generates a floating <abbr title="Table of Content">TOC</abbr> always visible that also displays the current window scroll position', 'list-dashes' %}
 {% iconCard 'Fallback if no Javascript available', 'LibDoc can work even without Javascript with reduced features.', 'parachute' %}
 {% iconCard 'Image transcoding', 'LibDoc transcodes and resizes your source images into production ready formats.', 'images' %}
