@@ -386,7 +386,7 @@ Remote images are processed just like [local images](#local-images) through Elev
 
 A WEBP remote image:
 
-![Fir tree in the snow](https://raw.githubusercontent.com/olivier3lanc/photographies/master/paysages/hiver/sapins_hiver_isoles_img_1248_size_2560x1706.webp) 
+![Fir tree in the snow](https://raw.githubusercontent.com/olivier3lanc/photographies/master/assets/paysages/hiver/sapins_hiver_isoles_img_1248_size_2560x1706.webp) 
 
 A remote SVG logo:
 
@@ -395,7 +395,7 @@ A remote SVG logo:
 ```markdown
 A WEBP remote image:
 
-![Fir tree in the snow](https://raw.githubusercontent.com/olivier3lanc/photographies/master/paysages/hiver/sapins_hiver_isoles_img_1248_size_2560x1706.webp) 
+![Fir tree in the snow](https://raw.githubusercontent.com/olivier3lanc/photographies/master/assets/paysages/hiver/sapins_hiver_isoles_img_1248_size_2560x1706.webp) 
 
 A remote SVG logo:
 
