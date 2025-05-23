@@ -17,9 +17,9 @@ In `settings.json`, the following parameters are related to the table of content
 
 ```json
 {
-    "tocEnabled": false,
-    "tocHtmlTags": ["h1", "h2"],
-    "tocMinTags": 2
+    "tocEnabled": true,
+    "tocHtmlTags": ["h1", "h2", "h3", "h4", "h5", "h6"],
+    "tocMinTags": 1
 }
 ```
 
