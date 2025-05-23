@@ -10,7 +10,7 @@
 
 {%- comment -%} {%- assign blogPathUrl = '/' | append: libdocConfig.blogSlug | append: '/' -%} {%- endcomment -%}
 {%- assign pagePathUrl = page.url | split: '/' -%}
-{%- if pagePathUrl[1] == libdocConfig.blogSlug -%}
+{%- if pagePathUrl[1] == libdocConfig.blogSlug and pagePathUrl[2] == null -%}
     {%- capture extendedTitle -%}
         {%- if pagination.pageNumber > 0 -%}
             -

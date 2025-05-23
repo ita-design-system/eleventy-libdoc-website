@@ -1,6 +1,6 @@
 {
   "name": "eleventy-libdoc",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "An Eleventy starter project to craft slick and responsive documentation",
   "main": "index.js",
   "scripts": {
