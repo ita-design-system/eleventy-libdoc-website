@@ -7,6 +7,9 @@ const search = {
             return String.fromCharCode(charCode);
         });
     },
+    sanitizeQuery: function(queryString) {
+        return queryString.replaceAll('\\', '');
+    },
     HTMLEncode: function(str) {
         // https://stackoverflow.com/a/784765
         str = [...str];
@@ -27,6 +30,7 @@ const search = {
         if (typeof search.searchIndexArray == 'object') {
             let markup = '';
             search.searchIndexArray.forEach(function(item) {
+                query = search.sanitizeQuery(query);
                 const   itemContent = `${item.content} ${item.title}`,
                         content = search.decodeHtmlCharCodes(itemContent).toLowerCase(),
                         queryLowered = query.toLowerCase(),

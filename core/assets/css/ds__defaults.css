@@ -766,6 +766,7 @@ main picture:has(.long-shadow) img {
 main figure figcaption {
     font-size: var(--ita-fontSizes-4);
     font-variation-settings: "slnt" -5, "CASL" 0, "CRSV" 1.0, "MONO" 0, "wght" 300;
+    line-height: 1.5em;
 }
 main figure.wide,
 main picture:has(.wide) {

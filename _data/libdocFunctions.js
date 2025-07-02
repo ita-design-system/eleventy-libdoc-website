@@ -56,6 +56,13 @@ export default {
         }
     },
     filters: {
+        sanitizeJson: async function(value) {
+            // Remove back slashes
+            value = value.replaceAll('\\', '');
+            // Remove extra spaces
+            value = value.replace(/\s+/g, ' ').trim();
+            return value;
+        },
         autoids: async function(content) {
             let i = 0;
             const anchorsIds = [];
