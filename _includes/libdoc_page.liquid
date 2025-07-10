@@ -47,11 +47,15 @@
 
     <meta name="generator" content="{{ eleventy.generator }}">
     
+    <link rel="stylesheet" href="/core/assets/css/ds__fonts.css">
     <link rel="stylesheet" href="/core/assets/css/ds__defaults.css">
     <link rel="stylesheet" href="/core/assets/css/ds.css">
+    <link rel="stylesheet" href="/core/assets/css/ds__colors.css">
     <link rel="stylesheet" href="/core/assets/css/hljs/night-owl.css">
+    {% comment %} <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/lightfair.css"> {% endcomment %}
     <link rel="stylesheet" href="/core/assets/fonts/icomoon/style.css">
     <style>
+        /* color-scheme: dark; */
         :root {
             --ita-widths-sidebar: {{ libdocSystem.widthSidebar }}px;
             --ita-widths-content: {{ libdocSystem.widthContent }}px;
@@ -182,18 +186,18 @@
                             <form action="/search/"
                                 class="d-flex fd-column | pos-relative | pl-5 pr-5 | search_form">
                                 <label for="searchInput"
-                                    class="pos-absolute | ml-5 t-tY-50 | fvs-wght-400 fs-1 tt-uppercase | bc-neutral-100">
+                                    class="pos-absolute | ml-5 t-tY-50 | fvs-wght-400 fs-1 tt-uppercase | c-neutral-900 bc-neutral-100">
                                     {{ libdocMessages.search[pageLang] }}
                                 </label>
                                 <input  id="searchInput"
                                         type="search"
                                         name="search"
-                                        class="pl-5 pr-5 pt-4 pb-4 | fs-3 | bc-neutral-100 brad-4 bwidth-1 bstyle-dashed bcolor-neutral-500"
+                                        class="pl-5 pr-5 pt-4 pb-4 | fs-3 | c-neutral-900 bc-neutral-100 brad-4 bwidth-1 bstyle-dashed bcolor-neutral-500"
                                         placeholder="{{ libdocMessages.searchPlaceholder[pageLang] }}"
                                         value="">
                                 <div class="d-flex ai-center gap-2 | pos-absolute top-0 right-0 | h-100 mr-5">
                                     <button type="button"
-                                        class="pos-relative | p-4 pr-5 | fs-3 | brad- bc-neutral-100 c-neutral-900 b-0 cur-pointer | search_form__clear_btn"
+                                        class="pos-relative | p-4 pr-5 | fs-3 | c-neutral-900 bc-neutral-100 c-neutral-900 b-0 cur-pointer | search_form__clear_btn"
                                         title="{{ libdocMessages.searchClear[pageLang] }}"
                                         hidden>
                                         <span class="icon-x | pos-absolute top-50 left-50 t-tY-50 t-tX-50"></span>
