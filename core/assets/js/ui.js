@@ -1,6 +1,8 @@
 const libdocUi = {
     defaults: {
         localStorageIdentifier: 'eleventyLibdoc',
+        colorSchemes: ['auto', 'light', 'dark'],
+        darkModeCssFilePath: '/core/assets/css/ds__dark_mode.css',
         screenSizes: {
             xs: [0, 599],
             sm: [600, 959],
@@ -25,7 +27,9 @@ const libdocUi = {
         searchForms: document.querySelectorAll('.search_form'),
         searchInputs: document.querySelectorAll('input[type="search"][name="search"]'),
         searchClearBtns: document.querySelectorAll('.search_form__clear_btn'),
-        ftocHeadings: []
+        ftocHeadings: [],
+        darkModeCssMetaLink: document.head.querySelector('#libdoc_dark_mode_css'),
+        inputsColorScheme: document.querySelectorAll('[name="libdoc_color_scheme"]')
     },
     getTransferSize: function() {
         // https://jmperezperez.com/blog/page-load-footer/
@@ -225,39 +229,11 @@ const libdocUi = {
             document.body.insertAdjacentHTML('beforeend', n_markup);
         }
     },
-    // getUserSelection: function() {
-    //     let result = { text: "", selection: null };
-    //     if (window.getSelection) {
-    //         result.text = window.getSelection().toString();
-    //         result.selection = window.getSelection();
-    //     } else if (document.selection && document.selection.type != "Control") {
-    //         result.text = document.selection.createRange().text;
-    //     }
-    //     return result;
-    // },
     handlers: {
-        // _selectionChange: function(evt) {
-        //     const selection = libdocUi.getUserSelection();
-        //     if (libdocUi.el.selectionCmd === undefined) {
-        //         libdocUi.el.selectionCmd = document.createElement('a');
-        //         libdocUi.el.selectionCmd.href = '';
-        //         libdocUi.el.selectionCmd.setAttribute(
-        //             'class',
-        //             'pos-absolute t-tX-100 | p-4 | td-none | brad-4 bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 __hover-1 __soft-shadow'
-        //         );
-        //         libdocUi.el.selectionCmd.innerHTML = `<span class="icon-link-simple | pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-4"></span>`;
-        //     }
-        //     if (selection.selection !== null && selection.text.length > 0) {
-        //         const elSelectionParent = selection.selection.anchorNode.parentElement;
-        //         Object.keys(libdocUi.el.main.children).forEach(function(indexString) {
-        //             const elMainChild = libdocUi.el.main.children[parseInt(indexString)];
-        //             if (elMainChild.contains(elSelectionParent)) {
-        //                 libdocUi.el.selectionCmd.href = `${location.host}${location.pathname}#__${indexString}`;
-        //                 elSelectionParent.prepend(libdocUi.el.selectionCmd);
-        //             }
-        //         })
-        //     }
-        // },
+        _colorSchemeClick: function(event) {
+            console.log(event.target.value)
+            libdocUi.setColorScheme(event.target.value);
+        },
         _touchStart: function(evt) {
             document.body.classList.add('touch-device');
             document.body.removeEventListener('touch', libdocUi.handlers._touchStart);
@@ -829,7 +805,31 @@ const libdocUi = {
             }
         }
     },
+    setColorScheme: function(name) {
+        if (typeof name == 'string') {
+            if (libdocUi.defaults.colorSchemes.includes(name)) {
+                if (name == 'light') {
+                    libdocUi.el.darkModeCssMetaLink.href = '';
+                    libdocUi.el.darkModeCssMetaLink.media = 'screen and (prefers-color-scheme: dark)';
+                } else if (name == 'dark') {
+                    libdocUi.el.darkModeCssMetaLink.href = libdocUi.defaults.darkModeCssFilePath;
+                    libdocUi.el.darkModeCssMetaLink.media = '';
+                } else if (name == 'auto') {
+                    libdocUi.el.darkModeCssMetaLink.href = libdocUi.defaults.darkModeCssFilePath;
+                    libdocUi.el.darkModeCssMetaLink.media = 'screen and (prefers-color-scheme: dark)';
+                }
+                libdocUi.el.inputsColorScheme.forEach(function(elInput) {
+                    if (elInput.value == name) elInput.checked = true;
+                })
+                libdocUi.updateUserPreferences({
+                    colorScheme: name
+                });
+                console.log('changed color scheme')
+            }
+        }
+    },
     update: function() {
+        libdocUi.setColorScheme(libdocUi.getUserPreferences().colorScheme);
         libdocUi._currentScreenSizeName = libdocUi.getCurrentScreenSizeName();
         hljs.highlightAll();
         document.querySelectorAll('main>pre').forEach(function(elPre) {
@@ -893,39 +893,9 @@ const libdocUi = {
             libdocUi.fitSvgToItsContent(el)
         });
         document.body.addEventListener('touchstart', libdocUi.handlers._touchStart);
-        document.head.insertAdjacentHTML('beforeend', `
-            <style>
-                :root {
-                    --ita-colors-neutral-900: #EEE;
-                    --ita-colors-neutral-800: #BBB;
-                    --ita-colors-neutral-700: #999;
-                    --ita-colors-neutral-600: #787878;
-                    --ita-colors-neutral-500: #4F4F4F;
-                    --ita-colors-neutral-400: #3A3A3A;
-                    --ita-colors-neutral-300: #252525;
-                    --ita-colors-neutral-200: #121212;
-                    --ita-colors-neutral-100: #000000;
-                    --ita-colors-primary-900: #e6f2fa;
-                    --ita-colors-primary-800: #b9e1f9;
-                    --ita-colors-primary-700: #8dcaef;
-                    --ita-colors-primary-600: #55b6f4;
-                    --ita-colors-primary-500: #009afa;
-                    --ita-colors-primary-400: #025081;
-                    --ita-colors-primary-300: #023a5c;
-                    --ita-colors-primary-200: #01101a;
-                    --ita-colors-primary-100: #000e16;
-                    --ita-colors-success-900: #f8fff4;
-                    --ita-colors-success-500: #5cab33;
-                    --ita-colors-success-100: #1d2d14;
-                    --ita-colors-warning-900: #fff7eb;
-                    --ita-colors-warning-500: #EBA232;
-                    --ita-colors-warning-100: #2e2210;
-                    --ita-colors-danger-900: #fef3f3;
-                    --ita-colors-danger-500: #DF3528;
-                    --ita-colors-danger-100: #361614;
-                }
-            </style>
-        `)
+        libdocUi.el.inputsColorScheme.forEach(function(elInput) {
+            elInput.addEventListener('click', libdocUi.handlers._colorSchemeClick);
+        })
     }
 }
 libdocUi.update();

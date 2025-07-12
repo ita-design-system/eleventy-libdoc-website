@@ -1,0 +1,29 @@
+:root {
+    --ita-colors-neutral-900: #EEE;
+    --ita-colors-neutral-800: #BBB;
+    --ita-colors-neutral-700: #999;
+    --ita-colors-neutral-600: #787878;
+    --ita-colors-neutral-500: #4F4F4F;
+    --ita-colors-neutral-400: #3A3A3A;
+    --ita-colors-neutral-300: #252525;
+    --ita-colors-neutral-200: #121212;
+    --ita-colors-neutral-100: #000000;
+    --ita-colors-primary-900: #e6f2fa;
+    --ita-colors-primary-800: #b9e1f9;
+    --ita-colors-primary-700: #8dcaef;
+    --ita-colors-primary-600: #55b6f4;
+    --ita-colors-primary-500: #009afa;
+    --ita-colors-primary-400: #025081;
+    --ita-colors-primary-300: #023a5c;
+    --ita-colors-primary-200: #01101a;
+    --ita-colors-primary-100: #000e16;
+    --ita-colors-success-900: #f8fff4;
+    --ita-colors-success-500: #5cab33;
+    --ita-colors-success-100: #1d2d14;
+    --ita-colors-warning-900: #fff7eb;
+    --ita-colors-warning-500: #EBA232;
+    --ita-colors-warning-100: #2e2210;
+    --ita-colors-danger-900: #fef3f3;
+    --ita-colors-danger-500: #DF3528;
+    --ita-colors-danger-100: #361614;
+}

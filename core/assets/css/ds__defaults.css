@@ -831,6 +831,18 @@ main .widget + .widget {
     margin-top: var(--ita-spacings-5);
 }
 
+/* INPUT RADIOS */
+input[type="radio"] ~ label::before {
+    content: '';
+    min-width: 1em;
+    max-width: 1em;
+    min-height: 1em;
+    max-height: 1em;
+    border-radius: 100%;
+    border-width: 1px;
+    border-style: solid;
+}
+
 /* RESPONSIVE MD */
 @media (min-width: 960px) {
     #floating_toc_container {

@@ -12,14 +12,10 @@
     <meta name="author" content="{{ pageAuthor }}">
     <link rel="icon" type="image/png" href="{{ libdocConfig.faviconUrl }}">
     
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="theme-color" content="#FFFFFF">
-    
     <!-- Microsoft -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="msapplication-starturl" content="{{ page.url }}">
     <meta name="msapplication-tooltip" content="{{ pageTitle }}">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -38,11 +34,8 @@
     <!-- iOS -->
     <meta name="apple-mobile-web-app-title" content="{{ pageTitle }}">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
     
     <!-- Android -->
-    <meta name="theme-color" content="#FFFFFF">
-    <meta name="color-scheme" content="light">
     <meta name="mobile-web-app-capable" content="yes">
 
     <meta name="generator" content="{{ eleventy.generator }}">
@@ -51,6 +44,7 @@
     <link rel="stylesheet" href="/core/assets/css/ds__defaults.css">
     <link rel="stylesheet" href="/core/assets/css/ds.css">
     <link rel="stylesheet" href="/core/assets/css/ds__colors.css">
+    <link rel="stylesheet" href="/core/assets/css/ds__dark_mode.css" media="screen and (prefers-color-scheme: dark)" id="libdoc_dark_mode_css">
     <link rel="stylesheet" href="/core/assets/css/hljs/night-owl.css">
     {% comment %} <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/lightfair.css"> {% endcomment %}
     <link rel="stylesheet" href="/core/assets/fonts/icomoon/style.css">
@@ -263,7 +257,42 @@
             w-100-minus-sidebar="md"
             w-100="xs,sm">
             <header class="d-flex fd-column | pt-5 {% if pageUrlSplit[1] != 'tags' and pageUrlSplit[1] != libdocConfig.blogSlug %}pb-7{% endif %}">
-                {% include 'libdoc_breadcrumb' %}
+                <nav class="d-flex jc-space-between | pos-relative">
+                    {% include 'libdoc_breadcrumb' %}
+                    <details class="">
+                        <summary class="d-flex | pos-relative | p-5 | fs-4 td-none | brad-4 bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 __hover-1 __soft-shadow"
+                            title="Preferences">
+                            <span class="icon-faders | pos-absolute top-50 left-50 t-tY-50 t-tX-50"></span>
+                        </summary>
+                        <menu class="d-flex fd-column | pos-absolute right-0 z-1 | w-100 m-0 p-4 | ls-none bc-neutral-100 brad-2 bwidth-1 bstyle-dashed bcolor-neutral-500 | __soft-shadow"
+                            style="max-width: 400px">
+                            <li class="d-flex fd-column gap-3 | c-neutral-900">
+                                <p class="m-0 | fs-3 fvs-wght-500">{{ libdocMessages.colorSchemes[pageLang] }}</p>
+                                <div class="d-flex fd-column gap-3">
+                                    {% for item in libdocSystem.preferences.colorSchemes.choices %}
+                                        <div>
+                                            <input type="radio"
+                                                name="libdoc_color_scheme"
+                                                id="libdoc_color_scheme__{{ item.value }}"
+                                                class="pos-absolute opa-0"
+                                                value="{{ item.value }}"
+                                                {%- if forloop.first %}
+                                                    checked
+                                                {%- endif %}>
+                                            <label for="libdoc_color_scheme__{{ item.value }}"
+                                                class="d-flex ai-start gap-2">
+                                                <span class="d-flex fd-column gap-1">
+                                                    <strong class="fs-2 tt-uppercase">{{ libdocMessages[item.labelMainKey][pageLang] }}</strong>
+                                                    <span class="fs-2 | c-neutral-700">{{ libdocMessages[item.labelHelpKey][pageLang] }}</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </li>
+                        </menu>
+                    </details>
+                </nav>
                 <h1 class="mt-3 mb-0 | lsp-5 fvs-wght-700 tws-balance {% if pageTitle == page.inputPath %}wb-break-work{% endif %}"
                     fs-10="md"
                     fs-9="xs,sm">

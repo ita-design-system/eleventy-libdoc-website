@@ -398,6 +398,15 @@ main .__search-occurrence {
     color: var(--ita-colors-success-100);
 }
 
+/* INPUT RADIOS */
+input[type="radio"] ~ label::before {
+    border-color: var(--ita-colors-primary-500);
+    background: var(--ita-colors-neutral-100);
+}
+input[type="radio"]:checked ~ label::before {
+    background: radial-gradient(var(--ita-colors-neutral-100), var(--ita-colors-neutral-100) 30%, var(--ita-colors-primary-500) 33%, var(--ita-colors-primary-500) 100%);
+}
+
 /* PRINT */
 @media print {
     body {
