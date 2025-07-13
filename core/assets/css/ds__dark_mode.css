@@ -15,7 +15,7 @@
     --ita-colors-primary-500: #009afa;
     --ita-colors-primary-400: #025081;
     --ita-colors-primary-300: #023a5c;
-    --ita-colors-primary-200: #01101a;
+    --ita-colors-primary-200: #011828;
     --ita-colors-primary-100: #000e16;
     --ita-colors-success-900: #f8fff4;
     --ita-colors-success-500: #5cab33;
@@ -26,4 +26,41 @@
     --ita-colors-danger-900: #fef3f3;
     --ita-colors-danger-500: #DF3528;
     --ita-colors-danger-100: #361614;
+    --libdoc-long-shadow: none;
+    --libdoc-long-shadow-alt: 
+        5px 5px 10px 0px var(--ita-colors-primary-100),
+        10px 10px 40px 0px var(--ita-colors-primary-500),
+        -20px 20px 40px 0px var(--ita-colors-primary-300),
+        -20px -20px 40px 0px var(--ita-colors-primary-300),
+        20px -20px 40px 0px var(--ita-colors-primary-300),
+        5px 5px 10px 0px var(--ita-colors-primary-300),
+        -5px 5px 10px 0px var(--ita-colors-primary-300),
+        -5px -5px 10px 0px var(--ita-colors-primary-300),
+        5px -5px 10px 0px var(--ita-colors-primary-300)
+}
+main > :not(pre) code {
+  background-color: var(--ita-colors-primary-300);
+}
+/* ALERTS */
+main .alert {
+  color: var(--ita-colors-neutral-900);
+  background-color: var(--ita-colors-neutral-200);
+}
+main .alert.alert-info {
+  background-color: var(--ita-colors-primary-200);
+}
+/* TABLES */
+main table td code {
+  color: var(--ita-colors-primary-900);
+}
+/* INLINE HTML */
+main del {
+  background-color: var(--ita-colors-danger-500);
+  color: var(--ita-colors-danger-900);
+  text-decoration-color: var(--ita-colors-danger-100);
+}
+main s,
+main strike {
+  text-decoration-color: var(--ita-colors-danger-500);
+  color: var(--ita-colors-neutral-700);
 }
