@@ -55,12 +55,6 @@ main a:visited {
 main a:hover {
     color: var(--ita-colors-primary-700);
 }
-main a[href^="https://"]:not([href^="https://eleventy-libdoc"]):not(.btn)::after {
-    color: var(--ita-colors-primary-300);
-}
-main a[href^="https://"]:not([href^="https://eleventy-libdoc"]):not(.btn):hover::after {
-    color: var(--ita-colors-primary-700);
-}
 /* MARKING AND SPECIALS */
 main mark {
     /* text-shadow: none; */
