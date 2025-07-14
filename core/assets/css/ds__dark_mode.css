@@ -88,3 +88,36 @@ main small {
 #nav_primary_container {
     box-shadow: var(--libdoc-long-shadow);
 }
+
+/* PRINT */
+@media print {
+    :root {
+        --ita-colors-neutral-100: #FFFFFF !important;
+        --ita-colors-neutral-200: #F6F6F6 !important;
+        --ita-colors-neutral-300: #EEEEEE !important;
+        --ita-colors-neutral-400: #E5E5E5 !important;
+        --ita-colors-neutral-500: #BFBFBF !important;
+        --ita-colors-neutral-600: #999999 !important;
+        --ita-colors-neutral-700: #444444 !important;
+        --ita-colors-neutral-800: #252525 !important;
+        --ita-colors-neutral-900: #000000 !important;
+        --ita-colors-primary-100: #fafcff !important;
+        --ita-colors-primary-200: #daeafb !important;
+        --ita-colors-primary-300: #a5d0fd !important;
+        --ita-colors-primary-400: #5dabfe !important;
+        --ita-colors-primary-500: #0165d0 !important;
+        --ita-colors-primary-600: #0156b2 !important;
+        --ita-colors-primary-700: #03458c !important;
+        --ita-colors-primary-800: #02366f !important;
+        --ita-colors-primary-900: #01254b !important;
+        --ita-colors-success-100: #f2fbec !important;
+        --ita-colors-success-500: #5cab33 !important;
+        --ita-colors-success-900: #2b650c !important;
+        --ita-colors-warning-100: #fff7eb !important;
+        --ita-colors-warning-500: #EBA232 !important;
+        --ita-colors-warning-900: #87560b !important;
+        --ita-colors-danger-100: #fef3f3 !important;
+        --ita-colors-danger-500: #DF3528 !important;
+        --ita-colors-danger-900: #760e06 !important;
+    }
+}
