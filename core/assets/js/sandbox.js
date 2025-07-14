@@ -32,8 +32,8 @@ const sandbox = {
     },
     _params: {
         tabBtn: {
-            defaultClass: 'd-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | c-primary-900 bc-0 b-0 cur-pointer',
-            activeClass: 'd-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | c-primary-900 bc-neutral-100 b-0 brad-1 cur-pointer'
+            defaultClass: 'd-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | bc-0 b-0 cur-pointer',
+            activeClass: 'd-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | b-0 brad-1 cur-pointer'
         }
     },
     disableIframes: function() {
@@ -142,8 +142,8 @@ const sandbox = {
             if (elBtn.dataset.originalText === undefined) elBtn.dataset.originalText = elBtn.innerText;
             elBtn.innerHTML = `
                 <span style="margin-left: -4px;"
-                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | c-neutral-100 bc-success-500 brad-4">
-                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1"></span>
+                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | brad-4 bc-success-500">
+                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1 | c-success-100"></span>
                 </span>
                 ${libdocMessages.copied}!`;
             setTimeout(function() {
@@ -159,8 +159,8 @@ const sandbox = {
             if (elBtn.dataset.originalText === undefined) elBtn.dataset.originalText = elBtn.innerText;
             elBtn.innerHTML = `
                 <span style="margin-left: -4px;"
-                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | c-neutral-100 bc-success-500 brad-4">
-                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1"></span>
+                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | brad-4 bc-success-500">
+                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1 | c-success-100"></span>
                 </span>
                 ${libdocMessages.copied}!`;
             setTimeout(function() {
@@ -179,8 +179,8 @@ const sandbox = {
             if (elBtn.dataset.originalText === undefined) elBtn.dataset.originalText = elBtn.innerText;
             elBtn.innerHTML = `
                 <span style="margin-left: -4px;"
-                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | c-neutral-100 bc-success-500 brad-4">
-                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1"></span>
+                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | brad-4 bc-success-500">
+                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1 | c-success-100"></span>
                 </span>
                 ${libdocMessages.reloaded}!`;
             setTimeout(function() {

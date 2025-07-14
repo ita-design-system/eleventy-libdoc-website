@@ -326,16 +326,16 @@ export default {
                                 title="${libdocMessages.openInANewTab[libdocConfig.lang]}"
                                 class="d-flex ai-center gap-1 | p-0 | fvs-wght-400 fs-2 tt-uppercase td-none | sandbox__permalink"
                                 fs-2="xs">
-                                <span class="fvs-wght-400 | c-neutral-300">${libdocMessages.open[libdocConfig.lang]}</span>
-                                <span class="icon-arrow-square-out c-neutral-500"></span>
+                                <span class="fvs-wght-400">${libdocMessages.open[libdocConfig.lang]}</span>
+                                <span class="icon-arrow-square-out"></span>
                             </a>
                             <div class="d-flex gap-7">
                                 <button type="button"
-                                    class="d-flex ai-center | p-0 | fvs-wght-400 fs-2 tt-uppercase | bc-0 c-neutral-300 b-0 cur-pointer | sandbox__reload">
+                                    class="d-flex ai-center | p-0 | fvs-wght-400 fs-2 tt-uppercase | bc-0 b-0 cur-pointer | sandbox__reload">
                                     <span class="o-hidden | to-ellipsis ws-nowrap">${libdocMessages.reload[libdocConfig.lang]}</span>
                                 </button>
                                 <button type="button"
-                                    class="d-flex ai-center | p-0 | fvs-wght-400 fs-2 tt-uppercase | bc-0 c-neutral-300 b-0 cur-pointer | sandbox__copy_url">
+                                    class="d-flex ai-center | p-0 | fvs-wght-400 fs-2 tt-uppercase | bc-0 b-0 cur-pointer | sandbox__copy_url">
                                     <span class="o-hidden | to-ellipsis ws-nowrap">${libdocMessages.copyURL[libdocConfig.lang]}</span>
                                 </button>
                             </div>
