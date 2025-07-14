@@ -635,11 +635,11 @@ const libdocUi = {
                 linkIndexesArray.forEach(function(isInViewport, linkIndex) {
                     if (isInViewport) {
                         // libdocUi.el.ftocLinks[linkIndex].style.backgroundColor = 'var(--ita-colors-primary-200)';
-                        libdocUi.el.ftocLinks[linkIndex].classList.add('bc-primary-200');
+                        libdocUi.el.ftocLinks[linkIndex].classList.add('__active');
                         if (firstTrueIndex === -1) firstTrueIndex = linkIndex;
                     } else {
                         // libdocUi.el.ftocLinks[linkIndex].style.backgroundColor = null;
-                        libdocUi.el.ftocLinks[linkIndex].classList.remove('bc-primary-200');
+                        libdocUi.el.ftocLinks[linkIndex].classList.remove('__active');
                     }
                 });
                 if (firstTrueIndex > -1) {

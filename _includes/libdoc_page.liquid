@@ -44,9 +44,8 @@
     <link rel="stylesheet" href="/core/assets/css/ds__defaults.css">
     <link rel="stylesheet" href="/core/assets/css/ds.css">
     <link rel="stylesheet" href="/core/assets/css/ds__colors.css">
-    <link rel="stylesheet" href="/core/assets/css/ds__dark_mode.css" media="screen and (prefers-color-scheme: dark)" id="libdoc_dark_mode_css">
+    <link rel="stylesheet" href="/core/assets/css/ds__dark_mode.css" media="not print and (prefers-color-scheme: dark)" id="libdoc_dark_mode_css">
     <link rel="stylesheet" href="/core/assets/css/hljs/night-owl.css">
-    {% comment %} <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/lightfair.css"> {% endcomment %}
     <link rel="stylesheet" href="/core/assets/fonts/icomoon/style.css">
     <style>
         /* color-scheme: dark; */
@@ -139,7 +138,7 @@
                 </div>
             </nav>
             <nav id="nav_primary_container"
-                class="d-flex d-none--xs d-none--sm fd-column | w-100 o-hidden | bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 |  __soft-shadow"
+                class="d-flex d-none--xs d-none--sm fd-column | w-100 o-hidden | bwidth-1 bstyle-dashed bcolor-neutral-500 |  __soft-shadow"
                 mt-5="md"
                 maxw-sidebar="md"
                 maxh-sidebar="md"
@@ -151,7 +150,7 @@
                     d-flex fd-column
                     pos-sticky top-0 z-1
                     m-0 p-0 {% if libdocConfig.customLinks.size == 0 %}pb-7{% endif %}
-                    ls-none bc-neutral-100
+                    ls-none
                     {% if eleventyNavigationMenu.size > 0 %}bbwidth-1 bbstyle-dashed bcolor-neutral-500{% endif %}"
                     gap-5="md"
                     bradtl-3="md"

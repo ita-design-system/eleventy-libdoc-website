@@ -334,6 +334,11 @@ main .alert.alert-danger::before {
     border-color: currentColor;
 }
 
+/* FLOATING TOC */
+#floating_toc__list a.__active {
+    background-color: var(--ita-colors-primary-200);
+}
+
 /* SEARCH OCCURRENCES */
 @keyframes flash {
     50% { background-color: #BF0 }
@@ -344,6 +349,10 @@ main .__search-occurrence {
 }
 
 /* NAV_PRIMARY */
+#nav_primary_container,
+#nav_primary_header {
+    background-color: var(--ita-colors-neutral-100);
+}
 #nav_primary .nav_primary__anchor::before,
 .nav_primary .nav_primary__anchor::before,
 #nav_primary_blog_link::before {

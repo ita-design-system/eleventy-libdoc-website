@@ -26,7 +26,7 @@
     --ita-colors-danger-900: #fef3f3;
     --ita-colors-danger-500: #DF3528;
     --ita-colors-danger-100: #361614;
-    --libdoc-long-shadow: none;
+    --libdoc-long-shadow: 0px 0px 10px 0px var(--ita-colors-neutral-100), 5px 5px 10px 0px var(--ita-colors-primary-100), -5px 5px 10px 0px var(--ita-colors-primary-100), -5px -5px 10px 0px var(--ita-colors-primary-100), 5px -5px 10px 0px var(--ita-colors-primary-100);
     --libdoc-long-shadow-alt: 
         5px 5px 10px 0px var(--ita-colors-primary-100),
         10px 10px 40px 0px var(--ita-colors-primary-500),
@@ -63,4 +63,28 @@ main s,
 main strike {
   text-decoration-color: var(--ita-colors-danger-500);
   color: var(--ita-colors-neutral-700);
+}
+main kbd {
+  background-color: var(--ita-colors-primary-300);
+}
+main mark {
+  background-color: var(--ita-colors-success-500);
+  color: var(--ita-colors-success-100);
+}
+main small {
+  color: var(--ita-colors-neutral-900);
+}
+
+/* FLOATING TOC */
+#floating_toc__list a.__active {
+    background-color: var(--ita-colors-primary-300);
+}
+
+/* NAV_PRIMARY */
+#nav_primary_container,
+#nav_primary_header {
+    background-color: var(--ita-colors-neutral-200);
+}
+#nav_primary_container {
+    box-shadow: var(--libdoc-long-shadow);
 }
