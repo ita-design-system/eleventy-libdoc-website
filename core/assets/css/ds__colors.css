@@ -410,6 +410,11 @@ input[type="radio"]:checked ~ label::before {
     background: radial-gradient(var(--ita-colors-neutral-100), var(--ita-colors-neutral-100) 30%, var(--ita-colors-primary-500) 33%, var(--ita-colors-primary-500) 100%);
 }
 
+/* WIDGETS */
+.widget-iconCard > p {
+    background-color: var(--ita-colors-neutral-100);
+}
+
 /* PRINT */
 @media print {
     body {

@@ -249,7 +249,7 @@ export default {
                 }
                 markup = `
                     <aside class="widget widget-iconCard">
-                        <p class="d-flex gap-5 | p-5 m-0 | brad-3 bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500">
+                        <p class="d-flex gap-5 | p-5 m-0 | brad-3 bwidth-1 bstyle-dashed bcolor-neutral-500">
                             <span class="icon-${finalIconName} fs-10 | c-primary-500" fs-8="xs"></span>
                             <span class="d-flex fd-column gap-1">
                                 <strong class="fvs-wght-700 fs-6">${mainText}</strong>
