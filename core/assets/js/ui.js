@@ -3,6 +3,7 @@ const libdocUi = {
         localStorageIdentifier: 'eleventyLibdoc',
         colorSchemes: ['auto', 'light', 'dark'],
         darkModeCssFilePath: '/core/assets/css/ds__dark_mode.css',
+        darkModeCssMedia: '',
         screenSizes: {
             xs: [0, 599],
             sm: [600, 959],
@@ -810,13 +811,13 @@ const libdocUi = {
             if (libdocUi.defaults.colorSchemes.includes(name)) {
                 if (name == 'light') {
                     libdocUi.el.darkModeCssMetaLink.href = '';
-                    libdocUi.el.darkModeCssMetaLink.media = 'screen and (prefers-color-scheme: dark)';
+                    libdocUi.el.darkModeCssMetaLink.media = libdocUi.defaults.darkModeCssMedia;
                 } else if (name == 'dark') {
                     libdocUi.el.darkModeCssMetaLink.href = libdocUi.defaults.darkModeCssFilePath;
                     libdocUi.el.darkModeCssMetaLink.media = '';
                 } else if (name == 'auto') {
                     libdocUi.el.darkModeCssMetaLink.href = libdocUi.defaults.darkModeCssFilePath;
-                    libdocUi.el.darkModeCssMetaLink.media = 'screen and (prefers-color-scheme: dark)';
+                    libdocUi.el.darkModeCssMetaLink.media = libdocUi.defaults.darkModeCssMedia;
                 }
                 libdocUi.el.inputsColorScheme.forEach(function(elInput) {
                     if (elInput.value == name) elInput.checked = true;
@@ -824,11 +825,11 @@ const libdocUi = {
                 libdocUi.updateUserPreferences({
                     colorScheme: name
                 });
-                console.log('changed color scheme')
             }
         }
     },
     update: function() {
+        libdocUi.defaults.darkModeCssMedia = libdocUi.el.darkModeCssMetaLink.media;
         libdocUi.setColorScheme(libdocUi.getUserPreferences().colorScheme);
         libdocUi._currentScreenSizeName = libdocUi.getCurrentScreenSizeName();
         hljs.highlightAll();
