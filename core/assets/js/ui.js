@@ -837,7 +837,7 @@ const libdocUi = {
             elPre.style.paddingTop = '0';
             const elCommands = elPre.querySelector('.copy_code_block');
             if (elCommands === null) {
-                const commandBarMarkup = `<div class="d-flex jc-end">
+                const commandBarMarkup = `<div class="d-flex jc-end | pos-relative">
                         <button type="button"
                             class="
                             d-flex ai-center
