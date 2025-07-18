@@ -80,15 +80,15 @@ export default {
                     pr-9="md"
                     pl-5="xs,sm"
                     pr-5="xs,sm">
-                    <div class="d-flex | p-1 | bc-primary-200 brad-2"
+                    <div class="d-flex | p-1 o-hidden | brad-2 | sandbox__tabs"
                         d-none="md">
                         <button type="button"
-                            class="d-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | c-primary-900 bc-0 b-0 cur-pointer | sandbox__tab"
+                            class="d-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | b-0 brad-1 cur-pointer | sandbox__tab"
                             data-name="code">
                             ${libdocMessages.code[libdocConfig.lang]}
                         </button>
                         <button type="button"
-                            class="d-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | c-primary-900 bc-neutral-100 b-0 brad-1 cur-pointer | sandbox__tab"
+                            class="d-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | b-0 brad-1 cur-pointer | sandbox__tab __active"
                             data-name="iframe">
                             ${libdocMessages.result[libdocConfig.lang]}
                         </button>

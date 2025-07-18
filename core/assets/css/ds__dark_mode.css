@@ -39,6 +39,10 @@
             -5px -5px 10px 0px var(--ita-colors-primary-300),
             5px -5px 10px 0px var(--ita-colors-primary-300)
     }
+    html,
+    .o-auto {
+        scrollbar-color: var(--ita-colors-neutral-700) transparent;
+    }
     main > :not(pre) code {
     background-color: var(--ita-colors-primary-300);
     }
@@ -75,6 +79,9 @@
     main small {
     color: var(--ita-colors-neutral-900);
     }
+    main figure {
+        background-color: var(--ita-colors-neutral-200);
+    }
 
     /* FLOATING TOC */
     #floating_toc__list a.__active {
@@ -93,16 +100,16 @@
     /* SANDBOX */
     .sandbox .sandbox__code_wrapper,
     .sandbox .sandbox__iframe_wrapper {
-        background-color: var(--ita-colors-neutral-100);
+        background-color: var(--ita-colors-neutral-300);
         color: var(--ita-colors-neutral-800);
     }
     .sandbox .sandbox__resizer {
-        background-color: var(--ita-colors-neutral-200);
+        background-color: var(--ita-colors-neutral-300);
         color: var(--ita-colors-neutral-800);
     }
     .sandbox .sandbox__resizer:active,
     .sandbox .sandbox__resizer:hover {
-        background-color: var(--ita-colors-neutral-300);
+        background-color: var(--ita-colors-neutral-400);
     }
     main .sandbox__iframe_wrapper a,
     .sandbox .sandbox__reload,
@@ -113,6 +120,14 @@
     .sandbox .sandbox__enable_switch ~ label {
         background-color: var(--ita-colors-neutral-100);
         color: var(--ita-colors-neutral-900);
+    }
+    .sandbox .sandbox__tabs {
+        background-color: var(--ita-colors-primary-300);
+        box-shadow: inset 0px 0px 5px var(--ita-colors-primary-100);
+    }
+    .sandbox .sandbox__tab.__active {
+        background-color: var(--ita-colors-neutral-100);
+        box-shadow: var(--libdoc-long-shadow-alt);
     }
 
     /* WIDGETS */

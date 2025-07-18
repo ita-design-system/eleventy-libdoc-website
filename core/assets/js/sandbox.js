@@ -30,12 +30,6 @@ const sandbox = {
         copyUrl: '.sandbox__copy_url',
         permalink: '.sandbox__permalink'
     },
-    _params: {
-        tabBtn: {
-            defaultClass: 'd-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | bc-0 b-0 cur-pointer',
-            activeClass: 'd-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | b-0 brad-1 cur-pointer'
-        }
-    },
     disableIframes: function() {
         document.querySelectorAll(sandbox._selectors.iframe).forEach(function(el) {
             el.classList.add('pe-none');
@@ -115,9 +109,7 @@ const sandbox = {
                 elsBtns = elSandbox.querySelectorAll(sandbox._selectors.tabBtn),
                 elPre = elSandbox.querySelector(sandbox._selectors.codeWrapper),
                 elIframe = elSandbox.querySelector(sandbox._selectors.iframeWrapper),
-                tabName = elBtn.dataset.name,
-                defaultClass = `${sandbox._params.tabBtn.defaultClass} | ${sandbox._selectors.tabBtn.replace(`.`, ``)}`,
-                activeClass = `${sandbox._params.tabBtn.activeClass} | ${sandbox._selectors.tabBtn.replace(`.`, ``)}`;
+                tabName = elBtn.dataset.name;
             switch (tabName) {
                 case 'code':
                     elPre.classList.remove('d-none--xs', 'd-none--sm');
@@ -130,9 +122,9 @@ const sandbox = {
                     break;
             }
             elsBtns.forEach(function(el) {
-                el.setAttribute('class', defaultClass);
+                el.classList.remove('__active');
             });
-            elBtn.setAttribute('class', activeClass);
+            elBtn.classList.add('__active');
         },
         _clickCopyCode: function(evt) {
             const elBtn = evt.target.closest('button');
