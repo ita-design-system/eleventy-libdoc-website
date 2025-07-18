@@ -81,7 +81,11 @@
     color: var(--ita-colors-neutral-900);
     }
     main figure {
-        background-color: var(--ita-colors-neutral-200);
+        background-color: var(--ita-colors-neutral-300);
+    }
+    main figure.long-shadow img,
+    main picture:has(.long-shadow) img {
+        box-shadow: 0em 0em 60px var(--ita-colors-neutral-100), 0em 0em 10px var(--ita-colors-neutral-300), 1em 1em 40px var(--ita-colors-neutral-100);
     }
 
     /* FLOATING TOC */
