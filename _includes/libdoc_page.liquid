@@ -259,11 +259,14 @@
                 <nav class="d-flex jc-space-between | pos-relative">
                     {% include 'libdoc_breadcrumb' %}
                     <details class="">
-                        <summary class="d-flex | pos-relative | p-5 | fs-4 td-none | brad-4 bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 __hover-1 __soft-shadow"
+                        <summary class="d-flex | pos-relative | p-5 | fs-4 td-none | brad-4 bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 cur-pointer __hover-1 __soft-shadow"
                             title="Preferences">
-                            <span class="icon-faders | pos-absolute top-50 left-50 t-tY-50 t-tX-50"></span>
+                            <span class="icons">
+                                <span class="icon-faders | pos-absolute top-50 left-50 t-tY-50 t-tX-50"></span>
+                                <span class="icon-x | pos-absolute top-50 left-50 t-tY-50 t-tX-50"></span>
+                            </span>
                         </summary>
-                        <menu class="d-flex fd-column | pos-absolute right-0 z-1 | w-100 m-0 p-4 | ls-none bc-neutral-100 brad-2 bwidth-1 bstyle-dashed bcolor-neutral-500 | __soft-shadow"
+                        <menu class="d-flex fd-column | pos-absolute right-0 z-1 | w-100 mt-3 mb-0 p-4 | ls-none bc-neutral-100 brad-2 bwidth-1 bstyle-dashed bcolor-neutral-500 | __soft-shadow"
                             style="max-width: 400px">
                             <li class="d-flex fd-column gap-3 | c-neutral-900">
                                 <p class="m-0 | fs-3 fvs-wght-500">{{ libdocMessages.colorSchemes[pageLang] }}</p>

@@ -27,6 +27,7 @@
         --ita-colors-danger-900: #ffd1d1;
         --ita-colors-danger-500: #DF3528;
         --ita-colors-danger-100: #251312;
+        --libdoc-soft-shadow: 0px 0px 10px rgba(0,0,0,1);
         --libdoc-long-shadow: 0px 0px 10px 0px var(--ita-colors-neutral-100), 5px 5px 10px 0px var(--ita-colors-primary-100), -5px 5px 10px 0px var(--ita-colors-primary-100), -5px -5px 10px 0px var(--ita-colors-primary-100), 5px -5px 10px 0px var(--ita-colors-primary-100);
         --libdoc-long-shadow-alt: 
             5px 5px 10px 0px var(--ita-colors-primary-100),
@@ -127,7 +128,7 @@
     }
     .sandbox .sandbox__tab.__active {
         background-color: var(--ita-colors-neutral-100);
-        box-shadow: var(--libdoc-long-shadow-alt);
+        box-shadow: var(--libdoc-soft-shadow);
     }
 
     /* WIDGETS */
