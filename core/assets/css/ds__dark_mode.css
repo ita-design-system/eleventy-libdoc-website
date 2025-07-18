@@ -40,6 +40,9 @@
             -5px -5px 10px 0px var(--ita-colors-primary-300),
             5px -5px 10px 0px var(--ita-colors-primary-300)
     }
+    body {
+        background: 0px 0px / 20px 20px radial-gradient(var(--ita-colors-neutral-500) 0.5px,var(--ita-colors-neutral-200) 1px);
+    }
     html,
     .o-auto {
         scrollbar-color: var(--ita-colors-neutral-700) transparent;
