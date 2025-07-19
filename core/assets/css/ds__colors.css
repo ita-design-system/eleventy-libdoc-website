@@ -1,4 +1,6 @@
-
+html {
+    background-color: var(--ita-colors-primary-100);
+}
 body {
     background: 0px 0px / 20px 20px radial-gradient(var(--ita-colors-primary-300) 0.5px,var(--ita-colors-primary-100) 1px);
 }
@@ -156,8 +158,8 @@ main table tbody tr:nth-child(even) td {
     background-color: var(--ita-colors-primary-100);
 }
 main table td code {
-    background-color: var(--ita-colors-primary-400);
-    color: var(--ita-colors-neutral-100);
+    background-color: var(--ita-colors-primary-300);
+    color: var(--ita-colors-primary-900);
 }
 /* QUOTES */
 main blockquote {
@@ -199,6 +201,9 @@ main hr::before {
 main figure {
     background-color: var(--ita-colors-neutral-100);
     border-color: var(--ita-colors-neutral-400);
+}
+main img {
+    background-color: var(--libdoc-image-background-color);
 }
 main figure.dark,
 main picture:has(.dark) img {

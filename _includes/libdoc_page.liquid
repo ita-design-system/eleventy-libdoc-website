@@ -38,6 +38,8 @@
     <!-- Android -->
     <meta name="mobile-web-app-capable" content="yes">
 
+    <meta name="color-scheme" content="light dark">
+
     <meta name="generator" content="{{ eleventy.generator }}">
     
     <link rel="stylesheet" href="/core/assets/css/fonts.css">
@@ -48,8 +50,10 @@
     <link rel="stylesheet" href="/core/assets/css/hljs/night-owl.css">
     <link rel="stylesheet" href="/core/assets/fonts/icomoon/style.css">
     <style>
-        /* color-scheme: dark; */
         :root {
+            --libdoc-image-background-color-light-mode: {{ libdocConfig.imgBgColorLightMode }};
+            --libdoc-image-background-color-dark-mode: {{ libdocConfig.imgBgColorDarkMode }};
+            --libdoc-image-background-color: var(--libdoc-image-background-color-light-mode);
             --ita-widths-sidebar: {{ libdocSystem.widthSidebar }}px;
             --ita-widths-content: {{ libdocSystem.widthContent }}px;
             --ita-widths-main-container-max: calc(2 * var(--ita-widths-content) + var(--ita-widths-sidebar));
