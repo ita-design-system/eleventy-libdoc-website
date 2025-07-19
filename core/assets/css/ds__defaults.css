@@ -471,6 +471,9 @@ main table tbody tr td {
     font-variation-settings: "wght" 400, "MONO" 0;
     line-height: 1.5em;
 }
+main table td code {
+    font-size: var(--ita-fontSizes-3);
+}
 /* QUOTES */
 main blockquote {
     position: relative;
