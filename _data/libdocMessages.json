@@ -177,7 +177,11 @@
     },
     "tableOfContent": {
         "en": "Table of content",
-        "fr": "Table des matières"
+        "fr": "Sommaire"
+    },
+    "tableOfContentAbbr": {
+        "en": "TOC",
+        "fr": "Sommaire"
     },
     "tag": {
         "en": "Tag",
