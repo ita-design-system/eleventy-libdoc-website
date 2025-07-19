@@ -969,6 +969,16 @@ input[type="radio"] ~ label::before {
     box-shadow: var(--libdoc-soft-shadow);
 }
 
+/* ANIMATIONS */
+@keyframes blink {
+    100% {
+        opacity: 0.5;
+    }
+}
+.__anim-blink {
+    animation: blink 0.5s linear 0s infinite alternate;
+}
+
 /* PRINT */
 @media print {
     main {
