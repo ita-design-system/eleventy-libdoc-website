@@ -400,7 +400,7 @@ main > ol:has(ul) > li {
 main > ol:has(ul) > li:before  {
     content: counter(mixedItem) '.';
     position: absolute;
-    transform: translateX(calc(-100% - var(--ita-spacings-2)));
+    transform: translateY(-3px) translateX(calc(-100% - var(--ita-spacings-2)));
     display: inline-block;
     font-variation-settings: "wght" 700, "MONO" 1, "CASL" 1;
     font-size: var(--ita-fontSizes-2);
