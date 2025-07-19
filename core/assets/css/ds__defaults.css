@@ -71,7 +71,7 @@ body {
     font-weight: 300;
     font-style: normal;
     font-size: var(--ita-fontSizes-5);
-    font-variation-settings: "slnt" 0, "CASL" 0.5, "CRSV" 1, "MONO" 0, "wght" 360;
+    font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0, "MONO" 0, "wght" 360;
 }
 html,
 .o-auto {
@@ -129,32 +129,32 @@ main h6 {
     text-wrap-style: balance;
 }
 main h1 {
-    font-variation-settings: "wght" 800, "MONO" 0;
+    font-variation-settings: "wght" 800, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-9);
     letter-spacing: -0.06em;
 }
 main h2 {
-    font-variation-settings: "wght" 700, "MONO" 0;
+    font-variation-settings: "wght" 700, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-9);
     letter-spacing: -0.06em;
 }
 main h3 {
-    font-variation-settings: "wght" 800, "MONO" 0;
+    font-variation-settings: "wght" 800, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-8);
     letter-spacing: -0.05em;
 }
 main h4 {
-    font-variation-settings: "wght" 700, "MONO" 0;
+    font-variation-settings: "wght" 700, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-8);
     letter-spacing: -0.05em;
 }
 main h5 {
-    font-variation-settings: "wght" 800, "MONO" 0;
+    font-variation-settings: "wght" 800, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-7);
     letter-spacing: -0.05em;
 }
 main h6 {
-    font-variation-settings: "wght" 700, "MONO" 0;
+    font-variation-settings: "wght" 700, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-7);
     letter-spacing: -0.05em;
 }
@@ -259,7 +259,7 @@ main del * {
 }
 main samp {
     font-family: var(--libdoc-font-family);
-    font-variation-settings: "MONO" 1, "CASL" 0, "wght" 400;
+    font-variation-settings: "MONO" 1, "CASL" 0, "CRSV" 0, "wght" 400;
     letter-spacing: -0.04em;
     border-radius: 3px;
     padding: 0em 0.3em;
@@ -268,7 +268,7 @@ main q {
     font-variation-settings: "slnt" -15, "CRSV" 1, "CASL" 1, "wght" 400;
 }
 main kbd {
-    font-variation-settings: "MONO" 1, "wght" 500;
+    font-variation-settings: "MONO" 1, "CASL" 0, "CRSV" 0, "wght" 500;
     font-family: var(--libdoc-font-family);
 }
 /* LISTS */
@@ -418,7 +418,7 @@ main > *:not(pre) code {
     padding-left: 0.3em;
     padding-right: 0.3em;
     border-radius: 0.3em;
-    font-variation-settings: "wght" 400, "MONO" 1, "CASL" 0, "CRSV" 1;
+    font-variation-settings: "wght" 400, "MONO" 1, "CASL" 0, "CRSV" 0;
 }
 /* language not supported in highlight js */
 main pre:not(:has(.hljs)) {
