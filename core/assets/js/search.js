@@ -62,7 +62,7 @@ const search = {
     },
     renderSearchResult: function({url, title, summary}) {
         return `
-            <li class="d-flex fd-column">
+            <li class="d-flex fd-column pb-5">
                 <a  href="${url}"
                     class="fvs-wght-600 fs-5">
                     ${title}
