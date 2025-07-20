@@ -376,9 +376,19 @@ Here is an example of a markdown link including a raster image with its natural 
 
 *Please note that, awaiting enhancement, raster images smaller than main content width do not render properly on high density displays like Retina.*
 
+Here is a workaround using HTML: If your image is smaller than the content width, just apply `style` instead of `width` and `height` attributes. The favicon image now renders properly on hi-dpi displays.
+
+<img src="/favicon.png" alt="favicon" style="width: 64px; height: 64px">
+
+```html
+<img src="/favicon.png" alt="favicon" style="width: 64px; height: 64px">
+```
+
+
+
 Here is an example of a markdown link including a vector image with its natural width smaller than main content width
 
-[![alt text](/assets/images/info.svg)](/content/creating-content/markdown.md#images "Go to Markdown page section Images").
+[![alt text](/assets/images/info.svg)](/content/creating-content/markdown.md#images "Go to Markdown page section Images")
 
 ### Remote images
 

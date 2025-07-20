@@ -9,7 +9,7 @@ title: Default image background color - Configuration
 description: Sets the default image background color for both light mode and dark mode
 tags:
     - configuration
-    - color-scheme
+    - color-schemes
 ---
 Using transparent images may display bad contrasts between page background color and image colors. It it possible to set the default background color for both light mode and dark mode color schemes. Just set the following parameters into your `settings.json` file.
 

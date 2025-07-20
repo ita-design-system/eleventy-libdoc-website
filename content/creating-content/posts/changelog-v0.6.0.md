@@ -6,7 +6,7 @@ tags:
     - changelog
 title: Change log LibDoc v0.6.0
 description: List of added features and fixes
-date: 2026-07-02
+date: 2025-07-02
 ---
 [Release v0.6.0 on Github](https://github.com/ita-design-system/eleventy-libdoc/releases/tag/0.6.0)
 
