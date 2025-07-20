@@ -457,6 +457,12 @@ main .sandbox__iframe_wrapper a,
     background-color: var(--ita-colors-neutral-100);
 }
 
+/* BLOG */
+.blog-post-link {
+    background-color: var(--ita-neutral-100);
+    border-color: var(--ita-colors-neutral-500);
+}
+
 /* PRINT */
 @media print {
     body {
