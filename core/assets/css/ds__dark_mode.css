@@ -16,8 +16,8 @@
         --ita-colors-primary-500: #009afa;
         --ita-colors-primary-400: #025081;
         --ita-colors-primary-300: #023a5c;
-        --ita-colors-primary-200: #011828;
-        --ita-colors-primary-100: #000e16;
+        --ita-colors-primary-200: #0a1924;
+        --ita-colors-primary-100: #070f13;
         --ita-colors-success-900: #daffc5;
         --ita-colors-success-500: #5cab33;
         --ita-colors-success-100: #1a1d18;
@@ -27,7 +27,7 @@
         --ita-colors-danger-900: #ffd1d1;
         --ita-colors-danger-500: #DF3528;
         --ita-colors-danger-100: #251312;
-        --libdoc-image-background-color: var(--libdoc-image-background-color-dark-mode);
+        --libdoc-image-background-color: var(--libdoc-image-background-color-dark-mode) !important;
         --libdoc-soft-shadow: 0px 0px 10px rgba(0,0,0,1);
         --libdoc-long-shadow: 0px 0px 10px 0px var(--ita-colors-neutral-100), 5px 5px 10px 0px var(--ita-colors-primary-100), -5px 5px 10px 0px var(--ita-colors-primary-100), -5px -5px 10px 0px var(--ita-colors-primary-100), 5px -5px 10px 0px var(--ita-colors-primary-100);
         --libdoc-long-shadow-alt: 
@@ -88,11 +88,17 @@
     color: var(--ita-colors-neutral-900);
     }
     main figure {
-        background-color: var(--ita-colors-neutral-300);
+        background-color: var(--ita-colors-neutral-200);
     }
     main figure.long-shadow img,
     main picture:has(.long-shadow) img {
         box-shadow: 0em 0em 60px var(--ita-colors-neutral-100), 0em 0em 10px var(--ita-colors-neutral-300), 1em 1em 40px var(--ita-colors-neutral-100);
+    }
+    main > pre {
+        background-color: var(--ita-colors-primary-100);
+    }
+    main > pre > code {
+        box-shadow: none;
     }
 
     /* FLOATING TOC */

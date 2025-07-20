@@ -580,6 +580,7 @@ main hr::before {
 main img {
     max-width: 100%;
     height: auto;
+    position: relative;
 }
 main figure {
     display: flex;
