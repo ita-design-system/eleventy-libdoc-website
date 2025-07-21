@@ -151,7 +151,7 @@
     /* WIDGETS */
     .widget-iconCard > p {
         background-color: var(--ita-colors-neutral-200);
-        box-shadow: 0px 0px 10px var(--ita-colors-primary-300);
+        box-shadow: var(--libdoc-soft-shadow);
     }
 
     /* BLOG */
