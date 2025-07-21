@@ -11,6 +11,8 @@ permalink: creating-content/widgets/images/index.html
 
 [Markdown images](/content/creating-content/markdown.md#images) are useful for everyday use but sometime it comes you have to highlight your images.
 
+{% alert 'This widget is in relation with [default image background color](/content/configuration/default-image-background-color.md)', 'info', 'Nice to know' %}
+
 ## Light background on images with transparency
 
 `light` class name on `<img>` tag applies a white background on image.
