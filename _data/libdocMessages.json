@@ -7,6 +7,34 @@
         "en": "Code",
         "fr": "Code"
     },
+    "colorSchemes": {
+        "en": "Color schemes",
+        "fr": "Modes d’apparences"
+    },
+    "colorSchemeAuto": {
+        "en": "Automatic",
+        "fr": "Automatique"
+    },
+    "colorSchemeDescriptionAuto": {
+        "en": "Based on you operating system preference",
+        "fr": "Basé sur les règles d’affichage de votre système"
+    },
+    "colorSchemeLight": {
+        "en": "Light",
+        "fr": "Clair"
+    },
+    "colorSchemeDescriptionLight": {
+        "en": "Always apply light mode",
+        "fr": "Toujours appliquer le mode clair"
+    },
+    "colorSchemeDark": {
+        "en": "Dark",
+        "fr": "Sombre"
+    },
+    "colorSchemeDescriptionDark": {
+        "en": "Always apply dark mode",
+        "fr": "Toujours appliquer le mode sombre"
+    },
     "copied": {
         "en": "Copied",
         "fr": "Copié"
@@ -63,6 +91,10 @@
         "en": "Menu",
         "fr": "Menu"
     },
+    "noscriptAlert": {
+        "en": "It seems that your browser JavaScript is disabled, LibDoc is set to fallback mode with reduced features.",
+        "fr": "Il semble que JavaScript soit désactivé de votre naviigateur, LibDoc est en mode restreint avec des fonctionnalités réduites."
+    },
     "open": {
         "en": "Open",
         "fr": "Ouvrir"
@@ -82,6 +114,10 @@
     "pagesTagged": {
         "en": "Pages tagged",
         "fr": "Pages taguées"
+    },
+    "preferences": {
+        "en": "Preferences",
+        "fr": "Préférences"
     },
     "reload": {
         "en": "Reload",
@@ -145,7 +181,11 @@
     },
     "tableOfContent": {
         "en": "Table of content",
-        "fr": "Table des matières"
+        "fr": "Sommaire"
+    },
+    "tableOfContentAbbr": {
+        "en": "TOC",
+        "fr": "Sommaire"
     },
     "tag": {
         "en": "Tag",

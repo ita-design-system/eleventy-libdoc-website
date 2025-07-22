@@ -41,5 +41,7 @@ export default {
         "css"
     ],
     roundedImagesCorners: userConfig.roundedImagesCorners ?? true,
-    editThisPageRootUrl: userConfig.editThisPageRootUrl ?? false
+    editThisPageRootUrl: userConfig.editThisPageRootUrl ?? false,
+    imgBgColorLightMode: userConfig.imgBgColorLightMode ?? 'transparent',
+    imgBgColorDarkMode: userConfig.imgBgColorDarkMode ?? 'transparent'
 };

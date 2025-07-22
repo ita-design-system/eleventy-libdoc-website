@@ -16,53 +16,6 @@
         22px 24px 38px rgba(15, 49, 86, 0.42),
         34px 37px 59px rgba(15, 49, 86, 0.50);
 }
-/* FONTS */
-/* cyrillic-ext */
-@font-face {
-    font-family: "Recursive";
-    font-style: oblique 0deg 15deg;
-    font-weight: 300 800;
-    font-display: swap;
-    src: url('../fonts/Recursive_cyrillic_ext.woff2') format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-}
-
-/* vietnamese */
-@font-face {
-    font-family: "Recursive";
-    font-style: oblique 0deg 15deg;
-    font-weight: 300 800;
-    font-display: swap;
-    src: url('../fonts/Recursive_vietnamese.woff2') format('woff2');
-    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
-}
-
-/* latin-ext */
-@font-face {
-    font-family: "Recursive";
-    font-style: oblique 0deg 15deg;
-    font-weight: 300 800;
-    font-display: swap;
-    src: url('../fonts/Recursive_latin_ext.woff2') format('woff2');
-    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-/* latin */
-@font-face {
-    font-family: "Recursive";
-    font-style: oblique 0deg 15deg;
-    font-weight: 300 800;
-    font-display: swap;
-    src: url('../fonts/Recursive_latin.woff2') format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* Fallback */
-@font-face {
-    font-family: "fallbackFont";
-    src: local("Arial");
-    size-adjust: 113%;
-}
 
 /* BROWSERS DEFAULTS */
 /* <details> défaut style on iOS */
@@ -114,16 +67,15 @@ button {
     font-family: var(--libdoc-font-family);
 }
 body {
-    background: 0px 0px / 20px 20px radial-gradient(var(--ita-colors-primary-300) 0.5px,var(--ita-colors-primary-100) 1px);
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     font-size: var(--ita-fontSizes-5);
-    font-variation-settings: "slnt" 0, "CASL" 0.5, "CRSV" 1, "MONO" 0, "wght" 360;
+    font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0, "MONO" 0, "wght" 360;
+    letter-spacing: -0.01em;
 }
 html,
 .o-auto {
-    scrollbar-color: var(--ita-colors-primary-500) transparent;
     scrollbar-width: 10px;
 }
 button:disabled {
@@ -131,7 +83,8 @@ button:disabled {
     cursor: default;
 }
 input:focus {
-    outline: 2px solid var(--ita-colors-primary-400);
+    outline-width: 2px;
+    outline-style: solid;
 }
 code {
     font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0.0, "MONO" 1, "wght" 300;
@@ -139,14 +92,7 @@ code {
     font-size: var(--ita-fontSizes-4);
 }
 /* MAIN CONTENT */
-main {
-    color: var(--ita-colors-primary-900);
-}
-main *::target-text {
-    background-color: aqua;
-}
 main *::selection {
-    text-shadow: none;
     background-color: var(--ita-colors-primary-500);
     color: var(--ita-colors-primary-100);
 }
@@ -164,14 +110,6 @@ main > * {
     padding-left: var(--ita-spacings-9);
     padding-right: var(--ita-spacings-9);
 }
-main del {
-    background-color: var(--ita-colors-danger-100);
-    color: var(--ita-colors-danger-900);
-}
-main ins {
-    background-color: var(--ita-colors-success-100);
-    color: var(--ita-colors-success-900);
-}
 /* main > header p,
 main > header summary {
     text-shadow: var(--libdoc-text-shadow-legibility);
@@ -187,48 +125,37 @@ main h3,
 main h4,
 main h5,
 main h6 {
-    color: var(--ita-colors-primary-900);
     position: relative;
     scroll-margin-top: var(--ita-spacings-6);
     text-wrap-style: balance;
 }
-main h1:target a,
-main h2:target a,
-main h3:target a,
-main h4:target a,
-main h5:target a,
-main h6:target a {
-    background-color: var(--ita-colors-primary-500);
-    color: var(--ita-colors-primary-100);
-    border-color: var(--ita-colors-primary-100);
-}
 main h1 {
-    font-variation-settings: "wght" 800, "MONO" 0;
+    font-variation-settings: "wght" 800, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-9);
     letter-spacing: -0.06em;
 }
 main h2 {
-    font-variation-settings: "wght" 700, "MONO" 0;
+    font-variation-settings: "wght" 700, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-9);
     letter-spacing: -0.06em;
 }
 main h3 {
-    font-variation-settings: "wght" 800, "MONO" 0;
+    font-variation-settings: "wght" 800, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-8);
     letter-spacing: -0.05em;
 }
 main h4 {
-    font-variation-settings: "wght" 700, "MONO" 0;
+    font-variation-settings: "wght" 700, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-8);
     letter-spacing: -0.05em;
 }
 main h5 {
-    font-variation-settings: "wght" 800, "MONO" 0;
+    font-variation-settings: "wght" 800, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-7);
     letter-spacing: -0.05em;
 }
 main h6 {
-    font-variation-settings: "wght" 700, "MONO" 0;
+    font-variation-settings: "wght" 700, "MONO" 0, "CASL" 0, "CRSV" 0.0;
     font-size: var(--ita-fontSizes-7);
     letter-spacing: -0.05em;
 }
@@ -287,7 +214,6 @@ main a {
 }
 main a:link,
 main a:visited {
-    color: var(--ita-colors-primary-500);
     font-variation-settings: "wght" 500, "MONO" 0;
     letter-spacing: -0.03em;
     /* text-shadow: none; */
@@ -295,7 +221,6 @@ main a:visited {
     text-decoration-thickness: 0.1em;
 }
 main a:hover {
-    color: var(--ita-colors-primary-700);
     font-variation-settings: "wght" 700, "MONO" 0;
 }
 main a[aria-current="page"] {
@@ -311,14 +236,6 @@ main a.__external-link::after {
     float: none;
     transition: color 300ms;
 }
-main a[href^="https://"]:not([href^="https://eleventy-libdoc"]):not(.btn)::after,
-main a.__external-link::after {
-    color: var(--ita-colors-primary-300);
-}
-main a[href^="https://"]:not([href^="https://eleventy-libdoc"]):not(.btn):hover::after,
-main a.__external-link:hover::after {
-    color: var(--ita-colors-primary-700);
-}
 /* EMPHASIS */
 main em {
     font-variation-settings: "slnt" -8, "wght" 400;
@@ -333,66 +250,33 @@ main i {
     font-variation-settings: "slnt" -15, "MONO" 0;
 }
 /* MARKING AND SPECIALS */
-main mark {
-    /* text-shadow: none; */
-    background-color: var(--ita-colors-success-100);
-    color: var(--ita-colors-success-900);
-}
 main s,
 main strike {
-    text-decoration-color: var(--ita-colors-danger-500);
     text-decoration-thickness: 0.05em;
     text-decoration-style: wavy;
-    /* text-shadow: none; */
 }
-/* main del {
-    text-shadow: none;
-} */
 main del * {
-    /* text-shadow: none; */
-    background-color: var(--ita-colors-danger-100);
-    color: var(--ita-colors-danger-900);
-    max-width: var(--libdoc-container-width);
-}
-/* main ins {
-    text-shadow: none;
-} */
-main ins * {
-    /* text-shadow: none; */
-    background-color: var(--ita-colors-success-100);
-    color: var(--ita-colors-success-900);
     max-width: var(--libdoc-container-width);
 }
 main samp {
     font-family: var(--libdoc-font-family);
-    font-variation-settings: "MONO" 1, "CASL" 0, "wght" 400;
+    font-variation-settings: "MONO" 1, "CASL" 0, "CRSV" 0, "wght" 400;
     letter-spacing: -0.04em;
-    color: var(--ita-colors-neutral-100);
-    background: var(--ita-colors-neutral-800);
     border-radius: 3px;
     padding: 0em 0.3em;
 }
 main q {
     font-variation-settings: "slnt" -15, "CRSV" 1, "CASL" 1, "wght" 400;
-    /* text-shadow: none; */
-    background-color: var(--ita-colors-primary-100);
 }
 main kbd {
-    font-variation-settings: "MONO" 1, "wght" 500;
+    font-variation-settings: "MONO" 1, "CASL" 0, "CRSV" 0, "wght" 500;
     font-family: var(--libdoc-font-family);
-    background-color: var(--ita-colors-primary-200);
-    padding: 0 0.4em;
-    border-radius: 4px;
-    letter-spacing: -0.03em;
 }
 /* LISTS */
 main ul,
 main ol {
     line-height: 1.6em;
 }
-/* main > ol {
-    padding-left: var(--ita-spacings-11);
-} */
 main > ol:not(:has(ul)) ol {
     padding-left: var(--ita-spacings-3);
 }
@@ -407,9 +291,6 @@ main > ol:not(:has(ul)) li > ol {
     list-style: none;
     margin-top: 1em;
 }
-/* main > ul li + li {
-    padding-top: 0.5em;
-} */
 main > ol > li + li,
 main > ol li > ol > li + li {
     padding-top: 1em;
@@ -418,7 +299,8 @@ main > ol:not(:has(ul)) > li,
 main > ol:not(:has(ul)) li > ol > li {
     counter-increment: listItem;
     padding-left: var(--ita-spacings-7);
-    border-left: 1px dashed var(--ita-colors-neutral-500);
+    border-left-width: 1px;
+    border-left-style: dashed;
 }
 /* 
 https://www.joshwcomeau.com/css/styling-ordered-lists-with-css-counters/
@@ -436,30 +318,14 @@ main > ol:not(:has(ul)) li > ol > li::before {
 
     font-variation-settings: "wght" 500, "MONO" 1, "CASL" 1;
     padding: 0em 0em 0em 0.5em;
-    background-color: var(--ita-colors-primary-100);
-    color: var(--ita-colors-primary-500);
-    border-bottom: 1px dashed var(--ita-colors-neutral-500);
-    /* content: counters(listItem, '.') '.';
-    position: absolute;
-    transform: translateX(calc(-100% - var(--ita-spacings-2)));
-    display: inline-block;
-    font-variation-settings: "wght" 700, "MONO" 1, "CASL" 1;
-    font-size: var(--ita-fontSizes-2);
-    padding: 0em 1em;
-    background-color: var(--ita-colors-neutral-100);
-    color: var(--ita-colors-primary-500);
-    border-radius: 100px;
-    line-height: 2em;
-    letter-spacing: -0.1em;
-    border: 1px dotted var(--ita-colors-primary-500);
-    margin-top: 0.1em; */
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
 }
 main > ol:not(:has(ul)) > li {
-    border-left: 1px dashed var(--ita-colors-primary-500);
+    border-left-width: 1px;
+    border-left-style: dashed;
 }
 main > ol:not(:has(ul)) > li::before {
-    background-color: var(--ita-colors-primary-500);
-    color: var(--ita-colors-neutral-100);
     margin-top: 0;
     padding: 0.2em 1em;
     border-radius: 100px;
@@ -474,7 +340,8 @@ main > ul ul {
 main > ul > li,
 main > ul ul > li,
 main > ol ul > li {
-    border-left: 1px dashed var(--ita-colors-neutral-500);
+    border-left-width: 1px;
+    border-left-style: dashed;
     position: relative;
     padding-left: var(--ita-spacings-8);
     padding-top: 0.5em;
@@ -487,7 +354,8 @@ main > ol ul > li::before {
     top: 1.3em;
     left: 0;
     width: var(--ita-spacings-5);
-    border-bottom: 1px dashed var(--ita-colors-neutral-500);
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
 }
 main > ul > li::after,
 main > ul ul > li::after,
@@ -498,7 +366,6 @@ main > ol ul > li::after {
     left: var(--ita-spacings-4);
     width: var(--ita-spacings-2);
     height: var(--ita-spacings-2);
-    background-color: var(--ita-colors-primary-500);
     border-radius: 100%;
 }
 /* Mixed list type */
@@ -528,38 +395,31 @@ main > ol:has(ul) {
 main > ol:has(ul) > li {
     counter-increment: mixedItem;
     padding-left: var(--ita-spacings-6);
-    border-left: 1px dashed var(--ita-colors-primary-500);
+    border-left-width: 1px;
+    border-left-style: dashed;
 }
 main > ol:has(ul) > li:before  {
     content: counter(mixedItem) '.';
     position: absolute;
-    transform: translateX(calc(-100% - var(--ita-spacings-2)));
+    transform: translateY(-3px) translateX(calc(-100% - var(--ita-spacings-2)));
     display: inline-block;
     font-variation-settings: "wght" 700, "MONO" 1, "CASL" 1;
     font-size: var(--ita-fontSizes-2);
     padding: 0.2em 1em;
-    background-color: var(--ita-colors-primary-500);
-    color: var(--ita-colors-neutral-100);
     border-radius: 100px;
-    line-height: 2em;
-    letter-spacing: -0.1em;
-    border: none;
 }
 main > *:not(header) li::marker {
     font-variation-settings: "wght" 500, "MONO" 1, "CASL" 1;
-    color: var(--ita-colors-primary-500);
     font-size: var(--ita-fontSizes-3);
 }
 
 /* CODE AND SYNTAX HIGHLIGHTING */
 main > *:not(pre) code {
-    background-color: var(--ita-colors-primary-200);
     display: inline-block;
     padding-left: 0.3em;
     padding-right: 0.3em;
     border-radius: 0.3em;
-    font-variation-settings: "wght" 400, "MONO" 1, "CASL" 0, "CRSV" 1;
-    color: var(--ita-colors-primary-800);
+    font-variation-settings: "wght" 400, "MONO" 1, "CASL" 0, "CRSV" 0;
 }
 /* language not supported in highlight js */
 main pre:not(:has(.hljs)) {
@@ -567,10 +427,9 @@ main pre:not(:has(.hljs)) {
 }
 main > pre {
     padding: var(--ita-spacings-9);
-    background-color: var(--ita-colors-primary-200);
     border-radius: 12px;
-    border: 1px solid var(--ita-colors-primary-300);
-    box-shadow: inset 0.3em 0.3em 2em #0B427C44;
+    border-width: 1px;
+    border-style: solid;
     overflow: hidden;
 }
 main > pre > code {
@@ -578,13 +437,14 @@ main > pre > code {
     box-shadow: var(--libdoc-long-shadow-alt);
 }
 main > pre > code::before {
-    content: attr(class);
+    content: attr(data-language-name);
     display: block;
     padding-bottom: var(--ita-spacings-2);
     margin-bottom: var(--ita-spacings-2);
-    border-bottom: 1px dashed #385267;
-    font-size: var(--ita-fontSizes-2);
-    font-variation-settings: "wght" 400;
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    font-size: var(--ita-fontSizes-3);
+    font-variation-settings: "wght" 500;
 }
 /* TABLES */
 main > .table-wrapper + .table-wrapper {
@@ -601,39 +461,31 @@ main table thead th {
     font-variation-settings: "wght" 700, "MONO" 0;
     font-size: var(--ita-fontSizes-3);
     padding: var(--ita-spacings-3);
-    background-color: var(--ita-colors-primary-100);
-    border: 1px solid var(--ita-colors-primary-300);
+    border-width: 1px;
+    border-style: solid;
 }
 main table tbody tr td {
     padding: var(--ita-spacings-3);
     font-size: var(--ita-fontSizes-3);
-    border: 1px solid var(--ita-colors-primary-300);
+    border-width: 1px;
+    border-style: solid;
     font-variation-settings: "wght" 400, "MONO" 0;
     line-height: 1.5em;
 }
-main table tbody tr:nth-child(odd) td {
-    background-color: var(--ita-colors-primary-200);
-    color: var(--ita-colors-primary-900);
-}
-main table tbody tr:nth-child(even) td {
-    background-color: var(--ita-colors-primary-100);
-}
 main table td code {
-    background-color: var(--ita-colors-primary-400);
-    color: var(--ita-colors-neutral-100);
+    font-size: var(--ita-fontSizes-3);
 }
 /* QUOTES */
 main blockquote {
     position: relative;
-    background: var(--ita-colors-neutral-100);
-    color: var(--ita-colors-primary-900);
     margin-top: var(--ita-spacings-10);
     margin-bottom: var(--ita-spacings-10);
     padding: var(--ita-spacings-5) var(--ita-spacings-9);
     max-width: var(--libdoc-container-width);
     border-bottom-left-radius: 3em;
     border-top-right-radius: 3em;
-    border: 3px double var(--ita-colors-primary-300);
+    border-width: 3px;
+    border-style: double;
     font-family: var(--libdoc-font-family);
     font-size: var(--ita-fontSizes-7);
     border-radius: 12px;
@@ -644,14 +496,12 @@ main blockquote::before {
     position: absolute;
     left: 0;
     font-size: 4em;
-    color: var(--ita-colors-primary-300);
     transform: translateY(-60%);
 }
 main blockquote::after {
     content: "❞";
     position: absolute;
     font-size: 4em;
-    color: var(--ita-colors-primary-300);
     transform: translateY(-20%);
     right: 0;
 }
@@ -670,14 +520,14 @@ main dl dt {
     font-variation-settings: "wght" 500, "MONO" 0;
     margin-bottom: 0.2em;
     letter-spacing: -0.04em;
-    color: var(--ita-colors-primary-500);
 }
 main dl dd {
     margin-left: var(--ita-spacings-2);
     margin-bottom: 1em;
     line-height: 1.6em;
     padding-left: var(--ita-spacings-5);
-    border-left: 1px dashed var(--ita-colors-primary-500);
+    border-left-width: 1px;
+    border-left-style: dashed;
 }
 /* DETAILS */
 main > details summary,
@@ -694,7 +544,6 @@ main > details summary::before,
 main > *:not(header) details summary::before {
     content: '\e914';
     font-family: icomoon;
-    color: var(--ita-colors-primary-500);
     font-size: var(--ita-fontSizes-6);
 }
 main > details[open] summary::before,
@@ -706,7 +555,8 @@ main > details + details summary,
 main > *:not(header) details:has(+ details) summary,
 main > *:not(header) details + details summary {
     padding: 1em 0;
-    border-bottom: 1px dashed var(--ita-colors-neutral-500);
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
 }
 main > details[open]:has(+ details) summary,
 main > details + details[open] summary,
@@ -724,12 +574,14 @@ main hr::before {
     content: "";
     display: block;
     width: 100%;
-    border-bottom: 1px dashed var(--ita-colors-neutral-500);
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
 }
 /* IMAGES */
 main img {
     max-width: 100%;
     height: auto;
+    position: relative;
 }
 main figure {
     display: flex;
@@ -738,23 +590,10 @@ main figure {
     row-gap: 1em;
     padding-top: var(--ita-spacings-9);
     padding-bottom: var(--ita-spacings-9);
-    background-color: var(--ita-colors-neutral-100);
     border-radius: 12px;
-    border: 1px solid var(--ita-colors-neutral-400);
+    border-width: 1px;
+    border-style: solid;
     overflow: hidden;
-}
-main figure.dark,
-main picture:has(.dark) img {
-    color: var(--ita-colors-neutral-100);
-    background-color: var(--ita-colors-neutral-900);
-}
-main picture:has(.light) img {
-    color: var(--ita-colors-neutral-900);
-    background-color: var(--ita-colors-neutral-100);
-}
-main figure.damier img,
-main picture:has(.damier) img {
-    background: var(--libdoc-damier);
 }
 main figure.long-shadow {
     row-gap: 2em;
@@ -774,14 +613,10 @@ main picture:has(.wide) {
 }
 /* VIDEO */
 main video {
-    background: var(--ita-colors-neutral-900);
     padding: 0;
     max-width: var(--libdoc-container-width);
 }
 /* INLINE HTML */
-main rt {
-    background: linear-gradient(transparent calc(100% - 0.5px), var(--ita-colors-neutral-500) 0.5px);
-}
 main time {
     font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0, "MONO" 0, "wght" 400;
     letter-spacing: -0.02em;
@@ -795,13 +630,11 @@ main p:has(small) {
 }
 main small {
     font-size: var(--ita-fontSizes-3);
-    color: var(--ita-colors-neutral-700);
     font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0, "MONO" 0;
 }
 main u {
     text-decoration-style: wavy;
     text-decoration-color: var(--ita-colors-danger-500);
-    color: var(--ita-colors-danger-900);
 }
 main img.long-shadow {
     margin-bottom: 2em;
@@ -827,9 +660,8 @@ main button[type="button"].btn {
     gap: var(--ita-spacings-3);
     padding: 1.5em;
     border-radius: 100px;
-    background-color: var(--ita-colors-neutral-200);
-    color: var(--ita-colors-neutral-900);
-    border: 1px dashed var(--ita-colors-neutral-900);
+    border-width: 1px;
+    border-style: dashed;
     height: 3em;
     text-transform: uppercase;
     text-decoration: none;
@@ -848,54 +680,6 @@ main button[type="button"].btn:active {
     border-style: solid;
     scale: 0.95;
 }
-main a.btn.btn-primary,
-main button[type="button"].btn.btn-primary {
-    background-color: var(--ita-colors-primary-500);
-    color: var(--ita-colors-neutral-100);
-    border-color: var(--ita-colors-neutral-100);
-}
-main a.btn.btn-primary-light,
-main button[type="button"].btn.btn-primary-light {
-    background-color: var(--ita-colors-primary-100);
-    color: var(--ita-colors-primary-600);
-    border-color: var(--ita-colors-primary-600);
-}
-main a.btn.btn-success,
-main button[type="button"].btn.btn-success {
-    background-color: var(--ita-colors-success-500);
-    color: var(--ita-colors-neutral-100);
-    border-color: var(--ita-colors-success-100);
-}
-main a.btn.btn-success-light,
-main button[type="button"].btn.btn-success-light {
-    background-color: var(--ita-colors-success-100);
-    color: var(--ita-colors-success-900);
-    border-color: var(--ita-colors-success-900);
-}
-main a.btn.btn-warning,
-main button[type="button"].btn.btn-warning {
-    background-color: var(--ita-colors-warning-500);
-    color: var(--ita-colors-neutral-100);
-    border-color: var(--ita-colors-warning-100);
-}
-main a.btn.btn-warning-light,
-main button[type="button"].btn.btn-warning-light {
-    background-color: var(--ita-colors-warning-100);
-    color: var(--ita-colors-warning-900);
-    border-color: var(--ita-colors-warning-900);
-}
-main a.btn.btn-danger,
-main button[type="button"].btn.btn-danger {
-    background-color: var(--ita-colors-danger-500);
-    color: var(--ita-colors-neutral-100);
-    border-color: var(--ita-colors-danger-100);
-}
-main a.btn.btn-danger-light,
-main button[type="button"].btn.btn-danger-light {
-    background-color: var(--ita-colors-danger-100);
-    color: var(--ita-colors-danger-900);
-    border-color: var(--ita-colors-danger-900);
-}
 /* EMBEDS */
 main > iframe {
     aspect-ratio: 2.06;
@@ -906,7 +690,6 @@ main > iframe {
 main > aside > iframe {
     width: 100%;
     aspect-ratio: 16/9;
-    background-color: var(--ita-colors-neutral-900);
     border-radius: 9px;
     overflow: hidden;
     box-shadow: var(--libdoc-long-shadow);
@@ -917,9 +700,6 @@ main .alert {
     padding: var(--ita-spacings-3) var(--ita-spacings-5);
     border-left-style: solid;
     border-left-width: 3px;
-    border-color: var(--ita-colors-neutral-500);
-    color: var(--ita-colors-neutral-700);
-    background-color: var(--ita-colors-primary-100);
     font-size: var(--ita-fontSizes-4);
     letter-spacing: -0.01em;
     line-height: 1.6em;
@@ -932,46 +712,8 @@ main .alert[data-title]::before {
     text-transform: uppercase;
     font-size: var(--ita-fontSizes-3);
     padding-bottom: var(--ita-spacings-1);
-    color: var(--ita-colors-neutral-700);
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-color: var(--ita-colors-neutral-500);
-}
-main .alert.alert-info {
-    background-color: var(--ita-colors-neutral-100);
-    color: var(--ita-colors-primary-900);
-    border-color: var(--ita-colors-primary-500);
-}
-main .alert.alert-info::before {
-    color: var(--ita-colors-primary-500);
-    border-color: currentColor;
-}
-main .alert.alert-success {
-    background-color: var(--ita-colors-success-100);
-    color: var(--ita-colors-success-900);
-    border-color: var(--ita-colors-success-500);
-}
-main .alert.alert-success::before {
-    color: var(--ita-colors-success-500);
-    border-color: currentColor;
-}
-main .alert.alert-warning {
-    background-color: var(--ita-colors-warning-100);
-    color: var(--ita-colors-warning-900);
-    border-color: var(--ita-colors-warning-500);
-}
-main .alert.alert-warning::before {
-    color: var(--ita-colors-warning-500);
-    border-color: currentColor;
-}
-main .alert.alert-danger {
-    background-color: var(--ita-colors-danger-100);
-    color: var(--ita-colors-danger-900);
-    border-color: var(--ita-colors-danger-500);
-}
-main .alert.alert-danger::before {
-    color: var(--ita-colors-danger-500);
-    border-color: currentColor;
 }
 /* SEARCH OCCURRENCES */
 @keyframes flash {
@@ -979,7 +721,8 @@ main .alert.alert-danger::before {
     100% { background-color: inherit }
 }
 main .__search-occurrence {
-    outline: 2px dashed var(--ita-colors-success-500) !important;
+    outline-width: 2px;
+    outline-style: dashed;
     outline-offset: 2px;
     border-radius: 3px;
     animation: flash 1s 0s 1 linear;
@@ -990,7 +733,8 @@ main .__search-occurrence {
 #nav_primary_blog_link::before {
     content: '';
     display: flex;
-    border-top: 1px dashed var(--ita-colors-neutral-500);
+    border-top-width: 1px;
+    border-top-style: dashed;
     width: var(--ita-spacings-5);
     min-width: var(--ita-spacings-5);
     order: -2;
@@ -1000,7 +744,6 @@ main .__search-occurrence {
 #nav_primary_blog_link::after {
     content: '';
     display: flex;
-    background-color: var(--ita-colors-primary-500);
     width: var(--ita-spacings-2);
     min-width: var(--ita-spacings-2);
     aspect-ratio: 1;
@@ -1009,13 +752,10 @@ main .__search-occurrence {
     border-radius: 100%;
     transform: translateX(calc(-50% + 1px));
 }
-#nav_primary_container [aria-current="page"],
-.nav_primary [aria-current="page"] {
-    color: var(--ita-colors-primary-500);
-}
 #nav_primary > ol > li ol li,
 .nav_primary > ol > li ol li {
-    border-left: 1px dashed var(--ita-colors-neutral-500);
+    border-left-width: 1px;
+    border-left-style: dashed;
 }
 #nav_primary > ol > li > a.nav_primary__anchor,
 .nav_primary > ol > li > a.nav_primary__anchor {
@@ -1053,13 +793,15 @@ main .__search-occurrence {
     margin-left: auto;
     margin-right: auto;
 }
+.sandbox .sandbox__code {
+    min-height: 500px;
+}
 .sandbox .sandbox__resizer {
     width: 20px;
 }
 .sandbox .sandbox__resizer:active,
 .sandbox .sandbox__resizer:hover {
     cursor: col-resize;
-    background-color: var(--ita-colors-neutral-700);
 }
 .sandbox .sandbox__enable_wrapper {
     opacity: 0;
@@ -1084,7 +826,6 @@ main .__search-occurrence {
     max-width: 80vw;
 }
 #floating_toc a:hover {
-    color: var(--ita-colors-primary-700);
     font-variation-settings: "wght" 700, "MONO" 0;
 }
 
@@ -1096,6 +837,18 @@ main .__search-occurrence {
 /* WIDGETS */
 main .widget + .widget {
     margin-top: var(--ita-spacings-5);
+}
+
+/* INPUT RADIOS */
+input[type="radio"] ~ label::before {
+    content: '';
+    min-width: 1em;
+    max-width: 1em;
+    min-height: 1em;
+    max-height: 1em;
+    border-radius: 100%;
+    border-width: 1px;
+    border-style: solid;
 }
 
 /* RESPONSIVE MD */
@@ -1114,7 +867,8 @@ main .widget + .widget {
     body {
         font-size: var(--ita-fontSizes-4);
     }
-    code {
+    code,
+    main > pre > code::before {
         font-size: var(--ita-fontSizes-2);
     }
     main > * {
@@ -1197,7 +951,6 @@ main .widget + .widget {
     }
 }
 
-/* RESPONSIVE XS + SM */
 @media (min-width: 960px) and (max-width: 1440px) {
     body:not(.touch-device) #floating_toc__list {
         transition: opacity 300ms;
@@ -1212,24 +965,8 @@ main .widget + .widget {
 .__hover-1 {
     transition: all 300ms;
 }
-.__hover-1:hover {
-    background-color: var(--ita-colors-primary-500);
-    color: var(--ita-colors-primary-100);
-    border-color: var(--ita-colors-primary-100);
-}
-.__hover-1:hover > * {
-    color: var(--ita-colors-primary-100);
-}
 .__hover-2 {
     transition: all 300ms;
-}
-.__hover-2:hover {
-    background-color: var(--ita-colors-success-500);
-    color: var(--ita-colors-success-100);
-    border-color: var(--ita-colors-success-100);
-}
-.__hover-2:hover > * {
-    color: var(--ita-colors-success-100);
 }
 
 /* SHADOWS */
@@ -1237,11 +974,18 @@ main .widget + .widget {
     box-shadow: var(--libdoc-soft-shadow);
 }
 
+/* ANIMATIONS */
+@keyframes blink {
+    100% {
+        opacity: 0.5;
+    }
+}
+.__anim-blink {
+    animation: blink 0.5s linear 0s infinite alternate;
+}
+
 /* PRINT */
 @media print {
-    body {
-        background: none;
-    }
     main {
         width: 100% !important;
         padding: 0px 30px;
@@ -1269,12 +1013,10 @@ main .widget + .widget {
     main > pre {
         border: none;
         box-shadow: none;
-        background-color: transparent;
     }
     main > pre > code {
         box-shadow: none;
         white-space: pre-wrap;
-        background-color: transparent;
         font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0, "MONO" 1, "wght" 500;
     }
     main > pre > code::before {

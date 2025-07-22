@@ -28,6 +28,7 @@ Eleventy LibDoc is an easy to use and content focused starter project for [Eleve
 {% iconCard 'Printable', 'Every page created with LibDoc can be printed. Try to print preview this page in PDF!<br><button type="button" class="btn mt-2" onclick="print()">print preview</button>', 'printer' %}
 {% iconCard 'Slick code highlighting', 'Display your code in a nice style and adjust which code languages you really use.', 'code' %}
 {% iconCard 'Sandboxes', 'Showcase small demos or full HTML pages into a responsive dual pane.', 'sidebar' %}
+{% iconCard 'Light and dark modes', 'LibDoc’s interface is available with both light and dark mode color schemes', 'circle-half' %}
 
 ## Configuration
 
@@ -57,6 +58,8 @@ Start entering your own settings into `settings.json` at the root of the project
     Adjust your own supported languages for syntax highlighting.
 *   [Edit this page link](https://eleventy-libdoc.netlify.app/configuration/edit-this-page-link/)<br>
     Sets the git root directory project’s URL to enable "Edit this page" button link.
+*   [Default image background color](https://eleventy-libdoc.netlify.app/configuration/default-image-background-color/)<br>
+    Sets the default image background color for both light mode and dark mode.
 
 
 ## Creating content
@@ -106,6 +109,8 @@ One of the most important element of the user interface. [Primary navigation doc
     Organize your content with infinite-depth hierarchical navigation.
 *   **Eleventy breadcrumb**<br>
     Automatic breadcrumb is created from Eleventy navigation.
+*   [Color schemes - Light and dark mode](https://eleventy-libdoc.netlify.app/primary-navigation/color-schemes/)<br>
+    LibDoc’s interface in light or dark mode based on user preferences.
 
 ## Files tree
 

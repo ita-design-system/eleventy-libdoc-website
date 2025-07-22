@@ -23,4 +23,4 @@ description: LibDoc could not work without these resources
     The Internet's favorite JavaScript syntax highlighter supporting Node.js and the web.
 *   [Recursive font](https://www.recursive.design/)<br>
     A typographic palette for vibrant code & UI.
-*   All photographs by [Olivier 3lanc](https://github.com/olivier3lanc)
+*   All photographs by [Olivier 3lanc](https://olivier3lanc.github.io)

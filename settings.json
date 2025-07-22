@@ -11,5 +11,6 @@
             "text": "ITADS"
         }
     ],
-    "editThisPageRootUrl": "https://github.com/ita-design-system/eleventy-libdoc-website/blob/main"
+    "editThisPageRootUrl": "https://github.com/ita-design-system/eleventy-libdoc-website/blob/main",
+    "imgBgColorDarkMode": "white"
 }

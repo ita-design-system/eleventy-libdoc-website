@@ -46,7 +46,7 @@ On small devices, the home page link is displayed as the first item into the ded
             <button type="button"
                 class="d-flex fd-column jc-center ai-center gap-1 | pl-2 pr-2 | ta-center | cur-pointer c-primary-900 bc-neutral-100 b-0 brad-3" disabled="">
                 <span class="icon-list-dashes fs-6"></span>
-                <span class="fvs-wght-400 fs-1 tt-uppercase">{{ libdocMessages.tableOfContent[libdocConfig.lang] }}</span>
+                <span class="fvs-wght-400 fs-1 tt-uppercase">{{ libdocMessages.tableOfContentAbbr[libdocConfig.lang] }}</span>
             </button>
             <button type="button"
                 class="d-flex fd-column jc-center ai-center gap-1 | pl-2 pr-2 | ta-center | cur-pointer c-primary-900 bc-neutral-100 b-0 brad-3" disabled="">

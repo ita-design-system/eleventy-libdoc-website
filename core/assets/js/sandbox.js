@@ -30,12 +30,6 @@ const sandbox = {
         copyUrl: '.sandbox__copy_url',
         permalink: '.sandbox__permalink'
     },
-    _params: {
-        tabBtn: {
-            defaultClass: 'd-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | c-primary-900 bc-0 b-0 cur-pointer',
-            activeClass: 'd-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | c-primary-900 bc-neutral-100 b-0 brad-1 cur-pointer'
-        }
-    },
     disableIframes: function() {
         document.querySelectorAll(sandbox._selectors.iframe).forEach(function(el) {
             el.classList.add('pe-none');
@@ -94,19 +88,15 @@ const sandbox = {
                 sandbox.disableIframes();
                 // Enable mouse position monitoring
                 window.addEventListener('mousemove', sandbox.handlers._mousemoveWindow);
-                // console.log('start sandbox__resizer', sandbox._preInitialWidth, sandbox._iframeInitialWidth);
             }
         },
         _stopResizer: function(evt) {
-            console.log('stop sandbox__resizer');
             sandbox.enableIframes();
             window.removeEventListener('mousemove', sandbox.handlers._mousemoveWindow);
         },
         _mousemoveWindow:  function(evt) {
             sandbox._pointerX = evt.clientX;
             sandbox._pointerY = evt.clientY;
-            // const delta = sandbox._pointerX - sandbox._pointerXReference;
-            // console.log(delta);
             sandbox.resize();
         },
         _tab: function(evt) {
@@ -115,9 +105,7 @@ const sandbox = {
                 elsBtns = elSandbox.querySelectorAll(sandbox._selectors.tabBtn),
                 elPre = elSandbox.querySelector(sandbox._selectors.codeWrapper),
                 elIframe = elSandbox.querySelector(sandbox._selectors.iframeWrapper),
-                tabName = elBtn.dataset.name,
-                defaultClass = `${sandbox._params.tabBtn.defaultClass} | ${sandbox._selectors.tabBtn.replace(`.`, ``)}`,
-                activeClass = `${sandbox._params.tabBtn.activeClass} | ${sandbox._selectors.tabBtn.replace(`.`, ``)}`;
+                tabName = elBtn.dataset.name;
             switch (tabName) {
                 case 'code':
                     elPre.classList.remove('d-none--xs', 'd-none--sm');
@@ -130,9 +118,9 @@ const sandbox = {
                     break;
             }
             elsBtns.forEach(function(el) {
-                el.setAttribute('class', defaultClass);
+                el.classList.remove('__active');
             });
-            elBtn.setAttribute('class', activeClass);
+            elBtn.classList.add('__active');
         },
         _clickCopyCode: function(evt) {
             const elBtn = evt.target.closest('button');
@@ -142,8 +130,8 @@ const sandbox = {
             if (elBtn.dataset.originalText === undefined) elBtn.dataset.originalText = elBtn.innerText;
             elBtn.innerHTML = `
                 <span style="margin-left: -4px;"
-                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | c-neutral-100 bc-success-500 brad-4">
-                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1"></span>
+                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | brad-4 bc-success-500">
+                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1 | c-success-100"></span>
                 </span>
                 ${libdocMessages.copied}!`;
             setTimeout(function() {
@@ -159,8 +147,8 @@ const sandbox = {
             if (elBtn.dataset.originalText === undefined) elBtn.dataset.originalText = elBtn.innerText;
             elBtn.innerHTML = `
                 <span style="margin-left: -4px;"
-                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | c-neutral-100 bc-success-500 brad-4">
-                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1"></span>
+                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | brad-4 bc-success-500">
+                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1 | c-success-100"></span>
                 </span>
                 ${libdocMessages.copied}!`;
             setTimeout(function() {
@@ -179,8 +167,8 @@ const sandbox = {
             if (elBtn.dataset.originalText === undefined) elBtn.dataset.originalText = elBtn.innerText;
             elBtn.innerHTML = `
                 <span style="margin-left: -4px;"
-                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | c-neutral-100 bc-success-500 brad-4">
-                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1"></span>
+                    class="d-flex | pos-absolute t-tX-100 | p-2 mr-1 | brad-4 bc-success-500">
+                    <span class="icon-check pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-1 | c-success-100"></span>
                 </span>
                 ${libdocMessages.reloaded}!`;
             setTimeout(function() {

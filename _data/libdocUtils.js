@@ -80,31 +80,31 @@ export default {
                     pr-9="md"
                     pl-5="xs,sm"
                     pr-5="xs,sm">
-                    <div class="d-flex | p-1 | bc-primary-200 brad-2"
+                    <div class="d-flex | p-1 o-hidden | brad-2 | sandbox__tabs"
                         d-none="md">
                         <button type="button"
-                            class="d-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | c-primary-900 bc-0 b-0 cur-pointer | sandbox__tab"
+                            class="d-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | b-0 brad-1 cur-pointer | sandbox__tab"
                             data-name="code">
                             ${libdocMessages.code[libdocConfig.lang]}
                         </button>
                         <button type="button"
-                            class="d-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | c-primary-900 bc-neutral-100 b-0 brad-1 cur-pointer | sandbox__tab"
+                            class="d-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | b-0 brad-1 cur-pointer | sandbox__tab __active"
                             data-name="iframe">
                             ${libdocMessages.result[libdocConfig.lang]}
                         </button>
                     </div>
-                    <div class="d-flex fd-column d-none--xs d-none--sm | o-hidden | bc-neutral-900 c-neutral-200 brad-3 bwidth-1 bstyle-solid bcolor-neutral-900 | sandbox__code_wrapper"
+                    <div class="d-flex fd-column d-none--xs d-none--sm | o-hidden | brad-3 | sandbox__code_wrapper"
                         w-50="md"
                         w-100="xs,sm"
                         bradtr-0="md"
                         bradbr-0="md">
                         <header class="d-flex jc-space-between | pl-5" style="height: 58px">
-                            <p class="d-flex ai-center | m-0 | fvs-wght-400 fs-3 lh-1 | c-neutral-600"
+                            <p class="d-flex ai-center | m-0 | fvs-wght-400 fs-3 lh-1"
                                 fs-2="xs">
                                 ${title}
                             </p>
                             <button type="button"
-                                class="d-flex ai-center | pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | bc-0 c-neutral-300 b-0 cur-pointer | sandbox__copy_code"
+                                class="d-flex ai-center | pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | bc-0 b-0 cur-pointer | sandbox__copy_code"
                                 title="${libdocMessages.copyHTML[libdocConfig.lang]}">
                                 <span class="o-hidden | to-ellipsis ws-nowrap">${libdocMessages.copy[libdocConfig.lang]}</span>
                             </button>
@@ -130,24 +130,24 @@ export default {
                                 </label>
                             </div>
                         </div>
-                        <div class="d-flex gap-2 | m-0 pt-1 pb-1 pl-0 | fvs-wght-400 fs-2 lh-1 | c-neutral-500 ls-none"
+                        <div class="d-flex gap-2 | m-0 pt-1 pb-1 pl-0 | fvs-wght-400 fs-2 lh-1 | ls-none"
                             pl-2="xs,sm">
                             &nbsp;
                         </div>
                     </div>
-                    <button class="pos-relative | p-0 | bc-neutral-800 c-neutral-500 b-0 | sandbox__resizer"
+                    <button class="pos-relative | p-0 | b-0 | sandbox__resizer"
                         title="${libdocMessages.sandboxResizeHelper[libdocConfig.lang]}"
                         d-none="xs,sm">
                         <span class="icon-dots-six-vertical fs-5"></span>
                     </button>
-                    <div class="d-flex fd-column | pos-relative | o-hidden | bc-neutral-900 c-neutral-200 brad-3 bwidth-1 bstyle-solid bcolor-neutral-900 | sandbox__iframe_wrapper"
+                    <div class="d-flex fd-column | pos-relative | o-hidden | brad-3 | sandbox__iframe_wrapper"
                         w-50="md"
                         w-100="xs,sm"
                         bradtl-0="md"
                         bradbl-0="md"
                         style="box-sizing: content-box">${iframeCommands}
                         <div class="d-flex | pos-relative">
-                            <iframe ${iframeAttribute} loading="lazy" class="w-100 h-500px | b-0 bc-neutral-100 | sandbox__iframe"></iframe>
+                            <iframe ${iframeAttribute} loading="lazy" class="w-100 h-500px | b-0 | sandbox__iframe"></iframe>
                             <div class="d-flex jc-center ai-center | pos-absolute top-0 left-0 | w-100 h-100 | sandbox__enable_wrapper"
                                 style="background-color: rgba(0,0,0,0.5)">
                                 <input type="checkbox"
@@ -161,7 +161,7 @@ export default {
                                 </label>
                             </div>
                         </div>
-                        <ul class="d-flex gap-2 | m-0 pt-1 pb-1 pl-2 | fvs-wght-400 fs-2 lh-1 | c-neutral-500 ls-none">
+                        <ul class="d-flex gap-2 | m-0 pt-1 pb-1 pl-2 | fvs-wght-400 fs-2 lh-1 | ls-none">
                             <li>${libdocMessages.width[libdocConfig.lang]}: <span class="sandbox__monitor__iframe_width">-</span>px</li>
                             <li>${libdocMessages.height[libdocConfig.lang]}: <span class="sandbox__monitor__iframe_height">-</span>px</li>
                         </ul>

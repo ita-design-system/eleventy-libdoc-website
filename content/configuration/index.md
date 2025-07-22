@@ -52,7 +52,9 @@ Even if `settings.json` can be empty, it is recommended to enter at least:
         "css"
     ],
     "roundedImagesCorners": true,
-    "editThisPageRootUrl": false
+    "editThisPageRootUrl": false,
+    "imgBgColorLightMode": "transparent",
+    "imgBgColorDarkMode": "transparent"
 }
 ```
 
@@ -83,3 +85,5 @@ Parameter | Type | Description | Page override
 `hljsLanguages` | Array | List of supported [languages for syntax highlighting](/content/configuration/hljs.md), just add aliases according to your needs | no
 `roundedImagesCorners` | Boolean | Enable disable rounded image corners by default | no
 `editThisPageRootUrl` | String or <var>false</var> | Sets the git root directory project’s URL to enable [edit this page link](/content/configuration/edit-this-page.md) | no
+`imgBgColorLightMode` | CSS color string | Sets the [default background color](/content/configuration/default-image-background-color.md) for `<img>` tags on light mode | no
+`imgBgColorDarkMode` | CSS color string | Sets the [default background color](/content/configuration/default-image-background-color.md) for `<img>` tags on dark mode | no

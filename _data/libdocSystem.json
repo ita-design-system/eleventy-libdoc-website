@@ -28,5 +28,26 @@
             }
         }
     },
-    "productionUrl": "eleventy-libdoc.netlify.app"
+    "productionUrl": "eleventy-libdoc.netlify.app",
+    "preferences": {
+        "colorSchemes": {
+            "choices": [
+                {
+                    "value": "auto",
+                    "labelMainKey": "colorSchemeAuto",
+                    "labelHelpKey": "colorSchemeDescriptionAuto"
+                },
+                {
+                    "value": "light",
+                    "labelMainKey": "colorSchemeLight",
+                    "labelHelpKey": "colorSchemeDescriptionLight"
+                },
+                {
+                    "value": "dark",
+                    "labelMainKey": "colorSchemeDark",
+                    "labelHelpKey": "colorSchemeDescriptionDark"
+                }
+            ]
+        }
+    }
 }

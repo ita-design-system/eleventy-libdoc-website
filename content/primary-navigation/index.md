@@ -112,3 +112,4 @@ The primary navigation is one of the most important element of the user interfac
         </a>
     </div>
 1. [The Eleventy Navigation](/content/primary-navigation/eleventy-navigation.md)
+1. [Color schemes](/content/primary-navigation/color-schemes.md)

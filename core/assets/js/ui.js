@@ -1,6 +1,10 @@
 const libdocUi = {
     defaults: {
         localStorageIdentifier: 'eleventyLibdoc',
+        colorSchemes: ['auto', 'light', 'dark'],
+        darkModeCssFilePath: '/core/assets/css/ds__dark_mode.css',
+        supportedLanguagesJsonPath: '/core/assets/js/supported-languages.json',
+        darkModeCssMedia: '',
         screenSizes: {
             xs: [0, 599],
             sm: [600, 959],
@@ -25,7 +29,9 @@ const libdocUi = {
         searchForms: document.querySelectorAll('.search_form'),
         searchInputs: document.querySelectorAll('input[type="search"][name="search"]'),
         searchClearBtns: document.querySelectorAll('.search_form__clear_btn'),
-        ftocHeadings: []
+        ftocHeadings: [],
+        darkModeCssMetaLink: document.head.querySelector('#libdoc_dark_mode_css'),
+        inputsColorScheme: document.querySelectorAll('[name="libdoc_color_scheme"]')
     },
     getTransferSize: function() {
         // https://jmperezperez.com/blog/page-load-footer/
@@ -225,39 +231,11 @@ const libdocUi = {
             document.body.insertAdjacentHTML('beforeend', n_markup);
         }
     },
-    // getUserSelection: function() {
-    //     let result = { text: "", selection: null };
-    //     if (window.getSelection) {
-    //         result.text = window.getSelection().toString();
-    //         result.selection = window.getSelection();
-    //     } else if (document.selection && document.selection.type != "Control") {
-    //         result.text = document.selection.createRange().text;
-    //     }
-    //     return result;
-    // },
     handlers: {
-        // _selectionChange: function(evt) {
-        //     const selection = libdocUi.getUserSelection();
-        //     if (libdocUi.el.selectionCmd === undefined) {
-        //         libdocUi.el.selectionCmd = document.createElement('a');
-        //         libdocUi.el.selectionCmd.href = '';
-        //         libdocUi.el.selectionCmd.setAttribute(
-        //             'class',
-        //             'pos-absolute t-tX-100 | p-4 | td-none | brad-4 bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 __hover-1 __soft-shadow'
-        //         );
-        //         libdocUi.el.selectionCmd.innerHTML = `<span class="icon-link-simple | pos-absolute top-50 left-50 t-tY-50 t-tX-50 | fs-4"></span>`;
-        //     }
-        //     if (selection.selection !== null && selection.text.length > 0) {
-        //         const elSelectionParent = selection.selection.anchorNode.parentElement;
-        //         Object.keys(libdocUi.el.main.children).forEach(function(indexString) {
-        //             const elMainChild = libdocUi.el.main.children[parseInt(indexString)];
-        //             if (elMainChild.contains(elSelectionParent)) {
-        //                 libdocUi.el.selectionCmd.href = `${location.host}${location.pathname}#__${indexString}`;
-        //                 elSelectionParent.prepend(libdocUi.el.selectionCmd);
-        //             }
-        //         })
-        //     }
-        // },
+        _colorSchemeClick: function(event) {
+            console.log(event.target.value)
+            libdocUi.setColorScheme(event.target.value);
+        },
         _touchStart: function(evt) {
             document.body.classList.add('touch-device');
             document.body.removeEventListener('touch', libdocUi.handlers._touchStart);
@@ -659,11 +637,11 @@ const libdocUi = {
                 linkIndexesArray.forEach(function(isInViewport, linkIndex) {
                     if (isInViewport) {
                         // libdocUi.el.ftocLinks[linkIndex].style.backgroundColor = 'var(--ita-colors-primary-200)';
-                        libdocUi.el.ftocLinks[linkIndex].classList.add('bc-primary-200');
+                        libdocUi.el.ftocLinks[linkIndex].classList.add('__active');
                         if (firstTrueIndex === -1) firstTrueIndex = linkIndex;
                     } else {
                         // libdocUi.el.ftocLinks[linkIndex].style.backgroundColor = null;
-                        libdocUi.el.ftocLinks[linkIndex].classList.remove('bc-primary-200');
+                        libdocUi.el.ftocLinks[linkIndex].classList.remove('__active');
                     }
                 });
                 if (firstTrueIndex > -1) {
@@ -829,28 +807,86 @@ const libdocUi = {
             }
         }
     },
+    setColorScheme: function(name) {
+        if (typeof name == 'string') {
+            if (libdocUi.defaults.colorSchemes.includes(name)) {
+                if (name == 'light') {
+                    libdocUi.el.darkModeCssMetaLink.href = '';
+                    libdocUi.el.darkModeCssMetaLink.media = libdocUi.defaults.darkModeCssMedia;
+                } else if (name == 'dark') {
+                    libdocUi.el.darkModeCssMetaLink.href = libdocUi.defaults.darkModeCssFilePath;
+                    libdocUi.el.darkModeCssMetaLink.media = '';
+                } else if (name == 'auto') {
+                    libdocUi.el.darkModeCssMetaLink.href = libdocUi.defaults.darkModeCssFilePath;
+                    libdocUi.el.darkModeCssMetaLink.media = libdocUi.defaults.darkModeCssMedia;
+                }
+                libdocUi.el.inputsColorScheme.forEach(function(elInput) {
+                    if (elInput.value == name) elInput.checked = true;
+                })
+                libdocUi.updateUserPreferences({
+                    colorScheme: name
+                });
+            }
+        }
+    },
+    getJson: async function(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    },
+    createCopyCodeOnCodeBlocks: function() {
+        const elsPre = document.querySelectorAll('main>pre');
+        if (elsPre.length > 0) {
+            elsPre.forEach(function(elPre) {
+                elPre.style.paddingTop = '0';
+                const elCommands = elPre.querySelector('.copy_code_block');
+                if (elCommands === null) {
+                    const commandBarMarkup = `<div class="d-flex jc-end | pos-relative">
+                            <button type="button"
+                                class="
+                                d-flex ai-center
+                                pt-5 pb-5 fvs-wght-400 fs-2 tt-uppercase
+                                bc-0 c-primary-900 b-0 cur-pointer
+                                copy_code_block">${libdocMessages.copyCode}</button>
+                        </div>`;
+                    elPre.insertAdjacentHTML('afterbegin', commandBarMarkup);
+                }
+                const elCode = elPre.querySelector('code');
+                if (elCode !== null) {
+                    const className = elCode.getAttribute('class');
+                    if (className !== null) {
+                        const languageClassSplit = elCode.getAttribute('class').split(' ');
+                        if (languageClassSplit.length > 0) elCode.dataset.languageName = languageClassSplit[0].toString().replace('language-', '');
+                    }
+                }
+            });
+            // Adjust proper language name display
+            const languagesNamesArray = libdocUi.getJson(libdocUi.defaults.supportedLanguagesJsonPath);
+            try {
+                languagesNamesArray.then(languagesArray => {
+                    document.querySelectorAll('code[data-language-name]').forEach(function(elCode) {
+                        const languageAlias = elCode.dataset.languageName;
+                        let index = -1;
+                        languagesArray.forEach(function(lang, langIndex) {
+                            if (lang.includes(languageAlias)) index = langIndex;
+                        });
+                        if (index > -1) {
+                            const languageName = languagesArray[index].split('|')[1];
+                            elCode.dataset.languageName = languageName;
+                        }
+                    })
+                });
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    },
     update: function() {
+        libdocUi.defaults.darkModeCssMedia = libdocUi.el.darkModeCssMetaLink.media;
+        libdocUi.setColorScheme(libdocUi.getUserPreferences().colorScheme);
         libdocUi._currentScreenSizeName = libdocUi.getCurrentScreenSizeName();
         hljs.highlightAll();
-        document.querySelectorAll('main>pre').forEach(function(elPre) {
-            elPre.style.paddingTop = '0';
-            const elCommands = elPre.querySelector('.copy_code_block');
-            if (elCommands === null) {
-                const commandBarMarkup = `<div class="d-flex jc-end">
-                        <button type="button"
-                            class="
-                            d-flex ai-center
-                            pt-5 pb-5 fvs-wght-400 fs-2 tt-uppercase
-                            bc-0 c-primary-900 b-0 cur-pointer
-                            copy_code_block">${libdocMessages.copyCode}</button>
-                    </div>`;
-                elPre.insertAdjacentHTML('afterbegin', commandBarMarkup);
-            }
-            const elCode = elPre.querySelector('code');
-            if (elCode !== null) {
-                if (!elCode.classList.contains('hljs')) elCode.classList.add('hljs');
-            }
-        });
+        libdocUi.createCopyCodeOnCodeBlocks();
         libdocUi.createFloatingToc();
         libdocUi.createGoToTop();
         libdocUi.updateNavPrimary();
@@ -893,6 +929,9 @@ const libdocUi = {
             libdocUi.fitSvgToItsContent(el)
         });
         document.body.addEventListener('touchstart', libdocUi.handlers._touchStart);
+        libdocUi.el.inputsColorScheme.forEach(function(elInput) {
+            elInput.addEventListener('click', libdocUi.handlers._colorSchemeClick);
+        })
     }
 }
 libdocUi.update();

@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('fonts/icomoon.ttf?zcqum8') format('truetype'),
-    url('fonts/icomoon.woff?zcqum8') format('woff'),
-    url('fonts/icomoon.svg?zcqum8#icomoon') format('svg');
+    url('fonts/icomoon.ttf?afshac') format('truetype'),
+    url('fonts/icomoon.woff?afshac') format('woff'),
+    url('fonts/icomoon.svg?afshac#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-circle-half:before {
+  content: "\e924";
+}
 .icon-sidebar:before {
   content: "\e923";
 }
