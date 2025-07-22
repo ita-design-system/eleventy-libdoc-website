@@ -26,7 +26,7 @@ Features:
     * Forced light mode (LIGHT).
     * Force dark mode (DARK).
 * Improved primary color for better [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/).
-* Added parameter: Default image background color.
+* Added parameter: [Default image background color](/content/configuration/default-image-background-color.md).
 * Skeleton loader on search result while search index is fully loaded.
 * Improved search results layout.
 * Added contrast icon.
