@@ -21,7 +21,10 @@ ogImageUrl: "https://raw.githubusercontent.com/ita-design-system/ita-medias/refs
 Features:
 
 * New user preferences menu at the top of each page.
-* Introducing dark mode color scheme: User can choose its preferences.
+* Introducing dark mode color scheme: User can choose its preferences:
+    * Based by default on Operating System (AUTO). **Works even if JavaScript is disabled**.
+    * Forced light mode (LIGHT).
+    * Force dark mode (DARK).
 * Improved primary color for better [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/).
 * Added parameter: Default image background color.
 * Skeleton loader on search result while search index is fully loaded.
@@ -30,9 +33,11 @@ Features:
 * Separated CSS files between layout and colors schemes.
 * Better wording for small devices navbar.
 * Better font legibility.
+* Added alert on each page when JavaScript is disabled.
 
 Fixes:
 
+* Bad language display above syntax highlighting <https://github.com/ita-design-system/eleventy-libdoc/issues/18>
 * Bad external link icon contrast
 * Mixed lists numbered bullets position
 * Inline code font size too large for tables
