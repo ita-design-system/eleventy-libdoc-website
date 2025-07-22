@@ -37,7 +37,7 @@ Features:
 
 Fixes:
 
-* Bad language display above syntax highlighting <https://github.com/ita-design-system/eleventy-libdoc/issues/18>
-* Bad external link icon contrast
-* Mixed lists numbered bullets position
-* Inline code font size too large for tables
+* Bad language display above syntax highlighting <https://github.com/ita-design-system/eleventy-libdoc/issues/18>.
+* Bad external link icon contrast.
+* Mixed lists numbered bullets position.
+* Inline code font size too large for tables.
