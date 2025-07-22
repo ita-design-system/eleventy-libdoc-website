@@ -91,6 +91,10 @@
         "en": "Menu",
         "fr": "Menu"
     },
+    "noscriptAlert": {
+        "en": "It seems that your browser JavaScript is disabled, LibDoc is set to fallback mode with reduced features.",
+        "fr": "Il semble que JavaScript soit désactivé de votre naviigateur, LibDoc est en mode restreint avec des fonctionnalités réduites."
+    },
     "open": {
         "en": "Open",
         "fr": "Ouvrir"

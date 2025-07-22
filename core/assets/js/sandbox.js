@@ -88,19 +88,15 @@ const sandbox = {
                 sandbox.disableIframes();
                 // Enable mouse position monitoring
                 window.addEventListener('mousemove', sandbox.handlers._mousemoveWindow);
-                // console.log('start sandbox__resizer', sandbox._preInitialWidth, sandbox._iframeInitialWidth);
             }
         },
         _stopResizer: function(evt) {
-            console.log('stop sandbox__resizer');
             sandbox.enableIframes();
             window.removeEventListener('mousemove', sandbox.handlers._mousemoveWindow);
         },
         _mousemoveWindow:  function(evt) {
             sandbox._pointerX = evt.clientX;
             sandbox._pointerY = evt.clientY;
-            // const delta = sandbox._pointerX - sandbox._pointerXReference;
-            // console.log(delta);
             sandbox.resize();
         },
         _tab: function(evt) {

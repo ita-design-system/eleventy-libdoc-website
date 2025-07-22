@@ -41,7 +41,22 @@
     <meta name="color-scheme" content="light dark">
 
     <meta name="generator" content="{{ eleventy.generator }}">
-    
+
+    <!-- Font fallback -->
+    <style>
+        @font-face {
+            font-family: "fallbackFont";
+            src: local("Arial");
+            size-adjust: 103%;
+        }
+        html, body {
+            font-family: fallbackFont, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+            font-display: swap;
+        }
+        pre, code {
+            font-family: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+        }
+    </style>
     <link rel="stylesheet" href="/core/assets/css/fonts.css">
     <link rel="stylesheet" href="/core/assets/css/ds.css">
     <link rel="stylesheet" href="/core/assets/css/ds__defaults.css">
@@ -262,7 +277,7 @@
             <header class="d-flex fd-column | pt-5 {% if pageUrlSplit[1] != 'tags' and pageUrlSplit[1] != libdocConfig.blogSlug %}pb-7{% endif %}">
                 <nav class="d-flex jc-space-between | pos-relative">
                     {% include 'libdoc_breadcrumb' %}
-                    <details class="">
+                    <details id="user_preferences_btn">
                         <summary class="d-flex | pos-relative | p-5 | fs-4 td-none | brad-4 bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 cur-pointer __hover-1 __soft-shadow"
                             title="Preferences">
                             <span class="icons">
@@ -377,6 +392,10 @@
                     </details>
                 {% endif %}
             </header>
+            <noscript>
+                {% assign noscriptAlert = libdocMessages.noscriptAlert[pageLang] %}
+                {% alert noscriptAlert %}
+            </noscript>
             {{ content | cleanup | autoids }}
             <footer class="minh-100vh">
                 <div class="pt-11 | blwidth-1 blstyle-dashed bcolor-neutral-500"></div>

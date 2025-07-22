@@ -72,6 +72,7 @@ body {
     font-style: normal;
     font-size: var(--ita-fontSizes-5);
     font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0, "MONO" 0, "wght" 360;
+    letter-spacing: -0.01em;
 }
 html,
 .o-auto {
@@ -436,14 +437,14 @@ main > pre > code {
     box-shadow: var(--libdoc-long-shadow-alt);
 }
 main > pre > code::before {
-    content: attr(class);
+    content: attr(data-language-name);
     display: block;
     padding-bottom: var(--ita-spacings-2);
     margin-bottom: var(--ita-spacings-2);
     border-bottom-width: 1px;
     border-bottom-style: dashed;
-    font-size: var(--ita-fontSizes-2);
-    font-variation-settings: "wght" 400;
+    font-size: var(--ita-fontSizes-3);
+    font-variation-settings: "wght" 500;
 }
 /* TABLES */
 main > .table-wrapper + .table-wrapper {
@@ -792,6 +793,9 @@ main .__search-occurrence {
     margin-left: auto;
     margin-right: auto;
 }
+.sandbox .sandbox__code {
+    min-height: 500px;
+}
 .sandbox .sandbox__resizer {
     width: 20px;
 }
@@ -863,7 +867,8 @@ input[type="radio"] ~ label::before {
     body {
         font-size: var(--ita-fontSizes-4);
     }
-    code {
+    code,
+    main > pre > code::before {
         font-size: var(--ita-fontSizes-2);
     }
     main > * {
@@ -946,7 +951,6 @@ input[type="radio"] ~ label::before {
     }
 }
 
-/* RESPONSIVE XS + SM */
 @media (min-width: 960px) and (max-width: 1440px) {
     body:not(.touch-device) #floating_toc__list {
         transition: opacity 300ms;
