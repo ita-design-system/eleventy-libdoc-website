@@ -147,7 +147,7 @@ export default {
                         bradbl-0="md"
                         style="box-sizing: content-box">${iframeCommands}
                         <div class="d-flex | pos-relative">
-                            <iframe ${iframeAttribute} loading="lazy" class="w-100 h-500px | b-0 | sandbox__iframe"></iframe>
+                            <iframe ${iframeAttribute} loading="lazy" class="w-100 h-500px | b-0 | sandbox__iframe" style="background:white"></iframe>
                             <div class="d-flex jc-center ai-center | pos-absolute top-0 left-0 | w-100 h-100 | sandbox__enable_wrapper"
                                 style="background-color: rgba(0,0,0,0.5)">
                                 <input type="checkbox"
