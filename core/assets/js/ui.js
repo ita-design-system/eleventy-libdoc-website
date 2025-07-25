@@ -830,9 +830,14 @@ const libdocUi = {
         }
     },
     getJson: async function(url) {
-        const response = await fetch(url);
-        const data = await response.json();
-        return data;
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.log(error);
+            return [];
+        }
     },
     createCopyCodeOnCodeBlocks: function() {
         const elsPre = document.querySelectorAll('main>pre');
@@ -862,8 +867,8 @@ const libdocUi = {
             });
             // Adjust proper language name display
             const languagesNamesArray = libdocUi.getJson(libdocUi.defaults.supportedLanguagesJsonPath);
-            try {
-                languagesNamesArray.then(languagesArray => {
+            languagesNamesArray.then(languagesArray => {
+                if (languagesArray.length > 0) {
                     document.querySelectorAll('code[data-language-name]').forEach(function(elCode) {
                         const languageAlias = elCode.dataset.languageName;
                         let index = -1;
@@ -875,10 +880,8 @@ const libdocUi = {
                             elCode.dataset.languageName = languageName;
                         }
                     })
-                });
-            } catch (error) {
-                console.log(error);
-            }
+                }
+            });
         }
     },
     update: function() {
