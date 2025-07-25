@@ -15,4 +15,4 @@ Fixed:
 * Missing blog post desctiption on posts pages <https://github.com/ita-design-system/eleventy-libdoc/issues/22>.
 * Missing background color of items into blog paginated pages <https://github.com/ita-design-system/eleventy-libdoc/issues/24>.
 
-
+Minor enhancement: avoid that JS execution stop if languages names JSON fetch fail.
