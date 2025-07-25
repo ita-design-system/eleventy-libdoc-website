@@ -459,7 +459,7 @@ main .sandbox__iframe_wrapper a,
 
 /* BLOG */
 .blog-post-link {
-    background-color: var(--ita-neutral-100);
+    background-color: var(--ita-colors-neutral-100);
     border-color: var(--ita-colors-neutral-500);
 }
 
