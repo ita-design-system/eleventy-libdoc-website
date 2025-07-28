@@ -6,7 +6,7 @@ eleventyNavigation:
     parent: Primary Navigation
     order: 30
 # title: LibDoc’s Front Matter 
-description: On a valid text query, search results page appears with excerpts of occurences
+description: On a valid text query, search results page appears with excerpts of occurrences
 tags:
     - navigation
 date: git Last Modified
@@ -42,7 +42,7 @@ date: git Last Modified
         <a href="/widgets/images/?text=markdown" class="fvs-wght-600 fs-5">
             Images widgets
         </a>
-        <div class="wb-break-all">
+        <div class="wb-break-all fs-4" fs-3="xs">
             ready to use html to highlight your images   <mark class="fvs-wght-600 wb-break-all">markdown</mark>  images are useful for everyday use but sometime it comes you have to highlight your images.light background on images with transparencylight class name on &amp;lt;img&amp;gt; tag applies a white background o
         </div>
     </li>
@@ -50,7 +50,7 @@ date: git Last Modified
         <a href="/inline-html/?text=markdown" class="fvs-wght-600 fs-5">
             Inline HTML
         </a>
-        <div class="wb-break-all">
+        <div class="wb-break-all fs-4" fs-3="xs">
             use some raw html tags into your pages  in addition of common  <mark class="fvs-wght-600 wb-break-all">markdown</mark> , it is possible to use some raw html tags.line breaki am an item sometimes it comes we need to break the line inside  <mark class="fvs-wght-600 wb-break-all">markdown</mark> i am another item sometimes it comes we need to re-break the line inside m
         </div>
     </li>
@@ -58,7 +58,7 @@ date: git Last Modified
         <a href="/markdown/?text=markdown" class="fvs-wght-600 fs-5">
             Markdown
         </a>
-        <div class="wb-break-all">
+        <div class="wb-break-all fs-4" fs-3="xs">
             all available  <mark class="fvs-wght-600 wb-break-all">markdown</mark>  tags into a single page with examples  this page illustrates renders of all different  <mark class="fvs-wght-600 wb-break-all">markdown</mark>  tags. learn more about  <mark class="fvs-wght-600 wb-break-all">markdown</mark> .paragraph and carriage returnat glance: double carriage return renders a
         </div>
     </li>
