@@ -9,7 +9,7 @@ html,
     scrollbar-color: var(--ita-colors-primary-500) transparent;
 }
 input:focus {
-    outline-color: var(--ita-colors-primary-400);
+    outline-color: var(--ita-colors-primary-300);
 }
 /* MAIN CONTENT */
 main {
