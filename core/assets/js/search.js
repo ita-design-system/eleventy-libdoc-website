@@ -137,6 +137,7 @@ const search = {
                 .then(response => response.json())
                 .then(searchIndexArray => {
                     search.searchIndexArray = searchIndexArray;
+                    search.sanitizeIndex();
                     if (query !== null) search.search(query);
                 })
                 .catch(error => {

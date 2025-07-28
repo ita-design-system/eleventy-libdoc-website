@@ -86,7 +86,7 @@ button:disabled {
     cursor: default;
 }
 input:focus {
-    outline-width: 1px;
+    outline-width: 3px;
     outline-style: solid;
     outline-offset: -1px;
     box-shadow: var(--libdoc-soft-shadow);

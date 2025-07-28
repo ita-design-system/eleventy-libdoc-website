@@ -8,8 +8,11 @@ html,
 .o-auto {
     scrollbar-color: var(--ita-colors-primary-500) transparent;
 }
+input {
+  caret-color: var(--ita-colors-primary-500);
+}
 input:focus {
-    outline-color: var(--ita-colors-primary-300);
+    outline-color: var(--ita-colors-primary-500);
 }
 /* MAIN CONTENT */
 main {
