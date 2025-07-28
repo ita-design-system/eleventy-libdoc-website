@@ -36,6 +36,9 @@ select, button {
 input:disabled {
     opacity: 1;
 }
+input::placeholder {
+    letter-spacing: -0.04em;
+}
 /* input type search reset */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -83,8 +86,10 @@ button:disabled {
     cursor: default;
 }
 input:focus {
-    outline-width: 2px;
+    outline-width: 3px;
     outline-style: solid;
+    outline-offset: -1px;
+    box-shadow: var(--libdoc-soft-shadow);
 }
 code {
     font-variation-settings: "slnt" 0, "CASL" 0, "CRSV" 0.0, "MONO" 1, "wght" 300;
@@ -828,6 +833,20 @@ main .__search-occurrence {
 #floating_toc a:hover {
     font-variation-settings: "wght" 700, "MONO" 0;
 }
+#floating_toc__list_parent::before {
+    content: '';
+    display: flex;
+    width: 50%;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    border-left: 1px dashed var(--ita-colors-neutral-500);
+    z-index: 12;
+    border-top: 1px dashed var(--ita-colors-neutral-500);
+    border-radius: 8px;
+    z-index: -10;
+}
 
 /* GTT / Go to top button */
 #gtt_btn {
@@ -849,6 +868,16 @@ input[type="radio"] ~ label::before {
     border-radius: 100%;
     border-width: 1px;
     border-style: solid;
+}
+
+/* USER PREFERENCES */
+#user_preferences[open] > summary::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: var(--ita-spacings-3);
+  border-left: 1px dashed var(--ita-colors-neutral-500);
 }
 
 /* RESPONSIVE MD */

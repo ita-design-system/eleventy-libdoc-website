@@ -233,7 +233,7 @@ const libdocUi = {
     },
     handlers: {
         _colorSchemeClick: function(event) {
-            console.log(event.target.value)
+            // console.log(event.target.value)
             libdocUi.setColorScheme(event.target.value);
         },
         _touchStart: function(evt) {
@@ -346,6 +346,9 @@ const libdocUi = {
             evt.target.dataset.title = evt.target.title;
             evt.target.removeEventListener('click', libdocUi.handlers._clickAbbr);
             evt.target.removeAttribute('title');
+        },
+        _DOMContentLoaded: function() {
+            libdocUi.initKeyShortcuts();
         }
     },
     fitSvgToItsContent: function(svgElement) {
@@ -466,7 +469,8 @@ const libdocUi = {
             elDetails.appendChild(elSummary);
             
             let floatingTocMarkup = `
-                <div d-flex="md"
+                <div id="floating_toc__list_parent"
+                    d-flex="md"
                     jc-end="md">
                     <ul id="floating_toc__list"
                         class="
@@ -688,33 +692,39 @@ const libdocUi = {
             && typeof libdocUi.el.searchOccurrencesCmd === 'undefined') {
             libdocUi.el.searchOccurrencesCmd = document.createElement('nav');
             libdocUi.el.searchOccurrencesCmd.id = 'query_occurrences_cmd';
-            libdocUi.el.searchOccurrencesCmd.setAttribute('class', 'd-flex gap-2 | pos-sticky bottom-0 z-1 | pb-5');
+            libdocUi.el.searchOccurrencesCmd.setAttribute('class', 'd-flex fw-wrap jc-space-between ai-center gap-5 | pos-sticky bottom-0 z-1 | pb-5 pt-5 | bs-1 bc-success-100 bradtl-3 bradtr-3');
+            const text = new URLSearchParams(location.search).get('text') || '';
             libdocUi.el.searchOccurrencesCmd.innerHTML = `
-                <div class="pos-absolute top-0 left-0 | w-100 h-100 | __gradient-mask-primary-100-to-top"></div>
-                <button type="button"
-                    class="pos-relative | h-50px ar-square | fs-5 | brad-4 bc-success-100 c-success-900 bwidth-1 bstyle-dashed bcolor-success-900 cur-pointer __hover-2"
-                    onclick="libdocUi.prevSearchOccurrence()"
-                    title="${libdocMessages.searchOccurrencesPrevious}">
-                    <span class="icon-caret-left | pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900"></span>
-                </button>
-                <button type="button"
-                    class="pos-relative | h-50px ar-square | fs-2 | brad-4 bc-success-100 c-success-900 bwidth-1 bstyle-dashed bcolor-success-900 cur-pointer __hover-2"
-                    onclick="libdocUi.curSearchOccurrence()"
-                    title="${libdocMessages.searchOccurrencesCurrent}">
-                    <span id="current_query_occurrence_index_position" class="pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900"></span>
-                </button>
-                <button type="button"
-                    class="pos-relative | h-50px ar-square | fs-5 | brad-4 bc-success-100 c-success-900 bwidth-1 bstyle-dashed bcolor-success-900 cur-pointer __hover-2"
-                    onclick="libdocUi.nextSearchOccurrence()"
-                    title="${libdocMessages.searchOccurrencesNext}">
-                    <span class="icon-caret-right | pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900"></span>
-                </button>
-                <button type="button"
-                    class="pos-relative | h-50px ar-square | fs-2 | brad-4 bc-success-100 c-success-900 bwidth-1 bstyle-dashed bcolor-success-900 cur-pointer __hover-2"
-                    onclick="libdocUi.stopSearchOccurrence()"
-                    title="${libdocMessages.searchOccurrencesStop}">
-                    <span class="icon-x | pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900"></span>
-                </button>`;
+                <p class="d-flex ai-baseline gap-2 | m-0 | fs-2">
+                    ${libdocMessages.searchOccurrence}
+                    <strong class="pt-1 pb-1 pl-3 pr-3 | fvs-500 | bc-success-900 c-success-100 brad-1">${text}</strong>
+                </p>
+                <div class="d-flex gap-2">
+                    <button type="button"
+                        class="pos-relative | h-50px ar-square | fs-5 | brad-4 bc-neutral-100 c-success-900 bwidth-1 bstyle-dashed bcolor-success-900 cur-pointer __hover-2"
+                        onclick="libdocUi.prevSearchOccurrence()"
+                        title="${libdocMessages.searchOccurrencesPrevious}">
+                        <span class="icon-caret-left | pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900"></span>
+                    </button>
+                    <button type="button"
+                        class="pos-relative | h-50px ar-square | fs-2 | brad-4 bc-neutral-100 c-success-900 bwidth-1 bstyle-dashed bcolor-success-900 cur-pointer __hover-2"
+                        onclick="libdocUi.curSearchOccurrence()"
+                        title="${libdocMessages.searchOccurrencesCurrent}">
+                        <span id="current_query_occurrence_index_position" class="pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900"></span>
+                    </button>
+                    <button type="button"
+                        class="pos-relative | h-50px ar-square | fs-5 | brad-4 bc-neutral-100 c-success-900 bwidth-1 bstyle-dashed bcolor-success-900 cur-pointer __hover-2"
+                        onclick="libdocUi.nextSearchOccurrence()"
+                        title="${libdocMessages.searchOccurrencesNext}">
+                        <span class="icon-caret-right | pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900"></span>
+                    </button>
+                    <button type="button"
+                        class="pos-relative | h-50px ar-square | fs-2 | brad-4 bc-neutral-100 c-success-900 bwidth-1 bstyle-dashed bcolor-success-900 cur-pointer __hover-2"
+                        onclick="libdocUi.stopSearchOccurrence()"
+                        title="${libdocMessages.searchOccurrencesStop}">
+                        <span class="icon-x | pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900"></span>
+                    </button>
+                </div>`;
             libdocUi.el.main.append(libdocUi.el.searchOccurrencesCmd);
             libdocUi.el.searchOccurrencesCurrentIndexPosition = document.querySelector('#current_query_occurrence_index_position');
         }
@@ -884,6 +894,26 @@ const libdocUi = {
             });
         }
     },
+    initKeyShortcuts: function() {
+        if (typeof hotkeys == 'function') {
+            hotkeys('s', function (event, handler) {
+                // Set timeout to avoid shortcut letter to be typed into input field
+                if (handler.key == 's') setTimeout(function() { fuzzy.el.searchInput.focus()},100);
+            });
+        }
+    },
+    addExternalLinkIconIntoMainContent: function() {
+        libdocUi.el.main.querySelectorAll('main a[href^="https://"]').forEach(function(el) {
+            const link = new URL(el.href);
+            if (link.hostname != location.hostname) {
+                el.target = '_blank';
+                el.title = `${libdocMessages.open} ${el.href} ${libdocMessages.inANewTab.toLowerCase()}`;
+                if (link.hostname == libdocSystem.productionUrl) {
+                    el.classList.add('__external-link');
+                }
+            }
+        });
+    },
     update: function() {
         libdocUi.defaults.darkModeCssMedia = libdocUi.el.darkModeCssMetaLink.media;
         libdocUi.setColorScheme(libdocUi.getUserPreferences().colorScheme);
@@ -895,6 +925,7 @@ const libdocUi = {
         libdocUi.updateNavPrimary();
         libdocUi.updateFtocList();
         libdocUi.updateGTTBtns();
+        libdocUi.addExternalLinkIconIntoMainContent();
         libdocUi.el.navPrimaryCheckbox.addEventListener('change', libdocUi.handlers._navPrimaryCheckboxChange);
         window.addEventListener('resize', libdocUi.handlers._windowResize);
         window.addEventListener('load', libdocUi.handlers._windowLoad);
@@ -914,17 +945,6 @@ const libdocUi = {
         document.querySelectorAll('details[name="nav_primary"]').forEach(function(elDetail) {
             elDetail.addEventListener("toggle", libdocUi.handlers._toggleNavPrimaryAccordion);
         });
-
-        libdocUi.el.main.querySelectorAll('main a[href^="https://"]').forEach(function(el) {
-            const link = new URL(el.href);
-            if (link.hostname != location.hostname) {
-                el.target = '_blank';
-                el.title = `${libdocMessages.open} ${el.href} ${libdocMessages.inANewTab.toLowerCase()}`;
-                if (link.hostname == libdocSystem.productionUrl) {
-                    el.classList.add('__external-link');
-                }
-            }
-        });
         libdocUi.el.main.querySelectorAll('abbr[title]').forEach(function(el) {
             el.addEventListener('click', libdocUi.handlers._clickAbbr);
         });
@@ -934,7 +954,8 @@ const libdocUi = {
         document.body.addEventListener('touchstart', libdocUi.handlers._touchStart);
         libdocUi.el.inputsColorScheme.forEach(function(elInput) {
             elInput.addEventListener('click', libdocUi.handlers._colorSchemeClick);
-        })
+        });
+        document.addEventListener('DOMContentLoaded', libdocUi.handlers._DOMContentLoaded);
     }
 }
 libdocUi.update();

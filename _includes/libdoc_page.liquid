@@ -93,7 +93,9 @@
             {%- endfor %}
         }
         const libdocConfig = {
-            searchIndexUrl: `{{ '/core/assets/js/search_index.json' | url }}`
+            searchIndexUrl: `{{ '/core/assets/js/search_index.json' | url }}`,
+            fuzzyIndexUrl: `{{ '/core/assets/js/fuzzy_index.json' | url }}`,
+            blogTitle: `{{ libdocConfig.blogTitle }}`
         }
         const libdocSystem = {
             productionUrl: `{{ libdocSystem.productionUrl }}`
@@ -194,22 +196,23 @@
                         {% endif %}
                     </li>
                     {% if libdocConfig.searchEnabled %}
-                        <li d-none="xs,sm">
+                        <li class="pos-relative z-1" d-none="xs,sm">
                             <form action="/search/"
-                                class="d-flex fd-column | pos-relative | pl-5 pr-5 | search_form">
+                                class="d-flex fd-column | pos-relative | pl-5 pr-5 | search_form | auto-search-wrapper">
                                 <label for="searchInput"
-                                    class="pos-absolute | ml-5 t-tY-50 | fvs-wght-400 fs-1 tt-uppercase | c-neutral-900 bc-neutral-100">
+                                    class="pos-absolute z-2 | ml-5 t-tY-50 | fvs-wght-400 fs-1 tt-uppercase | c-neutral-900 bc-neutral-100">
                                     {{ libdocMessages.search[pageLang] }}
                                 </label>
                                 <input  id="searchInput"
                                         type="search"
                                         name="search"
-                                        class="pl-5 pr-5 pt-4 pb-4 | fs-3 | c-neutral-900 bc-neutral-100 brad-4 bwidth-1 bstyle-dashed bcolor-neutral-500"
+                                        autocomplete="off"
+                                        class="pos-relative z-1 | pl-5 pr-5 pt-4 pb-4 | fs-3 | c-neutral-900 bc-neutral-100 brad-4 bwidth-1 bstyle-dashed bcolor-neutral-500"
                                         placeholder="{{ libdocMessages.searchPlaceholder[pageLang] }}"
                                         value="">
-                                <div class="d-flex ai-center gap-2 | pos-absolute top-0 right-0 | h-100 mr-5">
+                                <div class="pos-relative z-1 | d-flex ai-center | pos-absolute top-0 right-0 | h-100 mr-5">
                                     <button type="button"
-                                        class="pos-relative | p-4 pr-5 | fs-3 | c-neutral-900 bc-neutral-100 c-neutral-900 b-0 cur-pointer | search_form__clear_btn"
+                                        class="pos-relative | p-4 pr-7 | fs-3 | c-neutral-900 bc-neutral-100 c-neutral-900 b-0 cur-pointer | search_form__clear_btn"
                                         title="{{ libdocMessages.searchClear[pageLang] }}"
                                         hidden>
                                         <span class="icon-x | pos-absolute top-50 left-50 t-tY-50 t-tX-50"></span>
@@ -224,7 +227,7 @@
                         </li>
                     {% endif %}
                     {% if libdocConfig.customLinks.size > 0 %}
-                        <li class="d-flex ai-center fw-wrap gap-7 rgap-1 | pb-3 pl-4">
+                        <li class="d-flex ai-center fw-wrap gap-7 rgap-1 | pb-3 pl-5">
                             {% for item in libdocConfig.customLinks %}
                                 <a  href="{{ item.url }}"
                                     class="
@@ -277,9 +280,9 @@
             <header class="d-flex fd-column | pt-5 {% if pageUrlSplit[1] != 'tags' and pageUrlSplit[1] != libdocConfig.blogSlug %}pb-7{% endif %}">
                 <nav class="d-flex jc-space-between | pos-relative">
                     {% include 'libdoc_breadcrumb' %}
-                    <details id="user_preferences_btn">
-                        <summary class="d-flex | pos-relative | p-5 | fs-4 td-none | brad-4 bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 cur-pointer __hover-1 __soft-shadow"
-                            title="Preferences">
+                    <details id="user_preferences">
+                        <summary class="d-flex | pos-relative z-2 | p-5 | fs-4 td-none | brad-4 bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 cur-pointer __hover-1 __soft-shadow"
+                            title="{{ libdocMessages.userPreferences[pageLang] }}">
                             <span class="icons">
                                 <span class="icon-faders | pos-absolute top-50 left-50 t-tY-50 t-tX-50"></span>
                                 <span class="icon-x | pos-absolute top-50 left-50 t-tY-50 t-tX-50"></span>
@@ -428,5 +431,12 @@
         <script src="/core/assets/js/hljs/languages/{{ hljsLang }}.min.js"></script>
     {% endfor %}
     <script src="/core/assets/js/ui.js"></script>
+    {% if libdocConfig.searchEnabled %}
+        <link rel="stylesheet" href="/core/assets/css/autocomplete.css">
+        <script src="/core/assets/js/autocomplete.min.js"></script>
+        <script src="/core/assets/js/fuse.js"></script>
+        <script src="/core/assets/js/fuzzy.js"></script>
+        <script src="/core/assets/js/hotkeys.min.js"></script>
+    {% endif  %}
 </body>
 </html>

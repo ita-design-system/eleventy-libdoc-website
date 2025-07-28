@@ -19,6 +19,12 @@ description: LibDoc could not work without these resources
     Phosphor is a flexible icon family for interfaces, diagrams, presentations — whatever, really.
 *   [Liquid JS](https://liquidjs.com)<br>
     A simple, expressive and safe template engine.
+*   [Autocomplete JS](https://github.com/tomickigrzegorz/autocomplete)<br>
+    Simple accessible autocomplete for vanilla javacript with support for remote & local data.
+*   [Fuse JS](https://github.com/tomickigrzegorz/autocomplete)<br>
+    Lightweight fuzzy-search, in JavaScript.
+*   [Hotkeys JS](https://github.com/jaywcjlove/hotkeys-js)<br>
+    A robust Javascript library for capturing keyboard input. It has no dependencies.
 *   [Highlight JS](https://highlightjs.org/)<br>
     The Internet's favorite JavaScript syntax highlighter supporting Node.js and the web.
 *   [Recursive font](https://www.recursive.design/)<br>

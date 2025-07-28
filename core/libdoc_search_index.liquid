@@ -8,25 +8,17 @@ eleventyExcludeFromCollections: true
         {%- for tagName in collections.myTags -%}
             {
                 "url": "{{ '/tags/' | url }}{{ tagName }}",
-                "title": "{{ libdocMessages.tag[libdocConfig.lang] }}",
+                "title": "{{ libdocMessages.tag[libdocConfig.lang] }} {{ tagName }}",
                 "content": " {{ tagName }} "
             }{% if forloop.last == false %},{% endif %}
         {%- endfor -%},
     {%- endif -%}
     {% for item in collections.all %}
-        {%- assign itemUrlSplit = item.url | split: '/' -%}
-        {%- assign hasWritten = false -%}
-        {%- if pageUrlSplit[1] != itemUrlSplit[1] or item.url == '/' -%}
-            {%- if item.url != '/core/assets/fonts/icomoon/demo/' %}
-                {
-                    "url": "{{ item.url | url }}",
-                    "title": "{{ item.data.title | default: item.data.eleventyNavigation.key | default: item.inputPath | escape }}",
-                    "content": "{{ item.data.description | strip_newlines | strip_html | escape | sanitizeJSON }} {{ item.data.tags | join: ' ' }} {{ item.content | strip_newlines | strip_html | escape | sanitizeJSON }}"
-                }
-                {%- assign hasWritten = true -%}
-            {%- endif -%}
-        {%- endif -%}
-        {%- if forloop.last == false and hasWritten == true %},{%- endif -%}
+        {
+            "url": "{{ item.url | url }}",
+            "title": "{{ item.data.title | default: item.data.eleventyNavigation.key | default: item.inputPath | escape }}",
+            "content": "{{ item.data.description | strip_newlines | strip_html | escape | sanitizeJSON }} {{ item.data.tags | join: ' ' }} {{ item.content | strip_newlines | strip_html | escape | sanitizeJSON }}"
+        }{% if forloop.last == false %},{% endif %}
     {%- endfor -%}
 {%- endif %}
 ]
