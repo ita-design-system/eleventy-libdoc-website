@@ -8,6 +8,7 @@ eleventyNavigation:
     order: 30
 title: Author - Configuration
 description: How Author’s value is propagated on page metadata
+date: git Last Modified
 tags:
     - configuration
     - SEO

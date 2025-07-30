@@ -6,6 +6,7 @@ eleventyNavigation:
     order: 65
 description: Easily highlight something important in a simple way with an icon, a main text and its description
 permalink: creating-content/widgets/icon-cards/index.html
+date: git Last Modified
 tags:
     - icons
     - shortcodes

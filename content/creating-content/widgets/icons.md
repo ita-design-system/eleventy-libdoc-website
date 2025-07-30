@@ -6,6 +6,7 @@ eleventyNavigation:
     order: 60
 description: Add icons into your content with its dedicated shortcode
 permalink: creating-content/widgets/icons/index.html
+date: git Last Modified
 tags:
     - icons
     - shortcodes

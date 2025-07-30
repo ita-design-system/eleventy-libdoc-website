@@ -5,6 +5,7 @@ eleventyNavigation:
     key: Creating content
     order: 30
 description: How LibDoc can display your content in multiple ways
+date: git Last Modified
 ---
 LibDoc supports every [language](https://www.11ty.dev/docs/languages/) supported by Eleventy.
 

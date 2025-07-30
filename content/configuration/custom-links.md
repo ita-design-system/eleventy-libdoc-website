@@ -8,6 +8,7 @@ eleventyNavigation:
     order: 50
 title: Custom links - Configuration
 description: How to manage custom links into the primary navigation
+date: git Last Modified
 tags:
     - configuration
     - custom-links

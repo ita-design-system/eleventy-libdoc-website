@@ -7,6 +7,7 @@ eleventyNavigation:
     order: 70
 description: Ready to use HTML to highlight your images
 permalink: creating-content/widgets/images/index.html
+date: git Last Modified
 ---
 
 [Markdown images](/content/creating-content/markdown.md#images) are useful for everyday use but sometime it comes you have to highlight your images.

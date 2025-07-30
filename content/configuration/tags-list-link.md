@@ -7,6 +7,7 @@ eleventyNavigation:
     order: 70
 title: Tags list - Configuration
 description: Make tags list link appear or disappear
+date: git Last Modified
 tags:
     - configuration
     - tags

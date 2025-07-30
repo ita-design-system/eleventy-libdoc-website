@@ -7,6 +7,7 @@ eleventyNavigation:
     order: 25
 title: Site Logo - Configuration
 description: Optionally replace text link by logo image
+date: git Last Modified
 tags:
     - configuration
     - logo

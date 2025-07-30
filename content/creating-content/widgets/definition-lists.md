@@ -6,6 +6,7 @@ eleventyNavigation:
     order: 30
 description: How to use definition lists
 permalink: creating-content/widgets/definition-lists/index.html
+date: git Last Modified
 ---
 <dl>
     <dt>Term</dt>

@@ -8,6 +8,7 @@ eleventyNavigation:
     order: 40
 title: Favicon URL - Configuration
 description: How to manage Favicon URL
+date: git Last Modified
 tags:
     - configuration
     - favicon

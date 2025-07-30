@@ -6,6 +6,7 @@ eleventyNavigation:
     order: 80
 description: Showcase small demos or full HTML pages into a responsive dual pane
 permalink: creating-content/widgets/sandboxes/index.html
+date: git Last Modified
 tags:
     - sandbox
 ---

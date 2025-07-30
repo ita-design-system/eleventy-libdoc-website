@@ -6,6 +6,7 @@ eleventyNavigation:
     order: 60
 # title: LibDoc’s configuration
 description: How LibDoc’s configuration and pages parameters are applied for Search Engine Optimization
+date: git Last Modified
 tags:
     - configuration
     - SEO

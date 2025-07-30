@@ -8,6 +8,7 @@ eleventyNavigation:
     order: 110
 title: Highlight JS - Configuration
 description: Configure supported languages for syntax highlighting
+date: git Last Modified
 tags:
     - configuration
     - syntax-highlighting

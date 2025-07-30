@@ -6,6 +6,7 @@ eleventyNavigation:
     order: 50
 description: Code integration results of various content providers
 permalink: creating-content/widgets/embeds/index.html
+date: git Last Modified
 ---
 Here are few examples of how Eleventy LibDoc renders embeds from various sources.
 

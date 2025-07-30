@@ -7,6 +7,7 @@ eleventyNavigation:
     order: 130
 title: Default image background color - Configuration
 description: Sets the default image background color for both light mode and dark mode
+date: git Last Modified
 tags:
     - configuration
     - color-schemes

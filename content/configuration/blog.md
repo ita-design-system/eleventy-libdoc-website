@@ -8,6 +8,7 @@ eleventyNavigation:
     order: 60
 title: Blog - Configuration
 description: How to set up blogging feature in Eleventy LibDoc
+date: git Last Modified
 tags:
     - configuration
     - blogging

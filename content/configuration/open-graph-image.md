@@ -8,6 +8,7 @@ eleventyNavigation:
     order: 50
 title: Open Graph Image - Configuration
 description: Set the image displayed when visitors share your pages
+date: git Last Modified
 tags:
     - configuration
     - open-graph-image

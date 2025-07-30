@@ -7,6 +7,7 @@ eleventyNavigation:
     order: 20
 title: Site title and description - Configuration
 description: How to set site title and site description in LibDoc
+date: git Last Modified
 tags:
     - configuration
     - SEO

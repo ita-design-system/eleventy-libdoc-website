@@ -5,6 +5,7 @@ eleventyNavigation:
     parent: Sandboxes
 description: Examples of file based sandboxes
 permalink: creating-content/widgets/sandboxes/file-based-examples/index.html
+date: git Last Modified
 tags:
     - sandbox
 ---
