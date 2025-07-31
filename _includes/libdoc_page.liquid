@@ -359,10 +359,11 @@
                                 <span class="icon-calendar-dots fs-6"></span>
                                 <span ws-nowrap="sm,md">
                                     {% assign dateString = page.date | dateString %}
-                                    {{ date | datePrefixText }}
                                     {% if dateString == "1111-11-11" %}
+                                        {{ libdocMessages.lastModified[pageLang] }}
                                         {{ page.inputPath | gitLastModifiedDate }}
                                     {% else %}
+                                        {{ date | datePrefixText }}
                                         {{ dateString }}
                                     {% endif %}
                                 </span>
