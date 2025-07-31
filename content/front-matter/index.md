@@ -7,6 +7,7 @@ eleventyNavigation:
     order: 40
 title: LibDoc’s Front Matter 
 description: Documentation of all front matter settings related to a LibDoc page
+date: 1111-11-11
 tags:
     - front-matter
     - permalink
@@ -15,7 +16,6 @@ tags:
     - author
     - description
     - SEO
-date: git Last Modified
 ---
 List of LibDoc’s front matter parameters:
 
@@ -88,5 +88,4 @@ tags:
     - author
     - description
     - SEO
-date: git Last Modified
 ```

@@ -3,6 +3,7 @@
 // https://github.com/11ty/eleventy/issues/3128#issuecomment-1878745864
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
+const childProcess = require('child_process');
 // END IMPORT REQUIRE WORKAROUND
 
 // START JSON IMPORT WORKAROUND
@@ -164,6 +165,19 @@ export default {
                 tocMarkup += '</ol>';
             }
             return tocMarkup;
+        },
+        gitLastModifiedDate: async function(filePath) {
+            // Run the git log command
+            // https://jamesdoc.com/blog/2023/git-changelog-in-11ty/
+            let fileHistory = childProcess
+                .execSync(`git log --pretty=tformat:"%cs" ${filePath}`)
+                .toString()
+                .trim();
+
+            // If the file isn't committed to git then ignore
+            if (fileHistory == "") { return false }
+
+            return fileHistory.split(/\r?\n/)[0];
         }
     },
     collections: {

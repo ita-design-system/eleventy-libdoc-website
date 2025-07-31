@@ -7,6 +7,7 @@ eleventyNavigation:
     order: 130
 title: Default image background color - Configuration
 description: Sets the default image background color for both light mode and dark mode
+date: 1111-11-11
 tags:
     - configuration
     - color-schemes

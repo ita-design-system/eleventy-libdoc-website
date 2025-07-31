@@ -7,9 +7,9 @@ eleventyNavigation:
     order: 40
 # title: LibDoc’s Front Matter 
 description: Easily navigate into a page clicked from a search result
+date: 1111-11-11
 tags:
     - navigation
-date: git Last Modified
 ---
 
 When a search result is clicked, an UI element is displayed on the target page to help navigating between occurrences of the text query.

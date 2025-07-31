@@ -5,6 +5,7 @@ eleventyNavigation:
     parent: Sandboxes
 description: Examples of inline sandboxes
 permalink: creating-content/widgets/sandboxes/inline-examples/index.html
+date: 1111-11-11
 tags:
     - sandbox
 ---

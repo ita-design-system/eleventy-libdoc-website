@@ -7,10 +7,10 @@ eleventyNavigation:
     order: 90
 title: Favicon URL - Front Matter
 description: How to customize the favicon on any page
+date: 1111-11-11
 tags:
     - front-matter
     - favicon
-date: git Last Modified
 ---
 Allows to customize the favicon on any page. By default, favicon is already set into [LibDoc configuration favicon](/content/configuration/favicon.md). You can customize it on any page by entering another favicon URL into the front matter key `faviconUrl`.
 

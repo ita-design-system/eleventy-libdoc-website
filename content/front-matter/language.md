@@ -7,10 +7,10 @@ eleventyNavigation:
     order: 20
 title: Language - Front Matter
 description: How to override default language on any page
+date: 1111-11-11
 tags:
     - front-matter
     - language
-date: git Last Modified
 ---
 Useful when a selected page have different language than the default. Here is a front matter with a page language overridden:
 

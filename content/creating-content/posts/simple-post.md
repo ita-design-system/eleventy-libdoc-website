@@ -19,5 +19,4 @@ tags:
     - blogging
 title: My simple post
 description: This is a simple blog post test
-date: git Last Modified
 ```

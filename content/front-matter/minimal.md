@@ -6,11 +6,11 @@ eleventyNavigation:
     parent: Front Matter
     order: 10
 description: What is mandatory in a LibDoc front matter
+date: 1111-11-11
 tags:
     - front-matter
     - navigation
     - minimal
-date: git Last Modified
 ogImageUrl: "https://cdn.jsdelivr.net/gh/ita-design-system/ita-medias@main/bricss-og-image.png"
 ---
 Here is the minimal front matter for a page:

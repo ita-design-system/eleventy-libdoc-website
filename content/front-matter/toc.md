@@ -8,10 +8,10 @@ eleventyNavigation:
     order: 100
 title: Table of content - Front Matter
 description: Enable or disable table of content selectively
+date: 1111-11-11
 tags:
     - front-matter
     - TOC
-date: git Last Modified
 ---
 Allows to enable or disable the table of content on any page. By default, table of content display is set into [LibDoc configuration TOC](/content/configuration/toc.md). You can customize it on any page by entering `true` or `false` into the front matter key `tocEnabled`.
 

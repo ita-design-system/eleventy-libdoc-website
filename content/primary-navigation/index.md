@@ -6,9 +6,9 @@ eleventyNavigation:
     order: 50
 # title: LibDoc’s Front Matter 
 description: Detailed features of LibDoc’s primary navigation
+date: 1111-11-11
 tags:
     - navigation
-date: git Last Modified
 ---
 
 The primary navigation is one of the most important element of the user interface. It contains six parts:

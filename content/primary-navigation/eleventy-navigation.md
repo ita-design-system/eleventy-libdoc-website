@@ -7,10 +7,10 @@ eleventyNavigation:
     order: 80
 # title: LibDoc’s Front Matter 
 description: How to use hierarchical menu
+date: 1111-11-11
 tags:
     - navigation
     - menu
-date: git Last Modified
 ---
 
 LibDoc’s pages navigation is based on [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/). Page menu items must be set into the [front matter](/content/front-matter/index.md) of each page.

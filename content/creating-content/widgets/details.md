@@ -7,6 +7,7 @@ eleventyNavigation:
 description: Create simple dropdown toggle and accordions
 permalink: creating-content/widgets/details-and-accordions/index.html
 tocEnabled: false
+date: 1111-11-11
 ---
 <details>
     <summary>LibDoc description</summary>

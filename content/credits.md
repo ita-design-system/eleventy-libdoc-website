@@ -6,6 +6,7 @@ eleventyNavigation:
     order: 70
 # title: LibDoc’s configuration
 description: LibDoc could not work without these resources
+date: 1111-11-11
 ---
 *   [Eleventy](https://www.11ty.dev/)<br>
     Eleventy is a simpler static site generator.

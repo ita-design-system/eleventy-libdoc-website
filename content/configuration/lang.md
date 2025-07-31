@@ -7,6 +7,7 @@ eleventyNavigation:
     order: 10
 title: Language - Configuration
 description: How to set up LibDoc’s internationalization texts of user interface
+date: 1111-11-11
 tags:
     - configuration
     - i18n

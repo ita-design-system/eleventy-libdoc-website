@@ -7,11 +7,11 @@ eleventyNavigation:
     order: 70
 title: Author - Front Matter
 description: Manage the display of author into the header of each page
+date: 1111-11-11
 tags:
     - front-matter
     - navigation
     - author
-date: git Last Modified
 ---
 By default rendered page display [LibDoc configuration author](/content/configuration/author.md). To override the default author, enter any string in the `author` key of the front matter. To remove the author on the page, set `false`.
 

@@ -274,8 +274,10 @@ main q {
     font-variation-settings: "slnt" -15, "CRSV" 1, "CASL" 1, "wght" 400;
 }
 main kbd {
-    font-variation-settings: "MONO" 1, "CASL" 0, "CRSV" 0, "wght" 500;
+    font-variation-settings: "MONO" 1, "CASL" 0, "CRSV" 0, "wght" 300;
     font-family: var(--libdoc-font-family);
+    padding: 0 var(--ita-spacings-2);
+    border-radius: 4px;
 }
 /* LISTS */
 main ul,

@@ -6,6 +6,7 @@ eleventyNavigation:
     order: 20
 title: LibDoc’s configuration
 description: List and descriptions of every LibDoc parameter
+date: 1111-11-11
 tags:
     - configuration
 ---

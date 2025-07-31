@@ -7,10 +7,10 @@ eleventyNavigation:
     order: 30
 title: Title - Front Matter
 description: How to just add a title to a page
+date: 1111-11-11
 tags:
     - front-matter
     - navigation
-date: git Last Modified
 ---
 
 Page title is displayed following these ordered priorities:

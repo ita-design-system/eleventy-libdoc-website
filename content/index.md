@@ -3,6 +3,7 @@ title: Eleventy LibDoc
 description: An Eleventy starter project to craft slick and responsive documentation
 layout: libdoc_page.liquid
 permalink: index.html
+date: 1111-11-11
 ---
 Eleventy LibDoc is an easy to use and content focused starter project for [Eleventy][11ty] to craft slick and responsive documentation. It was was developed with accessibility awareness and low-tech mindset which allows to reach good page speed performances. It contains vanilla JS self-made components like search, primary navigation, table of content, code highlighting and sandboxes. Every page created with LibDoc is printable and can work properly even without Javascript by maintaining only essential features.
 

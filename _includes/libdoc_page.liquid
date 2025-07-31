@@ -358,9 +358,13 @@
                                 fs-2="xs">
                                 <span class="icon-calendar-dots fs-6"></span>
                                 <span ws-nowrap="sm,md">
-                                    {% comment %} <span class="ws-nowrap">{{ libdocMessages.lastModified[pageLang] }}</span> {% endcomment %}
+                                    {% assign dateString = page.date | dateString %}
                                     {{ date | datePrefixText }}
-                                    {{ page.date | dateString }}
+                                    {% if dateString == "1111-11-11" %}
+                                        {{ page.inputPath | gitLastModifiedDate }}
+                                    {% else %}
+                                        {{ dateString }}
+                                    {% endif %}
                                 </span>
                             </p>
                         {% endif %}

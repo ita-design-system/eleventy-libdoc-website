@@ -7,9 +7,9 @@ eleventyNavigation:
     order: 10
 # title: LibDoc’s Front Matter 
 description: Always visible, redirects to the root of the project.
+date: 1111-11-11
 tags:
     - navigation
-date: git Last Modified
 ---
 
 Home page link is always visible, it redirects to the root of the project displaying the text value of the [configuration file](/content/configuration/site-title-and-description.md). 

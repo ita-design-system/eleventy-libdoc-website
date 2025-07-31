@@ -8,6 +8,7 @@ eleventyNavigation:
     order: 30
 title: Author - Configuration
 description: How Author’s value is propagated on page metadata
+date: 1111-11-11
 tags:
     - configuration
     - SEO

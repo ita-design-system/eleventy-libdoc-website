@@ -6,10 +6,10 @@ eleventyNavigation:
     parent: Front Matter
     order: 40
 description: How to add a description to any page
+date: 1111-11-11
 tags:
     - front-matter
     - navigation
-date: git Last Modified
 ---
 A front matter with a custom description for a page:
 

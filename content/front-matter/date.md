@@ -7,10 +7,10 @@ eleventyNavigation:
     order: 60
 title: Date - Front Matter
 description: How to manage date string into the page header
+date: 1111-11-11
 tags:
     - front-matter
     - date
-date: git Last Modified
 ---
 
 ## Remove date display
@@ -33,3 +33,14 @@ date: 2016-01-01
 
 [Example with custom date](/content/front-matter/examples/date-custom.md)
 
+## git Last Modified date
+
+It may occurs that Eleventy date setting `date: git Last Modified` fails on production builds. To force the display of the truly git Last Modified date, just set `date: 1111-11-11`. This special date value forces the display of the truly git Last Modified date by seeking through git history. Thus, it may increases significantly build duration proportionally with the amount of pages this parameter is set.
+
+This following page front matter date will seek file git history to display the truly git Last Modified date.
+
+```yaml
+date: 1111-11-11
+```
+
+{% alert 'Depending on the amount of front matter *date: 1111-11-11*, the build duration may increase significantly. It is recommended to use this function sparingly.', 'warning', 'Build cost +++' %}

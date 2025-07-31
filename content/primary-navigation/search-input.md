@@ -7,9 +7,9 @@ eleventyNavigation:
     order: 20
 # title: LibDoc’s Front Matter 
 description: Fuzzy and standard search modes. Easily navigate through pages with keyboard and find exact query match.
+date: 1111-11-11
 tags:
     - navigation
-date: git Last Modified
 ---
 The input search supports both standard search and fuzzy search:
 

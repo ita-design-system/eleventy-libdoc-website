@@ -7,6 +7,7 @@ eleventyNavigation:
     order: 20
 title: Site title and description - Configuration
 description: How to set site title and site description in LibDoc
+date: 1111-11-11
 tags:
     - configuration
     - SEO

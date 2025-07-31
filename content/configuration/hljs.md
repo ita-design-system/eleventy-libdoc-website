@@ -8,6 +8,7 @@ eleventyNavigation:
     order: 110
 title: Highlight JS - Configuration
 description: Configure supported languages for syntax highlighting
+date: 1111-11-11
 tags:
     - configuration
     - syntax-highlighting

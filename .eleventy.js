@@ -26,6 +26,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addAsyncFilter("datePrefixText", libdocFunctions.filters.datePrefixText);
     eleventyConfig.addAsyncFilter("toc", libdocFunctions.filters.toc);
     eleventyConfig.addAsyncFilter("sanitizeJSON", libdocFunctions.filters.sanitizeJson);
+    eleventyConfig.addAsyncFilter("gitLastModifiedDate", libdocFunctions.filters.gitLastModifiedDate);
     // END FILTERS
 
     // START COLLECTIONS
