@@ -19,7 +19,7 @@ ogImageUrl: "https://raw.githubusercontent.com/ita-design-system/ita-medias/refs
 
 Features:
 
-* Slighty improved tags list page with tags ordered by popularity.
+* Slighty improved tags list page design and layout with tags ordered by popularity. [View new tags list](https://eleventy-libdoc.netlify.app/tags/).
 * `date: 1111-11-11` [Front matter date](/content/front-matter/date.md#git-last-modified-date) value parameter that truly display git last commit date.
 * Improve fuzzy search: 
     * No display for blog item if no post.
