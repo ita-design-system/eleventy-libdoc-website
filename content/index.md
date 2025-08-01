@@ -7,6 +7,8 @@ date: 1111-11-11
 ---
 Eleventy LibDoc is an easy to use and content focused starter project for [Eleventy][11ty] to craft slick and responsive documentation. It was was developed with accessibility awareness and low-tech mindset which allows to reach good page speed performances. It contains vanilla JS self-made components like search, primary navigation, table of content, code highlighting and sandboxes. Every page created with LibDoc is printable and can work properly even without Javascript by maintaining only essential features.
 
+Current version is **{{ libdocUtils.version }}** - [View change log](/tags/changelog).
+
 {% alert 'Transfer size of this page is around 400 kB <br>⤷ *you can see it on this browser developer tools at "Network" panel*', 'info', 'Quick performance info' %}
 
 ## Key features
