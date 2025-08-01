@@ -10,22 +10,58 @@ date: false
 #     key: Tags list
 #     order: 0
 ---
-<div>
-    <nav id="nav_primary_tags_list"
-        class="blwidth-1 blstyle-dashed bcolor-neutral-500">
-        <p class="d-flex fw-wrap gap-3 | m-0 pl-5 pr-5 ">
-            {% for tagName in collections.myTags %}
+{% assign lastIndex = collections.myTags.size |  minus: 1 %}
+{% assign highestBound = collections.myTags[0][1] %}
+{% assign lowestBound = collections.myTags[lastIndex][1] %}
+{% if collections.myTags.size > 0 %}
+    <ol>
+        {% for tag in collections.myTags %}
+            {% assign tagName = tag[0] %}
+            {% assign tagCount = tag[1] %}
+            <li class="d-flex jc-space-between"
+                ai-center="sm,md"
+                ai-end="xs"
+                gap-5="sm,md"
+                gap-3="xs">
                 <a  href="/tags/{{ tagName }}/"
                     class="
                     d-flex ai-center gap-2
-                    pl-2 pr-3 pt-1 pb-1
-                    fs-3 fvs-wght-600 lsp-2 td-none
-                    bwidth-1 bstyle-solid  brad-1 bradtl-3 bradbl-3
-                    {% if tag == tagName %}bc-success-100 c-success-500 bcolor-success-500{% else %}bc-primary-200 c-primary-500 bcolor-primary-400{% endif %}">
+                    pl-2 pr-3 pt-1 pb-1 o-hidden
+                    fs-3 fvs-wght-600 lsp-2 td-none lh-5 ws-nowrap to-ellipsis
+                    bwidth-1 bstyle-solid bradtr-1 bradbr-1 bradtl-4 bradbl-4
+                    bc-primary-200 c-primary-500 bcolor-primary-400"
+                    fs-2="xs">
                     <span class="icon-tag-simple"></span>
-                    <span>{{ tagName }}</span>
+                    <span class="o-hidden | to-ellipsis">{{ tagName }}</span>
                 </a>
-            {% endfor %}
-        </p>
-    </nav>
-</div>
+                <p class="d-flex | m-0 | lh-1"
+                    fd-column="xs"
+                    gap-5="sm,md">
+                    <span class="fs-2 ws-nowrap"
+                        fs-1="xs">
+                        {{ tagCount }}
+                        {% if tagCount == 1 %}
+                            {{ libdocMessages.page[libdocConfig.lang] |  downcase }}
+                        {% else %}
+                            {{ libdocMessages.pages[libdocConfig.lang] | downcase }}
+                        {% endif %}
+                    </span>
+                    <span class="d-flex gap-1"
+                        style="background: text linear-gradient( 
+                        90deg, 
+                        var(--ita-colors-primary-500) 0%, 
+                        var(--ita-colors-primary-500) calc(100% * {{ tagCount }} / {{ highestBound }}), 
+                        var(--ita-colors-neutral-500) calc(100% * {{ tagCount }} / {{ highestBound }})">
+                        <span class="icon-star-fill" style="color:transparent"></span>
+                        <span class="icon-star-fill" style="color:transparent"></span>
+                        <span class="icon-star-fill" style="color:transparent"></span>
+                        <span class="icon-star-fill" style="color:transparent"></span>
+                        <span class="icon-star-fill" style="color:transparent"></span>
+                    </span>
+                </p>
+            </li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <p>No tags yet.</p>
+{% endif %}

@@ -127,13 +127,13 @@ const search = {
     },
     update: function() {
         const query = search.getUrlSearchParams();
-        if (typeof libdocConfig.searchIndexUrl == 'string'
+        if (typeof libdocSystem.searchIndexUrl == 'string'
             && search.el.searchInput !== null
             && search.el.searchResults !== null
             && search.el.pageH1 !== null
         ) {
             if (query !== null) search.el.searchResults.innerHTML = search.renderLoadingResults();
-            fetch(libdocConfig.searchIndexUrl)
+            fetch(libdocSystem.searchIndexUrl)
                 .then(response => response.json())
                 .then(searchIndexArray => {
                     search.searchIndexArray = searchIndexArray;

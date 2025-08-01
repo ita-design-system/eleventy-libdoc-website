@@ -7,14 +7,7 @@ date: 1111-11-11
 ---
 Eleventy LibDoc is an easy to use and content focused starter project for [Eleventy][11ty] to craft slick and responsive documentation. It was was developed with accessibility awareness and low-tech mindset which allows to reach good page speed performances. It contains vanilla JS self-made components like search, primary navigation, table of content, code highlighting and sandboxes. Every page created with LibDoc is printable and can work properly even without Javascript by maintaining only essential features.
 
-{% alert 'Transfer size of this page is below 400 kB <br>⤷ *you can see it on this browser developer tools at "Network" panel*', 'info', 'Quick performance info' %}
-
-## Getting started
-
-1. Clone or fork <https://github.com/ita-design-system/eleventy-libdoc>
-2. Run `npm install`
-3. Enter your own settings in `settings.json`. [Configuration](/content/configuration/index.md).
-4. Build and serve `npx @11ty/eleventy --serve` or just build `npx @11ty/eleventy` (if you already have your own web server).
+{% alert 'Transfer size of this page is around 400 kB <br>⤷ *you can see it on this browser developer tools at "Network" panel*', 'info', 'Quick performance info' %}
 
 ## Key features
 
@@ -30,6 +23,13 @@ Eleventy LibDoc is an easy to use and content focused starter project for [Eleve
 {% iconCard 'Slick code highlighting', 'Display your code in a nice style and adjust which code languages you really use.', 'code' %}
 {% iconCard 'Sandboxes', 'Showcase small demos or full HTML pages into a responsive dual pane.', 'sidebar' %}
 {% iconCard 'Light and dark modes', 'LibDoc’s interface is available with both light and dark mode color schemes', 'circle-half' %}
+
+## Getting started
+
+1. Clone or fork <https://github.com/ita-design-system/eleventy-libdoc>
+2. Run `npm install`
+3. Enter your own settings in `settings.json`. [Configuration](/content/configuration/index.md).
+4. Build and serve `npx @11ty/eleventy --serve` or just build `npx @11ty/eleventy` (if you already have your own web server).
 
 ## Configuration
 

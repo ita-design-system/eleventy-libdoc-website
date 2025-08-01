@@ -183,15 +183,24 @@ export default {
     collections: {
         myTags: function(collectionsApi) {
             const allData = collectionsApi.getAll();
-            let finalData = [];
+            let unsortedTagsCount = {};
             allData.forEach(function(item) {
                 if (typeof item.data.tags == 'object') {
                     item.data.tags.forEach(function(tag) {
-                        if (!finalData.includes(tag) && tag != 'post') finalData.push(tag);
+                        if (tag !== 'post') {
+                            if (unsortedTagsCount[tag] === undefined) {
+                                unsortedTagsCount[tag] = 1
+                            } else {
+                                unsortedTagsCount[tag]++
+                            }
+                        }
                     })
                 }
             });
-            return finalData;
+            let sortedObject = Object.fromEntries(
+                Object.entries(unsortedTagsCount).sort(([, a], [, b]) => b - a)
+            );
+            return Object.entries(sortedObject);
         },
         postsByDateDescending: function(collectionsApi) {
             return collectionsApi.getFilteredByTag("post").sort(function (a, b) {

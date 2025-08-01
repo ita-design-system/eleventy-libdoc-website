@@ -20,7 +20,7 @@ const fuzzy = {
                             includeMatches: true,
                             keys: ['url', 'title', 'description']
                         }
-                        const fuse = new Fuse(fuzzy.indexItems, fuseOptions);
+                        const fuse = new Fuse(fuzzy.sanitizedIndex, fuseOptions);
                         const fuseResult = fuse.search(currentValue);
                         return fuseResult;
                     },
@@ -44,8 +44,8 @@ const fuzzy = {
         });
     },
     initIndex: function(evt) {
-        if (fuzzy.indexItems === null && typeof libdocConfig.fuzzyIndexUrl == 'string') {
-            const fuzzyIndex = fuzzy.getJson(libdocConfig.fuzzyIndexUrl);
+        if (fuzzy.indexItems === null && typeof libdocSystem.fuzzyIndexUrl == 'string') {
+            const fuzzyIndex = fuzzy.getJson(libdocSystem.fuzzyIndexUrl);
             fuzzyIndex.then(jsonFetch => {
                 fuzzy.indexItems = jsonFetch;
                 fuzzy.sanitizeIndex();
@@ -76,31 +76,36 @@ const fuzzy = {
         }
     },
     sanitizeIndex: function() {
-        if (typeof fuzzy.indexItems !== null) {
+        if (typeof fuzzy.indexItems !== null && fuzzy.sanitizedIndex === null) {
+            const filterArray = ['./core/assets/fonts/icomoon/demo.html'];
+            fuzzy.sanitizedIndex = [];
             fuzzy.indexItems.forEach(function(item) {
-                switch (item.title) {
-                    case './core/libdoc_blog.liquid':
-                        item.title = libdocConfig.blogTitle
-                        break;
-
-                    case './core/libdoc_tags.liquid':
-                        item.title = libdocMessages.tagsList;
-                        break;
-
-                    case './core/assets/fonts/icomoon/demo.html':
-                        item.title = '';
-                        item.url = '';
-                        break;
-                
-                    default:
-                        break;
+                if (!filterArray.includes(item.title)) {
+                    let canBePushed = true;
+                    switch (item.title) {
+                        case './core/libdoc_blog.liquid':
+                            item.title = libdocConfig.blogTitle;
+                            item.description = libdocConfig.blogDescription === 'false' ? '' : libdocConfig.blogDescription;
+                            if (!libdocSystem.blogPostsCount) canBePushed = false;
+                            break;
+                        case './core/libdoc_tags.liquid':
+                            item.title = libdocMessages.tagsList;
+                            item.description = libdocMessages.tagsListDescription;
+                            if (!libdocConfig.displayTagsListLink) canBePushed = false;
+                            break;
+                        default:
+                            break;
+                    }
+                    if (canBePushed) fuzzy.sanitizedIndex.push(item);
+                    
                 }
-            })
+            });
         }
     },
+    sanitizedIndex: null,
     indexItems: null,
     update: function() {
-        if (typeof Fuse == 'function' && typeof libdocConfig.searchIndexUrl == 'string') {
+        if (typeof Fuse == 'function' && typeof libdocSystem.searchIndexUrl == 'string') {
             if (fuzzy.el.searchInput !== null) {
                 fuzzy.el.searchInput.addEventListener('focus', fuzzy.handlers._focusInput);
             };

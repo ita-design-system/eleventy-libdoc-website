@@ -33,6 +33,12 @@
 {%- if pagePathUrl[1] == 'tags' -%}
     {%- assign pageTitle = libdocMessages.tagsList[pageLang] -%}
     {%- assign pageDescription = libdocMessages.tagsListDescription[pageLang] -%}
+    {%- if pagePathUrl[2] -%}
+        {%- assign pageTitle = pagePathUrl[2] -%}
+        {%- capture pageDescription -%}
+            {{ libdocMessages.pagesTagged[pageLang] }} <em>{{ pagePathUrl[2] }}</em>
+        {%- endcapture -%}
+    {%- endif -%}
 {%- endif -%}
 
 {%- if eleventyNavigation.key -%}
@@ -44,13 +50,6 @@
 
 {%- if pagePathUrl[1] == 'search' -%}
     {%- assign pageTitle = libdocMessages.search[pageLang] -%}
-{%- endif -%}
-
-{%- if tag -%}
-    {%- assign pageTitle = tag -%}
-    {%- capture pageDescription -%}
-        {{ libdocMessages.pagesTagged[pageLang] }} <em>{{ tag }}</em>
-    {%- endcapture -%}
 {%- endif -%}
 
 {%- if tocEnabled == true -%}
