@@ -6,7 +6,6 @@ eleventyNavigation:
     order: 40
 description: Create simple dropdown toggle and accordions
 permalink: creating-content/widgets/details-and-accordions/index.html
-date: git Last Modified
 tocEnabled: false
 date: 1111-11-11
 ---
