@@ -8,7 +8,7 @@ eleventyNavigation:
     order: 80
 title: Table of content - Configuration
 description: Configuration of the TOC - Table of Content
-date: git Last Modified
+date: 1111-11-11
 tags:
     - configuration
     - TOC

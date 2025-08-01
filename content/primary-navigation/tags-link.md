@@ -7,10 +7,10 @@ eleventyNavigation:
     order: 70
 # title: LibDoc’s Front Matter 
 description: How to use the tags list page of LibDoc
+date: 1111-11-11
 tags:
     - navigation
     - tags
-date: git Last Modified
 ---
 
 Every LibDoc page can contain tags. All these tags are listed into a special page of Eleventy LibDoc called *tags list*. **Tags list link appears only if at least one tag - excepting `post` tag - is found on pages.**

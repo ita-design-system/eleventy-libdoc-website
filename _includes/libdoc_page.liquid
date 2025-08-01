@@ -82,10 +82,6 @@
     <noscript>
         <link rel="stylesheet" href="/core/assets/css/noscript.css">
     </noscript>
-    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/nord.min.css"> {% endcomment %}
-    {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/ir-black.min.css"> {% endcomment %}
-    {% comment %} <link rel="stylesheet" href="/assets/css/monokai-sublime.css"> {% endcomment %}
-    
     <script>
         const libdocMessages = {
             {% for key in libdocMessages %}
@@ -93,12 +89,15 @@
             {%- endfor %}
         }
         const libdocConfig = {
-            searchIndexUrl: `{{ '/core/assets/js/search_index.json' | url }}`,
-            fuzzyIndexUrl: `{{ '/core/assets/js/fuzzy_index.json' | url }}`,
-            blogTitle: `{{ libdocConfig.blogTitle }}`
+            blogTitle: `{{ libdocConfig.blogTitle }}`,
+            blogDescription: `{{ libdocConfig.blogDescription }}`,
+            displayTagsListLink: {{ libdocConfig.displayTagsListLink }}
         }
         const libdocSystem = {
-            productionUrl: `{{ libdocSystem.productionUrl }}`
+            searchIndexUrl: `{{ '/core/assets/js/search_index.json' | url }}`,
+            fuzzyIndexUrl: `{{ '/core/assets/js/fuzzy_index.json' | url }}`,
+            productionUrl: `{{ libdocSystem.productionUrl }}`,
+            blogPostsCount: `{{ collections.post.size }}`
         }
     </script>
 </head>
@@ -110,7 +109,7 @@
         pl-5="md"
         style="max-width: var(--ita-widths-main-container-max)">
         <div id="sidebar"
-            class="d-flex fd-column | pos-sticky top-0 z-2"
+            class="d-flex fd-column | pos-sticky top-0 z-3"
             ai-center="xs,sm"
             w-100="xs,sm"
             w-sidebar="md">
@@ -159,7 +158,7 @@
                 </div>
             </nav>
             <nav id="nav_primary_container"
-                class="d-flex d-none--xs d-none--sm fd-column | w-100 o-hidden | bwidth-1 bstyle-dashed bcolor-neutral-500 |  __soft-shadow"
+                class="d-flex d-none--xs d-none--sm fd-column | w-100 | bwidth-1 bstyle-dashed bcolor-neutral-500 | __soft-shadow"
                 mt-5="md"
                 maxw-sidebar="md"
                 maxh-sidebar="md"
@@ -358,9 +357,14 @@
                                 fs-2="xs">
                                 <span class="icon-calendar-dots fs-6"></span>
                                 <span ws-nowrap="sm,md">
-                                    {% comment %} <span class="ws-nowrap">{{ libdocMessages.lastModified[pageLang] }}</span> {% endcomment %}
-                                    {{ date | datePrefixText }}
-                                    {{ page.date | dateString }}
+                                    {% assign dateString = page.date | dateString %}
+                                    {% if dateString == "1111-11-11" %}
+                                        {{ libdocMessages.lastModified[pageLang] }}
+                                        {{ page.inputPath | gitLastModifiedDate }}
+                                    {% else %}
+                                        {{ date | datePrefixText }}
+                                        {{ dateString }}
+                                    {% endif %}
                                 </span>
                             </p>
                         {% endif %}

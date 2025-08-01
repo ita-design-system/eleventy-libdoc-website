@@ -6,7 +6,7 @@ eleventyNavigation:
     order: 30
 description: List of available HTML snippets that enhance the display of the content
 permalink: creating-content/widgets/index.html
-date: git Last Modified
+date: 1111-11-11
 ---
 
 * [Alerts](/content/creating-content/widgets/alerts.md) Simple paragraphs that displays informations to highlight

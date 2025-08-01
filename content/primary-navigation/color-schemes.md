@@ -7,10 +7,10 @@ eleventyNavigation:
     order: 90
 title: Color schemes - Light and dark modes
 description: LibDoc’s interface in light or dark mode based on user preferences
+date: 1111-11-11
 tags:
     - navigation
     - color-schemes
-date: git Last Modified
 ---
 
 From the user preferences menu - at the top of each page - user can select its own color scheme preference through these 3 options:

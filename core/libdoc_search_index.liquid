@@ -5,7 +5,8 @@ eleventyExcludeFromCollections: true
 [
 {%- if collections.all.size > 0 and libdocConfig.searchEnabled -%}
     {%- if collections.myTags.size > 0 -%}
-        {%- for tagName in collections.myTags -%}
+        {%- for tag in collections.myTags -%}
+            {% assign tagName = tag[0] %}
             {
                 "url": "{{ '/tags/' | url }}{{ tagName }}",
                 "title": "{{ libdocMessages.tag[libdocConfig.lang] }} {{ tagName }}",

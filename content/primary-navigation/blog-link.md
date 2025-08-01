@@ -7,10 +7,10 @@ eleventyNavigation:
     order: 60
 # title: LibDoc’s Front Matter 
 description: How to use the blog feature of LibDoc
+date: 1111-11-11
 tags:
     - navigation
     - blogging
-date: git Last Modified
 ---
 
 LibDoc has a feature dedicated to blogging. Any page created that contains a tag `post` is assigned as a blog post. 

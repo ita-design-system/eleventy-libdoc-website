@@ -8,7 +8,7 @@ eleventyNavigation:
     order: 90
 title: HTML Base - Configuration
 description: Configure your path prefix
-date: git Last Modified
+date: 1111-11-11
 tags:
     - configuration
 ---

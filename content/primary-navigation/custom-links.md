@@ -7,9 +7,9 @@ eleventyNavigation:
     order: 50
 # title: LibDoc’s Front Matter 
 description: Display important links that visitors may need to see on each page you create
+date: 1111-11-11
 tags:
     - navigation
-date: git Last Modified
 ---
 
 LibDoc allows to display personal and/or important links into the primary navigation. It can be set into [LibDoc configuration](/content/configuration/custom-links.md).

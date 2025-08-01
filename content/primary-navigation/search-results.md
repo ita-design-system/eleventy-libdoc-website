@@ -7,9 +7,9 @@ eleventyNavigation:
     order: 30
 # title: LibDoc’s Front Matter 
 description: On a valid text query, search results page appears with excerpts of occurrences
+date: 1111-11-11
 tags:
     - navigation
-date: git Last Modified
 ---
 <div class="pe-none">
     <div class="d-flex fd-column | pos-relative | pl-5 pr-5 | bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 btwidth-0 bbwidth-0"

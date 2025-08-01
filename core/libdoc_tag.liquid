@@ -3,8 +3,8 @@ layout: libdoc_page.liquid
 pagination:
     data: collections.myTags
     size: 1
-    alias: tag
-permalink: "tags/{{ tag }}/index.html"
+    alias: tagData
+permalink: "tags/{{ tagData[0] }}/index.html"
 date: false
 author: false
 eleventyExcludeFromCollections: true
@@ -12,6 +12,7 @@ eleventyExcludeFromCollections: true
 #     parent: Tags list
 #     key: tag
 ---
+{% assign tag = tagData[0] %}
 {% assign pages_with_tag = collections[tag] | sort: 'date' %}
 {% assign pages_with_tag = pages_with_tag | reverse %}
 <div>

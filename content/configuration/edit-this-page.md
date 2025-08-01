@@ -8,7 +8,7 @@ eleventyNavigation:
     order: 120
 title: Edit this page link - Configuration
 description: Sets the git root directory project’s URL to enable "Edit this page" button link 
-date: git Last Modified
+date: 1111-11-11
 tags:
     - configuration
 ---

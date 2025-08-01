@@ -6,7 +6,7 @@ eleventyNavigation:
     order: 20
 description: Use some raw HTML tags into your pages
 permalink: creating-content/inline-html/index.html
-date: git Last Modified
+date: 1111-11-11
 ---
 
 In addition of common [markdown](/content/creating-content/markdown.md), it is possible to use some raw HTML tags.

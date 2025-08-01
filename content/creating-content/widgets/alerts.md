@@ -6,7 +6,7 @@ eleventyNavigation:
     order: 10
 description: Shortcodes and plain HTML that allows to display informations to highlight
 permalink: creating-content/widgets/alerts/index.html
-date: git Last Modified
+date: 1111-11-11
 tags:
     - shortcodes
 ---

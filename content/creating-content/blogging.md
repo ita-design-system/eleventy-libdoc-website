@@ -6,9 +6,9 @@ eleventyNavigation:
     order: 40
 description: How to use blog feature of Eleventy LibDoc
 permalink: creating-content/blogging/index.html
+date: 1111-11-11
 tags:
     - blogging
-date: git Last Modified
 ---
 
 To start blogging, just write at least one page with the `post` tag. **The item "My Posts" into the primary navigation is displayed when at least one page has the `post` tag**. [View blog configuration](/content/configuration/blog.md) related pages.
@@ -65,7 +65,6 @@ tags:
     - blogging
 title: My another post
 description: This is another blog post test
-date: git Last Modified
 ogImageUrl: https://images.weserv.nl/?url=https://raw.githubusercontent.com/olivier3lanc/photographies/master/assets/paysages/hiver/la_pierra_menta_de_la_roche_parstire_alpha_size_3000x1600.webp&w=1200&h=630&fit=cover&q=30&output=webp
 ```
 
@@ -73,15 +72,13 @@ ogImageUrl: https://images.weserv.nl/?url=https://raw.githubusercontent.com/oliv
 
 ## Custom date
 
-Eleventy LibDoc uses built-in [11ty content dates](https://www.11ty.dev/docs/dates/). By default, the last modified date is applied. But this setting may display unwanted results such as build date. It is recommended to set `date: git Last Modified` or your own custom date e.g. `date: 2016-01-01`.
+Eleventy LibDoc uses built-in [11ty content dates](https://www.11ty.dev/docs/dates/). By default, the last modified date is applied. But this setting may display unwanted results such as build date. It is recommended to set `gitLastModified: true` or your own custom date e.g. `date: 2016-01-01`.
 
 ```yaml
 # Custom date
 date: 2016-01-01
 # Last modified
-date: git Last Modified
-# Git Last modified
-date: git Last Modified # recommended
+# Git Last modified # recommended
 ```
 
 ## Custom author

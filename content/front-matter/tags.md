@@ -7,11 +7,11 @@ eleventyNavigation:
     order: 50
 title: Tags - Front Matter
 description: How to assign tags to a page
+date: 1111-11-11
 tags:
     - front-matter
     - navigation
     - tags
-date: git Last Modified
 ---
 A front matter with only tags:
 
