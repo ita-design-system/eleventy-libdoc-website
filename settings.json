@@ -13,5 +13,6 @@
         }
     ],
     "editThisPageRootUrl": "https://github.com/ita-design-system/eleventy-libdoc-website/blob/main",
-    "imgBgColorDarkMode": "white"
+    "imgBgColorDarkMode": "white",
+    "productionUrl": "https://develop--eleventy-libdoc.netlify.app"
 }
