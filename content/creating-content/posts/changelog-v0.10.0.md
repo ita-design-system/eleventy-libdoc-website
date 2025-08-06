@@ -25,6 +25,7 @@ Features:
 * New custom links layout management: Progressive collapse of custom links. If links gets wider than their container, overflowed links are grouped into a sub menu.
 * Added `productionUrl` [configuration parameter](/content/configuration/production-url.md).
 * Improved design for blockquotes.
+* Added `rss` icon.
 
 Fixes:
 
