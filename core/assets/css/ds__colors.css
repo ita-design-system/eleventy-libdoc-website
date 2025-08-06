@@ -165,16 +165,9 @@ main table td code {
     color: var(--ita-colors-primary-900);
 }
 /* QUOTES */
-main blockquote {
-    background: var(--ita-colors-neutral-100);
-    color: var(--ita-colors-primary-900);
-    border-color: var(--ita-colors-primary-300);
-}
 main blockquote::before {
-    color: var(--ita-colors-primary-300);
-}
-main blockquote::after {
-    color: var(--ita-colors-primary-300);
+    border-color: var(--ita-colors-primary-200);
+    background-color: var(--ita-colors-neutral-100);
 }
 /* DEFINITION LISTS */
 main dl dt {

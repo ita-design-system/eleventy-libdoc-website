@@ -42,6 +42,7 @@ export default {
     ],
     roundedImagesCorners: userConfig.roundedImagesCorners ?? true,
     editThisPageRootUrl: userConfig.editThisPageRootUrl ?? false,
-    imgBgColorLightMode: userConfig.imgBgColorLightMode ?? 'transparent',
-    imgBgColorDarkMode: userConfig.imgBgColorDarkMode ?? 'transparent'
+    imgBgColorLightMode: userConfig.imgBgColorLightMode ?? "transparent",
+    imgBgColorDarkMode: userConfig.imgBgColorDarkMode ?? "transparent",
+    productionUrl: userConfig.productionUrl ?? ""
 };

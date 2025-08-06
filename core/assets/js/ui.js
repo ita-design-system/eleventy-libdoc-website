@@ -31,7 +31,8 @@ const libdocUi = {
         searchClearBtns: document.querySelectorAll('.search_form__clear_btn'),
         ftocHeadings: [],
         darkModeCssMetaLink: document.head.querySelector('#libdoc_dark_mode_css'),
-        inputsColorScheme: document.querySelectorAll('[name="libdoc_color_scheme"]')
+        inputsColorScheme: document.querySelectorAll('[name="libdoc_color_scheme"]'),
+        customLinks: document.querySelector('#custom_links')
     },
     getTransferSize: function() {
         // https://jmperezperez.com/blog/page-load-footer/
@@ -297,6 +298,7 @@ const libdocUi = {
             libdocUi._currentScreenSizeName = libdocUi.getCurrentScreenSizeName();
             libdocUi.updateSearchOccurrenceCmdBottom();
             libdocUi.updateNavPrimary();
+            libdocUi.updateCustomLinks();
         },
         _windowLoad: function() {
             const textQuery = libdocUi._searchParams.get('text') || libdocUi._searchParams.get('search');
@@ -914,6 +916,68 @@ const libdocUi = {
             }
         });
     },
+    _updateCustomLinks: null,
+    updateCustomLinks: function() {
+        if (libdocUi.el.customLinks !== null && libdocUi.el.navPrimaryContainer !== null) {
+            const   ctnWidth = libdocUi.el.navPrimaryContainer.clientWidth,
+                    elsLinks = libdocUi.el.customLinks.querySelectorAll('a'),
+                    isLargeScreen = libdocUi.getCurrentScreenSizeName() == 'md' ? true : false;
+            if (elsLinks.length > 1 && isLargeScreen && libdocUi._updateCustomLinks === null) {
+                libdocUi._updateCustomLinks = {
+                    itemsWidth: 0,
+                    items: []
+                };
+                elsLinks.forEach(function(elLink) {
+                    libdocUi._updateCustomLinks.items.push({
+                        url: elLink.href,
+                        text: elLink.innerHTML.trim(),
+                        classNames: elLink.getAttribute('class'),
+                        width: elLink.clientWidth
+                    });
+                    libdocUi._updateCustomLinks.itemsWidth += elLink.clientWidth;
+                });
+                libdocUi.el.customLinks.innerHTML = '';
+                let     tempWidth = 0;
+                const   menuItems = [],
+                        paddingLeft = parseFloat(getComputedStyle(libdocUi.el.customLinks).paddingLeft),
+                        threshold = ctnWidth - 35 - paddingLeft;
+                libdocUi._updateCustomLinks.items.forEach(function(item) {
+                    tempWidth += item.width;
+                    const elLink = document.createElement('a');
+                    elLink.href = item.url;
+                    elLink.innerHTML = item.text;
+                    elLink.title = `${libdocMessages.open} ${item.text} ${libdocMessages.inANewTab}`;
+                    elLink.target = '_blank';
+                    if (tempWidth > threshold) {
+                        elLink.setAttribute('class', 'd-flex ai-center gap-1 | pt-3 pb-3 p-5 | fvs-wght-700 fs-2 lsp-3 lh-1 tt-uppercase td-none ws-nowrap | c-primary-600');
+                        menuItems.push(elLink);
+                    } else {
+                        elLink.setAttribute('class', item.classNames);
+                        libdocUi.el.customLinks.appendChild(elLink);
+                    }
+                });
+                if (menuItems.length > 0) {
+                    const   elDetails = document.createElement('details'),
+                            elSummary = document.createElement('summary'),
+                            elMenuItemsCtn = document.createElement('nav');
+                    elMenuItemsCtn.setAttribute('class', 'd-flex fd-column | pos-absolute right-0 | mr-3 | bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 brad-2 __soft-shadow');
+                    elDetails.setAttribute('class', 'pos-absolute right-0');
+                    elSummary.setAttribute('class', 'd-flex ai-center jc-end gap-1 | pt-2 pb-2 pl-4 pr-4 | lh-1 | cur-pointer c-primary-600');
+                    elSummary.setAttribute('title', libdocMessages.otherCustomLinks);
+                    elSummary.innerHTML = '<span class="icons"><span class="icon-plus-circle"></span><span class="icon-minus-circle"></span></span>';
+                    elDetails.appendChild(elSummary);
+                    menuItems.forEach(function(elItem) {
+                        elMenuItemsCtn.appendChild(elItem);
+                    });
+                    elDetails.appendChild(elMenuItemsCtn);
+                    libdocUi.el.customLinks.appendChild(elDetails);
+                    libdocUi.el.customLinks.classList.remove('o-auto');
+                } else {
+                    libdocUi.el.customLinks.classList.add('o-auto');
+                }
+            }
+        }
+    },
     update: function() {
         libdocUi.defaults.darkModeCssMedia = libdocUi.el.darkModeCssMetaLink.media;
         libdocUi.setColorScheme(libdocUi.getUserPreferences().colorScheme);
@@ -926,6 +990,7 @@ const libdocUi = {
         libdocUi.updateFtocList();
         libdocUi.updateGTTBtns();
         libdocUi.addExternalLinkIconIntoMainContent();
+        libdocUi.updateCustomLinks();
         libdocUi.el.navPrimaryCheckbox.addEventListener('change', libdocUi.handlers._navPrimaryCheckboxChange);
         window.addEventListener('resize', libdocUi.handlers._windowResize);
         window.addEventListener('load', libdocUi.handlers._windowLoad);

@@ -25,6 +25,7 @@ Current version is **{{ libdocUtils.version }}** - [View change log](/tags/chang
 {% iconCard 'Slick code highlighting', 'Display your code in a nice style and adjust which code languages you really use.', 'code' %}
 {% iconCard 'Sandboxes', 'Showcase small demos or full HTML pages into a responsive dual pane.', 'sidebar' %}
 {% iconCard 'Light and dark modes', 'LibDoc’s interface is available with both light and dark mode color schemes', 'circle-half' %}
+{% iconCard 'Atom feed', 'The Atom feed allows visitors to subscribe to post blog content. [View LibDoc’s Atom feed](/core/feed.njk)', 'rss' %}
 
 ## Getting started
 
@@ -63,6 +64,8 @@ Start entering your own settings into `settings.json` at the root of the project
     Sets the git root directory project’s URL to enable "Edit this page" button link.
 *   [Default image background color](https://eleventy-libdoc.netlify.app/configuration/default-image-background-color/)<br>
     Sets the default image background color for both light mode and dark mode.
+*   [Production URL](https://eleventy-libdoc.netlify.app/configuration/production-url/)<br>
+    Parameter that defines the root URL of your project.
 
 
 ## Creating content
@@ -150,10 +153,14 @@ One of the most important element of the user interface. [Primary navigation doc
         *   `js/`
         *   `fonts/`
         *   `css/`
+    *   `feed.njk`  <br>
+        ⤷ Atom feed template. Generates a valid XML Atom file. Learn more about [Atom feed](https://eleventy-libdoc.netlify.app/creating-content/blogging/#atom-feed)
     *   `libdoc_blog.liquid`  <br>
         ⤷ blog related layout. Learn more about [blogging](https://eleventy-libdoc.netlify.app/creating-content/blogging/)
+    *   `libdoc_fuzzy_index.liquid`  <br>
+        ⤷ builds fuzzy search index JSON file.
     *   `libdoc_search_index.liquid`  <br>
-        ⤷ builds search index JSON file.
+        ⤷ builds exact matching search index JSON file.
     *   `libdoc_search.html`  <br>
         ⤷ layout dedicated to search results.
     *   `libdoc_tag.liquid`  <br>

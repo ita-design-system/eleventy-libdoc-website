@@ -487,32 +487,35 @@ main blockquote {
     position: relative;
     margin-top: var(--ita-spacings-10);
     margin-bottom: var(--ita-spacings-10);
-    padding: var(--ita-spacings-5) var(--ita-spacings-9);
-    max-width: var(--libdoc-container-width);
-    border-bottom-left-radius: 3em;
-    border-top-right-radius: 3em;
-    border-width: 3px;
-    border-style: double;
+    padding: 2em 4em;
     font-family: var(--libdoc-font-family);
     font-size: var(--ita-fontSizes-7);
-    border-radius: 12px;
-    box-shadow: var(--libdoc-soft-shadow);
+}
+main blockquote > *:first-child {
+    margin-top: 0;
+}
+main blockquote > *:last-child {
+    margin-bottom: 0;
 }
 main blockquote::before {
     content: "❝";
     position: absolute;
-    left: 0;
+    left: var(--ita-spacings-9);
     font-size: 4em;
-    transform: translateY(-60%);
-}
-main blockquote::after {
-    content: "❞";
-    position: absolute;
-    font-size: 4em;
-    transform: translateY(-20%);
-    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-width: calc(100% - 2 * var(--ita-spacings-9));
+    line-height: 0;
+    text-indent: var(--ita-spacings-5);
+    border-bottom-left-radius: 3em;
+    border-top-right-radius: 3em;
+    border-width: 3px;
+    border-style: double;
+    border-radius: 12px;
 }
 main blockquote * {
+    position: relative;
     font-variation-settings: "slnt" -15, "CASL" 1, "CRSV" 1;
     letter-spacing: -0.01em;
 }
@@ -971,8 +974,12 @@ input[type="radio"] ~ label::before {
         max-width: calc(calc(var(--ita-widths-content) + 2 * var(--ita-spacings-5)));
     }
     main blockquote {
-        font-size: var(--ita-fontSizes-6);
-        padding: var(--ita-spacings-5) var(--ita-spacings-7);
+        padding: 2em 3em;
+        font-size: var(--ita-fontSizes-5);
+    }
+    main blockquote::before {
+        left: var(--ita-spacings-5);
+        max-width: calc(100% - 2 * var(--ita-spacings-5));
     }
     #floating_toc_container {
         box-shadow: var(--libdoc-soft-shadow);

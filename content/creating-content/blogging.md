@@ -6,9 +6,10 @@ eleventyNavigation:
     order: 40
 description: How to use blog feature of Eleventy LibDoc
 permalink: creating-content/blogging/index.html
-date: 1111-11-11
 tags:
     - blogging
+    - atom-feed
+    - date
 ---
 
 To start blogging, just write at least one page with the `post` tag. **The item "My Posts" into the primary navigation is displayed when at least one page has the `post` tag**. [View blog configuration](/content/configuration/blog.md) related pages.
@@ -77,8 +78,6 @@ Eleventy LibDoc uses built-in [11ty content dates](https://www.11ty.dev/docs/dat
 ```yaml
 # Custom date
 date: 2016-01-01
-# Last modified
-# Git Last modified # recommended
 ```
 
 ## Custom author
@@ -88,3 +87,11 @@ It is possible to override the page’s author display. Just add `author` key in
 ```yaml
 author: John Doe
 ```
+
+## Atom Feed
+
+**The Atom feed is a single XML file URL populated only with blog posts that allows visitors to be kept informed about new publications of the blog part**.
+
+Once [production URL](/content/configuration/production-url.md) configuration setting is properly set, an [Atom feed](https://en.wikipedia.org/wiki/Atom_(web_standard)) is automatically built on the URL `<productionURL>/feed.xml`. 
+
+As an example, here is the LibDoc’s Atom feed <{{ libdocConfig.productionUrl }}/feed.xml>
