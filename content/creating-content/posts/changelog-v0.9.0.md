@@ -11,7 +11,7 @@ ogImageUrl: "https://raw.githubusercontent.com/ita-design-system/ita-medias/refs
 ---
 [Release v0.9.0 on Github](https://github.com/ita-design-system/eleventy-libdoc/releases/tag/0.9.0)
 
-<figure class="long-shadow">
+<figure>
     <img src="{{ ogImageUrl }}"
         alt="Improved tags list layout">
     <figcaption>Improved tags list layout</figcaption>

@@ -129,6 +129,11 @@
 		"fr": "Ouvrir dans un nouvel onglet",
 		"it": "Apri in una nuova scheda"
 	},
+	"otherCustomLinks": {
+		"en": "Other custom links",
+		"fr": "Autres liens personnalisés",
+		"it": "Altri collegamenti personalizzati"
+	},
 	"page": {
 		"en": "Page",
 		"fr": "Page",

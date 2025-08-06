@@ -226,17 +226,17 @@
                         </li>
                     {% endif %}
                     {% if libdocConfig.customLinks.size > 0 %}
-                        <li class="d-flex ai-center fw-wrap gap-7 rgap-1 | pb-3 pl-5">
+                        <li id="custom_links"
+                            class="d-flex ai-center rgap-1 | pos-relative | pb-3 pl-5 o-auto">
                             {% for item in libdocConfig.customLinks %}
                                 <a  href="{{ item.url }}"
                                     class="
                                     d-flex ai-center gap-1
-                                    pt-2 pb-2
-                                    fvs-wght-600 fs-2 lsp-3 lh-1 tt-uppercase td-none
+                                    pt-2 pb-2 pr-5
+                                    fvs-wght-700 fs-2 lsp-3 lh-1 tt-uppercase td-none ws-nowrap
                                     c-primary-600"
                                     target="_blank">
                                     {{ item.text }}
-                                    <span class=""><span class="icon-arrow-square-out | pos-absolute t-tY-50"></span></span>
                                 </a>
                             {% endfor %}
                         </li>

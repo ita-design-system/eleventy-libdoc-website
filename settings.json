@@ -4,6 +4,10 @@
     "blogDescription": "Here is the news feed of Eleventy LibDoc",
     "customLinks": [
         {
+            "url": "/feed.xml",
+            "text": "Atom feed"
+        },
+        {
             "url": "https://github.com/ita-design-system/eleventy-libdoc",
             "text": "GitHub"
         },
@@ -14,5 +18,5 @@
     ],
     "editThisPageRootUrl": "https://github.com/ita-design-system/eleventy-libdoc-website/blob/main",
     "imgBgColorDarkMode": "white",
-    "productionUrl": "https://develop--eleventy-libdoc.netlify.app"
+    "productionUrl": "https://eleventy-libdoc.netlify.app"
 }

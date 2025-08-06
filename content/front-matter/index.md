@@ -12,7 +12,7 @@ tags:
     - front-matter
     - permalink
     - navigation
-    - dates
+    - date
     - author
     - description
     - SEO

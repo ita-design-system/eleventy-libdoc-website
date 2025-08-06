@@ -6,7 +6,6 @@ eleventyNavigation:
     order: 20
 title: LibDoc’s configuration
 description: List and descriptions of every LibDoc parameter
-date: 1111-11-11
 tags:
     - configuration
 ---
@@ -18,6 +17,18 @@ Even if `settings.json` can be empty, it is recommended to enter at least:
 * `siteTitle`
 * `siteDescription`
 * `faviconUrl`
+* `productionUrl` - Only affects [Atom feed URL](/content/creating-content/blogging.md#atom-feed) for the moment.
+
+Example of a basic `settings.json`:
+
+```json
+{
+    "siteTitle": "My Project",
+    "siteDescription": "Description of my project",
+    "faviconUrl": "/favicon.png",
+    "productionUrl": "https://myapp.com"
+}
+```
 
 **If not specified in `settings.json`, the following parameters are applied:**
 
@@ -31,6 +42,7 @@ Even if `settings.json` can be empty, it is recommended to enter at least:
     "author": false,
     "faviconUrl": "/favicon.png",
     "ogImageUrl": "https://raw.githubusercontent.com/ita-design-system/ita-medias/refs/heads/main/ogimage-11ty-libdoc.png",
+    "gitLastModifiedDate": false, 
     "customLinks": [],
     "blogTitle": "Blog Posts",
     "blogDescription": false,
@@ -55,7 +67,8 @@ Even if `settings.json` can be empty, it is recommended to enter at least:
     "roundedImagesCorners": true,
     "editThisPageRootUrl": false,
     "imgBgColorLightMode": "transparent",
-    "imgBgColorDarkMode": "transparent"
+    "imgBgColorDarkMode": "transparent",
+    "productionUrl": ""
 }
 ```
 
@@ -69,6 +82,7 @@ Parameter | Type | Description | Page override
 `author` | String or <var>false</var> | Default [author](/content/configuration/author.md) of pages. Setting to <var>false</var> disables author display | yes
 `faviconUrl` | String | [Favicon URL configuration](/content/configuration/favicon.md) | yes
 `ogImageUrl` | String | Metadata of the default [Open Graph Image](/content/configuration/open-graph-image.md) | yes
+`gitLastModifiedDate` | Boolean | Ensure to display [truly git Last Modified date](/content/configuration/git-last-modified-date.md) | yes
 `customLinks` | Array | Array of objects defining [custom links](/content/configuration/custom-links.md) into the primary navigation | no
 `customLinks[i].text` | String | Link text | no
 `customLinks[i].url` | String | Link URL | no
@@ -88,3 +102,4 @@ Parameter | Type | Description | Page override
 `editThisPageRootUrl` | String or <var>false</var> | Sets the git root directory project’s URL to enable [edit this page link](/content/configuration/edit-this-page.md) | no
 `imgBgColorLightMode` | CSS color string | Sets the [default background color](/content/configuration/default-image-background-color.md) for `<img>` tags on light mode | no
 `imgBgColorDarkMode` | CSS color string | Sets the [default background color](/content/configuration/default-image-background-color.md) for `<img>` tags on dark mode | no
+`productionUrl` | String | Sets the [production URL](/content/configuration/production-url.md) that defines the root URL of your project | no
