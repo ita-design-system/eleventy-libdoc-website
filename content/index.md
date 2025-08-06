@@ -153,10 +153,14 @@ One of the most important element of the user interface. [Primary navigation doc
         *   `js/`
         *   `fonts/`
         *   `css/`
+    *   `feed.njk`  <br>
+        ⤷ Atom feed template. Generates a valid XML Atom file. Learn more about [Atom feed](https://eleventy-libdoc.netlify.app/creating-content/blogging/#atom-feed)
     *   `libdoc_blog.liquid`  <br>
         ⤷ blog related layout. Learn more about [blogging](https://eleventy-libdoc.netlify.app/creating-content/blogging/)
+    *   `libdoc_fuzzy_index.liquid`  <br>
+        ⤷ builds fuzzy search index JSON file.
     *   `libdoc_search_index.liquid`  <br>
-        ⤷ builds search index JSON file.
+        ⤷ builds exact matching search index JSON file.
     *   `libdoc_search.html`  <br>
         ⤷ layout dedicated to search results.
     *   `libdoc_tag.liquid`  <br>
