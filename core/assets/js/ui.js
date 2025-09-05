@@ -497,7 +497,7 @@ const libdocUi = {
                 floatingTocMarkup += `
                     <li>
                         <a  href="${headingReference}"
-                            class="d-flex | pl-5 pr-5 | fs-4 lsp-3 lh-5 fvs-wght-500 | c-primary-500 blwidth-1 blstyle-dashed bcolor-primary-300"
+                            class="d-flex | pl-5 pr-5 | fs-3 lsp-3 lh-5 fvs-wght-400 td-none | c-primary-500 blwidth-1 blstyle-dashed bcolor-primary-300"
                             pt-2="md"
                             pb-2="md"
                             pt-1="xs,sm"

@@ -276,7 +276,7 @@
         <main class="pos-relative"
             w-100-minus-sidebar="md"
             w-100="xs,sm">
-            <header class="d-flex fd-column | pt-5 {% if pageUrlSplit[1] != 'tags' and pageUrlSplit[1] != libdocConfig.blogSlug %}pb-7{% endif %}">
+            <header class="d-flex fd-column | pt-5 {{ headerPadding }} {{ headerMargin }}">
                 <nav class="d-flex jc-space-between | pos-relative">
                     {% include 'libdoc_breadcrumb' %}
                     <details id="user_preferences">
