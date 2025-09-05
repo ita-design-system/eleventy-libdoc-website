@@ -708,8 +708,8 @@ main > aside > iframe {
 main .alert {
     font-variation-settings: "wght" 400, "slnt" 0, "CASL" 0, "CRSV" 0;
     padding: var(--ita-spacings-3) var(--ita-spacings-5);
-    border-left-style: solid;
-    border-left-width: 3px;
+    border-left-style: dashed;
+    border-left-width: 1px;
     font-size: var(--ita-fontSizes-4);
     letter-spacing: -0.01em;
     line-height: 1.6em;
@@ -722,7 +722,7 @@ main .alert[data-title]::before {
     text-transform: uppercase;
     font-size: var(--ita-fontSizes-3);
     padding-bottom: var(--ita-spacings-1);
-    border-bottom-style: solid;
+    border-bottom-style: dashed;
     border-bottom-width: 1px;
 }
 /* SEARCH OCCURRENCES */
@@ -795,6 +795,9 @@ main .__search-occurrence {
 }
 #toc_main li {
     break-inside: avoid;
+}
+#toc_main li a {
+    text-decoration-color: var(--ita-colors-primary-300);
 }
 
 /* SANDBOX */
@@ -1039,6 +1042,7 @@ input[type="radio"] ~ label::before {
     #floating_toc_container,
     #toc_main,
     #sidebar,
+    #user_preferences,
     main h1 a,
     main h2 a,
     main h3 a,

@@ -18,9 +18,7 @@ date: false
         {% for tag in collections.myTags %}
             {% assign tagName = tag[0] %}
             {% assign tagCount = tag[1] %}
-            <li class="d-flex jc-space-between"
-                ai-center="sm,md"
-                ai-end="xs"
+            <li class="d-flex jc-space-between ai-center"
                 gap-5="sm,md"
                 gap-3="xs">
                 <a  href="/tags/{{ tagName }}/"
@@ -34,8 +32,9 @@ date: false
                     <span class="icon-tag-simple"></span>
                     <span class="o-hidden | to-ellipsis">{{ tagName }}</span>
                 </a>
-                <p class="d-flex | m-0 | lh-1"
+                <p  class="d-flex | m-0 | lh-1"
                     fd-column="xs"
+                    ai-center="sm,md"
                     gap-5="sm,md">
                     <span class="fs-2 ws-nowrap"
                         fs-1="xs">
@@ -46,7 +45,18 @@ date: false
                             {{ libdocMessages.pages[libdocConfig.lang] | downcase }}
                         {% endif %}
                     </span>
-                    <span class="d-flex gap-1"
+                    <span class="pl-10 pr-10 pt-2 | brad-3 bwidth-1 bstyle-solid bcolor-primary-500"
+                        pl-7="xs"
+                        pr-7="xs"
+                        pt-1="xs"
+                        style="
+                        background: linear-gradient( 
+                            90deg, 
+                            var(--ita-colors-primary-500) 0%, 
+                            var(--ita-colors-primary-500) calc(100% * {{ tagCount }} / {{ highestBound }}), 
+                            var(--ita-colors-primary-200) calc(100% * {{ tagCount }} / {{ highestBound }})">
+                    </span>
+                    {% comment %} <span class="d-flex gap-1"
                         style="background: text linear-gradient( 
                         90deg, 
                         var(--ita-colors-primary-500) 0%, 
@@ -57,7 +67,7 @@ date: false
                         <span class="icon-star-fill" style="color:transparent"></span>
                         <span class="icon-star-fill" style="color:transparent"></span>
                         <span class="icon-star-fill" style="color:transparent"></span>
-                    </span>
+                    </span> {% endcomment %}
                 </p>
             </li>
         {% endfor %}

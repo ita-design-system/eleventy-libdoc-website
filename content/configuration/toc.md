@@ -4,14 +4,14 @@ permalink: configuration/table-of-content/index.html
 eleventyNavigation:
     key: Table of content configuration
     parent: Configuration
-    title: Table of content
+    title: TOC - Table of content
     order: 80
-title: Table of content - Configuration
+# title: TOC - Table of content - Configuration
 description: Configuration of the TOC - Table of Content
 date: 1111-11-11
 tags:
     - configuration
-    - TOC
+    - toc
 ---
 
 In `settings.json`, the following parameters are related to the table of content.
@@ -28,4 +28,5 @@ In `settings.json`, the following parameters are related to the table of content
 * `tocHtmlTags` **default is `["h1", "h2", "h3", "h4", "h5", "h6"]`** is an array of heading tags to detect as table of content items.
 * `tocMinTags` **default is `1`** is an integer that sets the minimum amount of TOC HTML tags found onto the page to display the table of content.
 
+Above settings adjust both [main and floating Tables Of Content](/content/primary-navigation/tocs.md).
 

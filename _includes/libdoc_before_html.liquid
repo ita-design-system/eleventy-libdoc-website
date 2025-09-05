@@ -92,3 +92,18 @@
 {%- assign tag_to_replace = '<' | append: libdocSystem.navigationOptions.listElement | append: '>' -%}
 {%- assign tag_replacement = '<' | append: libdocSystem.navigationOptions.listElement | append: ' class="d-flex fd-column fg-1 order-1 | m-0 pl-5 o-hidden | ls-none">' -%}
 {%- assign eleventyNavigationMenu = eleventyNavigationMenu | replace: tag_to_replace, tag_replacement -%}
+
+{% comment %} header margin {% endcomment %}
+{%- assign headerMargin = 'mb-7' -%}
+{%- if pageUrlSplit[1] == 'tags' -%}
+    {%- assign headerMargin = '' -%}
+{%- endif -%}
+{%- if pageUrlSplit[1] == libdocConfig.blogSlug and pageUrlSplit[2] == null -%}
+    {%- assign headerMargin = '' -%}
+{%- endif -%}
+
+{% comment %} header padding {% endcomment %}
+{%- assign headerPadding = '' -%}
+{%- if pageUrlSplit[1] != 'tags' and pageUrlSplit[1] != libdocConfig.blogSlug and pageUrlSplit[2] != null -%}
+    {%- assign headerPadding = 'pb-7' -%}
+{%- endif -%}
