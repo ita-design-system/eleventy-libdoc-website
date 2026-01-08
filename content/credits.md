@@ -30,4 +30,4 @@ date: 1111-11-11
     The Internet's favorite JavaScript syntax highlighter supporting Node.js and the web.
 *   [Recursive font](https://www.recursive.design/)<br>
     A typographic palette for vibrant code & UI.
-*   All photographs by [Olivier 3lanc](https://olivier3lanc.github.io)
+*   All photographs by [Olivier 3lanc](https://olivier3lanc.me)
