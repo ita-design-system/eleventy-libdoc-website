@@ -23,7 +23,7 @@ Default Open Graph URL is the [LibDoc’s Open Graph image](https://raw.githubus
 }
 ```
 
-The Open Graph Image is a metadata image URL that is displayed when a link to a LibDoc page is shared into a social network. By default, LibDoc configation `ogImageUrl` is used on every page but this parameter can be overridden on each page’s front matter with the same key `ogImageUrl`. Then you can customize each page of your project.
+The Open Graph Image is a metadata image URL that is displayed when a link to a LibDoc page is shared into a social network. By default, LibDoc configuration `ogImageUrl` is used on every page but this parameter can be overridden on each page’s front matter with the same key `ogImageUrl`. Then you can customize each page of your project.
 
 <aside>
     <p class="alert alert-warning" data-title="Warning">

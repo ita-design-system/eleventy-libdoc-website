@@ -27,7 +27,7 @@ In addition, contiguous details tags with the same name attribute value can crea
 
 <details name="languages">
     <summary>HTML</summary>
-    <h2>Semantic Frist!</h2>
+    <h2>Semantic First!</h2>
     <p>
         Write semantic content with <abbr title="Hyper Text Markup Language">HTML</abbr>.
         Learn more at <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN</a>
@@ -53,7 +53,7 @@ In addition, contiguous details tags with the same name attribute value can crea
 ```html
 <details name="languages">
     <summary>HTML</summary>
-    <h2>Semantic Frist!</h2>
+    <h2>Semantic First!</h2>
     <p>
         Write semantic content with <abbr title="Hyper Text Markup Language">HTML</abbr>.
         Learn more at <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN</a>
