@@ -46,7 +46,7 @@ description: This is a simple blog post test
 
 ## Custom Open Graph Image
 
-The Open Graph Image is a metadata image URL that is displayed when a link to a LibDoc page is shared into a social network. By default, LibDoc configation `ogImageUrl` is used on every page but this parameter can be overridden on each page’s front matter with the same key `ogImageUrl`.
+The Open Graph Image is a metadata image URL that is displayed when a link to a LibDoc page is shared into a social network. By default, LibDoc configuration `ogImageUrl` is used on every page but this parameter can be overridden on each page’s front matter with the same key `ogImageUrl`.
 
 <aside>
     <p class="alert alert-warning"><strong>Open Graph Image URL must be public and absolute with <var>https://</var> protocol.</strong>.</p>
