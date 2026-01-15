@@ -12,7 +12,7 @@ tags:
     - navigation
 ---
 
-When a search result is clicked, an UI element is displayed on the target page to help navigating between occurrences of the text query.
+When a search result is clicked, a UI element is displayed on the target page to help navigating between occurrences of the text query.
 
 <div>
     <nav class="d-flex fw-wrap jc-space-between ai-center gap-5 | pos-sticky bottom-0 z-1 | p-5 | bs-1 bc-success-100 bradtl-3 bradtr-3 pe-none">
