@@ -25,7 +25,7 @@ When a search result is clicked, a UI element is displayed on the target page to
                 <span class="icon-caret-left | pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900"></span>
             </button>
             <button type="button" class="pos-relative | h-50px ar-square | fs-2 | brad-4 bc-neutral-100 c-success-900 bwidth-1 bstyle-dashed bcolor-success-900 cur-pointer __hover-2" onclick="libdocUi.curSearchOccurrence()" title="Current search occurrence">
-                <span id="current_query_occurrence_index_position" class="pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900">1/13</span>
+                <span class="pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900">1/13</span>
             </button>
             <button type="button" class="pos-relative | h-50px ar-square | fs-5 | brad-4 bc-neutral-100 c-success-900 bwidth-1 bstyle-dashed bcolor-success-900 cur-pointer __hover-2" onclick="libdocUi.nextSearchOccurrence()" title="Next search occurrence">
                 <span class="icon-caret-right | pos-absolute top-50 left-50 t-tY-50 t-tX-50 | c-success-900"></span>
