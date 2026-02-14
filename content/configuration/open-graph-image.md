@@ -56,3 +56,25 @@ Open Graph Image URL is applied following these ordered priorities:
 
 
 Learn more about [Open Graph](https://ogp.me/).
+
+## Tag pages
+
+It is possible to set a custom Open Graph Image URL to any tag. For example, assuming you have a tag called `foo`, then you have an URL `/tags/foo`, assigning an Open Graph image URL to this page can be set like follows through your `settings.json`:
+
+```json
+{
+    "ogImageUrlForEachTag": {
+        "foo": "https://example.com/path/to/custom-open-graph-image.avif"
+    }
+}
+```
+
+
+For example on current website, you can view an example of a custom Open Graph Image for tag page [change log](/tags/changelog) on this website. Here are the involved lines from the `settings.json` file:
+
+```json
+{
+    "ogImageUrlForEachTag": {
+        "changelog": "https://og-image.vercel.app/**11ty%20LibDoc%20Change%20Log**.png?theme=dark&md=1&fontFamily=source-sans-pro&fontSize=100px"
+    }
+}

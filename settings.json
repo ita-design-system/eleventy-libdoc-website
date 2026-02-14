@@ -18,5 +18,8 @@
     ],
     "editThisPageRootUrl": "https://github.com/ita-design-system/eleventy-libdoc-website/blob/main",
     "imgBgColorDarkMode": "white",
-    "productionUrl": "https://eleventy-libdoc.netlify.app"
+    "productionUrl": "https://eleventy-libdoc.netlify.app",
+    "ogImageUrlForEachTag": {
+        "changelog": "https://og-image.vercel.app/**11ty%20LibDoc%20Change%20Log**.png?theme=dark&md=1&fontFamily=source-sans-pro&fontSize=100px"
+    }
 }

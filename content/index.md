@@ -66,6 +66,8 @@ Start entering your own settings into `settings.json` at the root of the project
     Sets the default image background color for both light mode and dark mode.
 *   [Production URL](https://eleventy-libdoc.netlify.app/configuration/production-url/)<br>
     Parameter that defines the root URL of your project.
+*   [Custom Open Graph Image for each tag](https://eleventy-libdoc.netlify.app/configuration/open-graph-image/#tag-pages)<br>
+    Assign a custom Open Graph URL to any tag. This allows to get custom Open Graph images on tag pages (like /tags/my-tag) instead of default Open Graph image.
 
 
 ## Creating content

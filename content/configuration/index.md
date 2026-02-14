@@ -68,7 +68,8 @@ Example of a basic `settings.json`:
     "editThisPageRootUrl": false,
     "imgBgColorLightMode": "transparent",
     "imgBgColorDarkMode": "transparent",
-    "productionUrl": ""
+    "productionUrl": "",
+    "ogImageUrlForEachTag": {}
 }
 ```
 
@@ -103,3 +104,4 @@ Parameter | Type | Description | Page override
 `imgBgColorLightMode` | CSS color string | Sets the [default background color](/content/configuration/default-image-background-color.md) for `<img>` tags on light mode | no
 `imgBgColorDarkMode` | CSS color string | Sets the [default background color](/content/configuration/default-image-background-color.md) for `<img>` tags on dark mode | no
 `productionUrl` | String | Sets the [production URL](/content/configuration/production-url.md) that defines the root URL of your project | no
+`ogImageUrlForEachTag` | Object | Assign a custom [Open Graph Image](/content/configuration/open-graph-image.md#tag-pages) to any tag. This allows to get custom Open Graph images on tag pages (like /tags/my-tag) instead of default Open Graph image. | no
