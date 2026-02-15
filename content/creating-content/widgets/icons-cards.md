@@ -6,7 +6,6 @@ eleventyNavigation:
     order: 65
 description: Easily highlight something important in a simple way with an icon, a main text and its description
 permalink: creating-content/widgets/icon-cards/index.html
-date: 1111-11-11
 tags:
     - icons
     - shortcodes
@@ -18,16 +17,20 @@ Just use `iconCard` shortcode as follows:
 ```
 
 * `<MAIN_TEXT>` and `<DESCRIPTION>` are mandatory, must be a string with the content to display, can be **markdown** or **HTML**.
-* `<ICON_NAME>` is optional. It allows to display a title at the top of the alert.
+* `<ICON_NAME>`
+    * Can be a system related icon name [from this list](/content/creating-content/widgets/icons.md#list).
+    * Can be a [path or remote URL](/content/creating-content/widgets/icons.md#custom-icon) to a SVG or transparency raster image (PNG, AVIF)
 
 Examples:
 
 {% iconCard 'Icon cards', 'Easily highlight something important in a simple way with an icon, a main text and its description.', 'code' %}
 {% iconCard 'Default icon name', 'If none or invalid icon name is set, default icon is applied.' %}
+{% iconCard 'Custom icon', 'Add your own icon, SVG or transparency raster, from your project path or remote URL', '/assets/logo-11ty.svg' %}
 
 ```liquid
 {% raw %}{% iconCard 'Icon cards', 'Easily highlight something important in a simple way with an icon, a main text and its description.', 'code' %}
-{% iconCard 'Default icon name', 'If none or invalid icon name is set, default icon is applied.' %}{% endraw %}
+{% iconCard 'Default icon name', 'If none or invalid icon name is set, default icon is applied.' %}
+{% iconCard 'Custom icon', 'Add your own icon, SVG or transparency raster, from your project path or remote URL', '/assets/logo-11ty.svg' %}{% endraw %}
 ```
 
 Icon cards can be included into unordered and ordered lists:
