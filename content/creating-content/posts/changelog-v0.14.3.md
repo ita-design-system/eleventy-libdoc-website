@@ -4,12 +4,12 @@ permalink: "{{ libdocConfig.blogSlug }}/{{ page.fileSlug }}/index.html"
 tags:
     - post
     - changelog
-title: Change log LibDoc v0.14.2
+title: Change log LibDoc v0.14.3
 description: Custom icons, size and colors
 date: 2026-02-16
 # ogImageUrl: "https://raw.githubusercontent.com/ita-design-system/ita-medias/refs/heads/main/libdoc-v0.11.0.avif"
 ---
-[Release v0.14.2 on Github](https://github.com/ita-design-system/eleventy-libdoc/releases/tag/0.14.2)
+[Release v0.14.3 on Github](https://github.com/ita-design-system/eleventy-libdoc/releases/tag/0.14.3)
 
 ## Features
 
