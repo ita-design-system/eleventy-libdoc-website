@@ -247,7 +247,7 @@ export default {
             if (isSystemIcon) {
                 markup = `<span class="icon-${iconName} fs-${dsFontSize}"></span>`;
             } else {
-                markup = `<span class="icon- fs-${dsFontSize}" style="mask-image: url('${iconName}')"></span>`;
+                markup = `<span class="icon- fs-${dsFontSize}" style="mask-image: url('${libdocConfig.htmlBasePathPrefix}${iconName}')"></span>`;
             }
             return markup;
         },
@@ -261,7 +261,7 @@ export default {
                 } else {
                     iconMarkup = `<span class="icon- fs-10 | c-primary-500"
                             fs-8="xs"
-                            style="mask-image: url('${iconName || `/core/assets/icons/check-circle.svg`}')"></span>`;
+                            style="mask-image: url('${libdocConfig.htmlBasePathPrefix}${iconName || `/core/assets/icons/check-circle.svg`}')"></span>`;
                 }
                 markup = `
                     <aside class="widget widget-iconCard">

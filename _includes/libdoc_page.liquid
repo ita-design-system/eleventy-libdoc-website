@@ -89,6 +89,7 @@
             {%- endfor %}
         }
         const libdocConfig = {
+            htmlBasePathPrefix: `{{ libdocConfig.htmlBasePathPrefix }}`,
             blogTitle: `{{ libdocConfig.blogTitle }}`,
             blogDescription: `{{ libdocConfig.blogDescription }}`,
             displayTagsListLink: {{ libdocConfig.displayTagsListLink }}
@@ -356,7 +357,7 @@
                             <p  class="d-flex ai-center gap-2 | m-0 pr-2 | fvs-wght-400 fs-3 lsp-3 lh-3 | c-neutral-700 bc-primary-100"
                                 fs-2="xs">
                                 <span class="icon-calendar-dots fs-6"></span>
-                                <span ws-nowrap="sm,md">
+                                <time ws-nowrap="sm,md">
                                     {% assign dateString = page.date | dateString %}
                                     {% if dateString == "1111-11-11" %}
                                         {{ libdocMessages.lastModified[pageLang] }}
@@ -365,7 +366,7 @@
                                         {{ date | datePrefixText }}
                                         {{ dateString }}
                                     {% endif %}
-                                </span>
+                                </time>
                             </p>
                         {% endif %}
                         <div class="pl-5 w-100 | bbwidth-1 bbstyle-dashed bcolor-neutral-500"></div>

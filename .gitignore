@@ -5,3 +5,4 @@ _site
 .DS_Store
 _data/envlocal.json
 .env
+___dummy_content/

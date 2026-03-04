@@ -2,8 +2,8 @@ const libdocUi = {
     defaults: {
         localStorageIdentifier: 'eleventyLibdoc',
         colorSchemes: ['auto', 'light', 'dark'],
-        darkModeCssFilePath: '/core/assets/css/ds__dark_mode.css',
-        supportedLanguagesJsonPath: '/core/assets/js/supported-languages.json',
+        darkModeCssFilePath: `${libdocConfig.htmlBasePathPrefix}/core/assets/css/ds__dark_mode.css`,
+        supportedLanguagesJsonPath: `${libdocConfig.htmlBasePathPrefix}/core/assets/js/supported-languages.json`,
         darkModeCssMedia: '',
         screenSizes: {
             xs: [0, 599],

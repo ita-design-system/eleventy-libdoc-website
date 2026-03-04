@@ -110,3 +110,14 @@
 {%- if pageUrlSplit[1] != 'tags' and pageUrlSplit[1] != libdocConfig.blogSlug and pageUrlSplit[2] != null -%}
     {%- assign headerPadding = 'pb-7' -%}
 {%- endif -%}
+
+{% comment %} LEGACY ICONS {% endcomment %}
+{%- capture legacyIconsCss -%}
+    <style>
+        {%- for iconName in libdocSystem.icons -%}
+            .icon-{{ iconName }} {
+                mask-image: url('{{ libdocConfig.htmlBasePathPrefix }}/core/assets/icons/{{ iconName }}.svg');
+            }
+        {%- endfor -%}
+    </style>
+{%- endcapture -%}
