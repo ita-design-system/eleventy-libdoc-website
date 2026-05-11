@@ -34,6 +34,28 @@ Current version is **{{ libdocUtils.version }}** - [View change log](/tags/chang
 3. Enter your own settings in `settings.json`. [Configuration](/content/configuration/index.md).
 4. Build and serve `npx @11ty/eleventy --serve` or just build `npx @11ty/eleventy` (if you already have your own web server).
 
+## Update LibDoc
+
+This process shows how to update Eleventy LibDoc Starter template.
+
+{% alertAlt 'info', 'Edits' %}
+As a starter template, any edit made into the following files and folders needs to be saved and pasted into the new version.
+
+**If edits were made into these files/folders, please save it and paste changes into the new version.**
+{% endalertAlt %}
+
+1.  Delete the following files and folders:
+    * `_data`
+    * `_includes`
+    * `core`
+    * `node_modules`
+    * `.eleventy.js`
+    * `package-lock.json`
+    * `package.json`
+2. Replace the same files and folders from the new Eleventy LibDoc version.
+3. Run `npm install`, then you get the latest version. You can verify current version at the bottom of each page.
+
+
 ## Configuration
 
 Start entering your own settings into `settings.json` at the root of the project. [Configuration documentation](https://eleventy-libdoc.netlify.app/configuration/).
